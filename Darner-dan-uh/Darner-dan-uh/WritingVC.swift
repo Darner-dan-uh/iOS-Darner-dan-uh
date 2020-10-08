@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  WritingVC.swift
 //  Darner-dan-uh
 //
 //  Created by 이현욱 on 2020/09/03.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class WritingVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
