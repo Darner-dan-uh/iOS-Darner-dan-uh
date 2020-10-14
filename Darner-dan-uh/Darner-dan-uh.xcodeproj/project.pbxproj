@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D63FE3212535EF4600DCD75F /* BinggraeMelona-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D63FE31F2535EF4500DCD75F /* BinggraeMelona-Bold.ttf */; };
+		D63FE3222535EF4600DCD75F /* BinggraeMelona.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D63FE3202535EF4500DCD75F /* BinggraeMelona.ttf */; };
+		D63FE3322536118200DCD75F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63FE3312536118200DCD75F /* LoginViewModel.swift */; };
+		D63FE336253611C000DCD75F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63FE335253611C000DCD75F /* LoginVC.swift */; };
+		D63FE33C2536121000DCD75F /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63FE33B2536121000DCD75F /* RegisterVC.swift */; };
+		D63FE3472536185000DCD75F /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63FE3462536185000DCD75F /* UIColor.swift */; };
+		D63FE34A2536731000DCD75F /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63FE3492536731000DCD75F /* RegisterViewModel.swift */; };
+		D63FE34D253693C100DCD75F /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63FE34C253693C100DCD75F /* UIButton.swift */; };
 		D6578ACB2500867A000185F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6578ACA2500867A000185F1 /* AppDelegate.swift */; };
 		D6578ACD2500867A000185F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6578ACC2500867A000185F1 /* SceneDelegate.swift */; };
 		D6578ACF2500867A000185F1 /* WritingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6578ACE2500867A000185F1 /* WritingVC.swift */; };
@@ -25,6 +33,14 @@
 		0A6D3E1C8424177E67745A13 /* Pods-Darner-dan-uh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Darner-dan-uh.debug.xcconfig"; path = "Target Support Files/Pods-Darner-dan-uh/Pods-Darner-dan-uh.debug.xcconfig"; sourceTree = "<group>"; };
 		2C2C5094395481B434C2AC5C /* Pods_Darner_dan_uh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Darner_dan_uh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		773631FB34EA472779385722 /* Pods-Darner-dan-uh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Darner-dan-uh.release.xcconfig"; path = "Target Support Files/Pods-Darner-dan-uh/Pods-Darner-dan-uh.release.xcconfig"; sourceTree = "<group>"; };
+		D63FE31F2535EF4500DCD75F /* BinggraeMelona-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BinggraeMelona-Bold.ttf"; sourceTree = "<group>"; };
+		D63FE3202535EF4500DCD75F /* BinggraeMelona.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BinggraeMelona.ttf; sourceTree = "<group>"; };
+		D63FE3312536118200DCD75F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		D63FE335253611C000DCD75F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		D63FE33B2536121000DCD75F /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		D63FE3462536185000DCD75F /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		D63FE3492536731000DCD75F /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		D63FE34C253693C100DCD75F /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		D6578AC72500867A000185F1 /* Darner-dan-uh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Darner-dan-uh.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6578ACA2500867A000185F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6578ACC2500867A000185F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +85,72 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D63FE3262535EFD400DCD75F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				D63FE3452536184400DCD75F /* Extension */,
+				D63FE3342536119A00DCD75F /* Modules */,
+				D63FE3302536116C00DCD75F /* ViewModel */,
+				D6E68841252EB41B00FA09C1 /* Base */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		D63FE3282535EFDF00DCD75F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				D63FE31F2535EF4500DCD75F /* BinggraeMelona-Bold.ttf */,
+				D63FE3202535EF4500DCD75F /* BinggraeMelona.ttf */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		D63FE3302536116C00DCD75F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D63FE3312536118200DCD75F /* LoginViewModel.swift */,
+				D63FE3492536731000DCD75F /* RegisterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D63FE3342536119A00DCD75F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D63FE33A253611FE00DCD75F /* Register */,
+				D63FE339253611F300DCD75F /* Login */,
+				D6578ACE2500867A000185F1 /* WritingVC.swift */,
+				D6E68847252EB4EC00FA09C1 /* MemorizationVC.swift */,
+				D6E6884A252EB50700FA09C1 /* RankingVC.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D63FE339253611F300DCD75F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D63FE335253611C000DCD75F /* LoginVC.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D63FE33A253611FE00DCD75F /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				D63FE33B2536121000DCD75F /* RegisterVC.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		D63FE3452536184400DCD75F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D63FE3462536185000DCD75F /* UIColor.swift */,
+				D63FE34C253693C100DCD75F /* UIButton.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		D6578ABE2500867A000185F1 = {
 			isa = PBXGroup;
 			children = (
@@ -91,11 +173,9 @@
 			isa = PBXGroup;
 			children = (
 				D6578AD82500867C000185F1 /* Info.plist */,
+				D63FE3282535EFDF00DCD75F /* Resource */,
+				D63FE3262535EFD400DCD75F /* Source */,
 				D6E68842252EB42400FA09C1 /* Supporting */,
-				D6E68841252EB41B00FA09C1 /* Base */,
-				D6578ACE2500867A000185F1 /* WritingVC.swift */,
-				D6E68847252EB4EC00FA09C1 /* MemorizationVC.swift */,
-				D6E6884A252EB50700FA09C1 /* RankingVC.swift */,
 			);
 			path = "Darner-dan-uh";
 			sourceTree = "<group>";
@@ -182,6 +262,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D63FE3212535EF4600DCD75F /* BinggraeMelona-Bold.ttf in Resources */,
+				D63FE3222535EF4600DCD75F /* BinggraeMelona.ttf in Resources */,
 				D6E68858252EB55300FA09C1 /* Memorization.storyboard in Resources */,
 				D6578AD72500867C000185F1 /* LaunchScreen.storyboard in Resources */,
 				D6E68852252EB53F00FA09C1 /* Writing.storyboard in Resources */,
@@ -241,8 +323,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6578ACF2500867A000185F1 /* WritingVC.swift in Sources */,
+				D63FE34A2536731000DCD75F /* RegisterViewModel.swift in Sources */,
+				D63FE33C2536121000DCD75F /* RegisterVC.swift in Sources */,
 				D6578ACB2500867A000185F1 /* AppDelegate.swift in Sources */,
+				D63FE336253611C000DCD75F /* LoginVC.swift in Sources */,
+				D63FE3472536185000DCD75F /* UIColor.swift in Sources */,
+				D63FE3322536118200DCD75F /* LoginViewModel.swift in Sources */,
 				D6E68848252EB4EC00FA09C1 /* MemorizationVC.swift in Sources */,
+				D63FE34D253693C100DCD75F /* UIButton.swift in Sources */,
 				D6E6884C252EB50700FA09C1 /* RankingVC.swift in Sources */,
 				D6578ACD2500867A000185F1 /* SceneDelegate.swift in Sources */,
 			);
