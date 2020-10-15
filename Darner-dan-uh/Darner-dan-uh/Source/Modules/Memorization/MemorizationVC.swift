@@ -1,5 +1,5 @@
 //
-//  RankingVC.swift
+//  MemorizationVC.swift
 //  Darner-dan-uh
 //
 //  Created by 이현욱 on 2020/10/08.
@@ -8,14 +8,14 @@
 
 import UIKit
 
-class RankingVC: UIViewController {
+final class MemorizationVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
+    
 
     /*
     // MARK: - Navigation

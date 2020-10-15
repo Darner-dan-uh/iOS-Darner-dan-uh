@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WritingVC: UIViewController {
+final class WritingVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
