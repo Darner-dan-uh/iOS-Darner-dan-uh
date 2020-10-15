@@ -11,11 +11,12 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class LoginViewModel {
+class LoginViewModel: isValidFuncProtocol {
+
     let idTextFieldSubject = PublishSubject<String>()
     let pwTextFieldSubject = PublishSubject<String>()
-    
-    func isValid() -> Observable<Bool> {
+
+    func isvalid() -> Observable<Bool> {
         Observable
             .combineLatest(idTextFieldSubject, pwTextFieldSubject)
             .asObservable()

@@ -11,22 +11,21 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class RegisterViewModel {
+class RegisterViewModel: isValidFuncProtocol {
+
     let nameTextFieldSubject = PublishSubject<String>()
     let idTextFieldSubject = PublishSubject<String>()
     let pwTextFieldSubject = PublishSubject<String>()
     
-    func isValid() -> Observable<Bool> {
+    func isvalid() -> Observable<Bool> {
         Observable
             .combineLatest(idTextFieldSubject, pwTextFieldSubject, nameTextFieldSubject)
             .asObservable()
-            .map { 
+            .map {
                 return !$0.isEmpty && !$1.isEmpty && !$2.isEmpty
         }
     }
     
-    func a(str: String) -> Observable<Bool> {
-        return str.isEmpty
-    }
     
 }
+
