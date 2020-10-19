@@ -27,11 +27,12 @@ final class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         idTextField.rx.text.map { $0 ?? "" }.bind(to: viewModel.idTextFieldSubject).disposed(by: disposeBag)
-        pwTextField.rx.text.map { $0 ?? ""}.bind(to: viewModel.pwTextFieldSubject).disposed(by: disposeBag)
-        viewModel.isvalid().subscribe(onNext :{ value in
+        pwTextField.rx.text.map { $0 ?? "" }.bind(to: viewModel.pwTextFieldSubject).disposed(by: disposeBag)
+        viewModel.isValid().subscribe(onNext :{ value in
             self.loginBtn.layer.borderColor = value ? UIColor.customPink.cgColor : UIColor.black.cgColor
             self.loginBtn.backgroundColor = value ? .customPink : .white
             value ? self.loginBtn.setTextColor(color: .white) : self.loginBtn.setTextColor(color: .black)
+            self.loginBtn.isUserInteractionEnabled = value
         }).disposed(by: disposeBag)
         
     }

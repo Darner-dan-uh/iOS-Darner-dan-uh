@@ -8,23 +8,36 @@
 
 import UIKit
 
-final class DoubleCheckVC: UIViewController {
+import RxSwift
+import RxCocoa
 
+final class DoubleCheckVC: UIViewController {
+    
+    let disposeBag = DisposeBag()
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var nextBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.bindUI()
     }
     
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension DoubleCheckVC {
+    private func bindUI() {
+        emailTextField.rx.text.orEmpty
+            .map { self.checkEmail(email: $0) }
+            .subscribe(onNext: { bool in
+                bool ? self.nextBtn.setTextColor(color: .white) : self.nextBtn.setTextColor(color: .black)
+                self.nextBtn.isUserInteractionEnabled = bool
+                self.nextBtn.layer.borderColor = bool ? UIColor.customPink.cgColor : UIColor.black.cgColor
+                self.nextBtn.backgroundColor = bool ? .customPink : .white
+            }).disposed(by: disposeBag)
     }
-    */
-
+    
+    private func checkEmail(email: String) -> Bool {
+        return !email.isEmpty
+    }
 }

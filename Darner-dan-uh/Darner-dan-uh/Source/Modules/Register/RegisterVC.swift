@@ -16,7 +16,8 @@ final class RegisterVC: UIViewController {
     let disposeBag = DisposeBag()
     let viewModel = RegisterViewModel()
 
-    @IBOutlet weak var doubleCheckBtn: UIButton!
+    @IBOutlet weak var sameIdNoticeLbl: UILabel!
+    @IBOutlet weak var wrongPwLbl: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
@@ -26,33 +27,28 @@ final class RegisterVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bindUI()
+        self.bindUI()
     }
     
     @IBAction func popVC(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
-        
     }
     
     private func bindUI() {
-        //FIX- doublecheck 
         nameTextField.rx.text.map { $0 ?? ""}.bind(to: viewModel.nameTextFieldSubject).disposed(by: disposeBag)
         idTextField.rx.text.map { $0 ?? ""}.bind(to: viewModel.idTextFieldSubject).disposed(by: disposeBag)
         pwTextField.rx.text.map { $0 ?? ""}.bind(to: viewModel.pwTextFieldSubject).disposed(by: disposeBag)
-        viewModel.isvalid().subscribe(onNext: { value in
+        viewModel.isValid().subscribe(onNext: { value in
             self.registerBtn.layer.borderColor = value ? UIColor.customPink.cgColor : UIColor.black.cgColor
             self.registerBtn.backgroundColor = value ? .customPink : .white
             value ? self.registerBtn.setTextColor(color: .white) : self.registerBtn.setTextColor(color: .black)
-            self.registerBtn.isEnabled = value
+            self.registerBtn.isUserInteractionEnabled = value
         }).disposed(by: disposeBag)
-        idTextField.rx.text.orEmpty.map { self.isValid(email: $0)}.map {print($0)}
-//            .map { self.doubleCheckBtn.isHidden = $0}
+        idTextField.rx.text.subscribe( { text in
+            // text를 넣은 후 네트워킹해서 그 결과값을 sameIdNoticeLbl에 사용
+        }).disposed(by: disposeBag)
+        pwTextField.rx.text.map { self.viewModel.checkPw(PassWord: $0!)}.subscribe { bool in
+            self.wrongPwLbl.isHidden = bool
+        }.disposed(by: disposeBag)
     }
 }
-
-extension RegisterVC {
-    private func isValid(email: String) -> Bool {
-        return !email.isEmpty || email == ""
-    }
-}
-

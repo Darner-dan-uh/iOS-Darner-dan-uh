@@ -17,7 +17,7 @@ class RegisterViewModel: isValidFuncProtocol {
     let idTextFieldSubject = PublishSubject<String>()
     let pwTextFieldSubject = PublishSubject<String>()
     
-    func isvalid() -> Observable<Bool> {
+    func isValid() -> Observable<Bool> {
         Observable
             .combineLatest(idTextFieldSubject, pwTextFieldSubject, nameTextFieldSubject)
             .asObservable()
@@ -26,6 +26,8 @@ class RegisterViewModel: isValidFuncProtocol {
         }
     }
     
-    
+    func checkPw(PassWord: String) -> Bool {
+        return PassWord.count < 20
+    }
 }
 
