@@ -17,12 +17,12 @@
 		D63FE34D253693C100DCD75F /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63FE34C253693C100DCD75F /* UIButton.swift */; };
 		D63FE358253747FC00DCD75F /* DoubleCheckVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63FE357253747FC00DCD75F /* DoubleCheckVC.swift */; };
 		D6578ACB2500867A000185F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6578ACA2500867A000185F1 /* AppDelegate.swift */; };
-		D6578ACD2500867A000185F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6578ACC2500867A000185F1 /* SceneDelegate.swift */; };
 		D6578ACF2500867A000185F1 /* WritingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6578ACE2500867A000185F1 /* WritingVC.swift */; };
 		D6578AD22500867A000185F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6578AD02500867A000185F1 /* Main.storyboard */; };
 		D6578AD42500867C000185F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6578AD32500867C000185F1 /* Assets.xcassets */; };
 		D6578AD72500867C000185F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6578AD52500867C000185F1 /* LaunchScreen.storyboard */; };
 		D684E3D1253D679E00AB48E3 /* CheckCertificationNumberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D684E3D0253D679E00AB48E3 /* CheckCertificationNumberVC.swift */; };
+		D6BD2C0C253FF4820028913D /* FinishRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BD2C0B253FF4820028913D /* FinishRegisterViewController.swift */; };
 		D6E68848252EB4EC00FA09C1 /* MemorizationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E68847252EB4EC00FA09C1 /* MemorizationVC.swift */; };
 		D6E6884C252EB50700FA09C1 /* RankingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E6884A252EB50700FA09C1 /* RankingVC.swift */; };
 		D6E68852252EB53F00FA09C1 /* Writing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E68851252EB53F00FA09C1 /* Writing.storyboard */; };
@@ -46,13 +46,13 @@
 		D63FE357253747FC00DCD75F /* DoubleCheckVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCheckVC.swift; sourceTree = "<group>"; };
 		D6578AC72500867A000185F1 /* Darner-dan-uh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Darner-dan-uh.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6578ACA2500867A000185F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D6578ACC2500867A000185F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D6578ACE2500867A000185F1 /* WritingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingVC.swift; sourceTree = "<group>"; };
 		D6578AD12500867A000185F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6578AD32500867C000185F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6578AD62500867C000185F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6578AD82500867C000185F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D684E3D0253D679E00AB48E3 /* CheckCertificationNumberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckCertificationNumberVC.swift; sourceTree = "<group>"; };
+		D6BD2C0B253FF4820028913D /* FinishRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRegisterViewController.swift; sourceTree = "<group>"; };
 		D6E68847252EB4EC00FA09C1 /* MemorizationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizationVC.swift; sourceTree = "<group>"; };
 		D6E6884A252EB50700FA09C1 /* RankingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingVC.swift; sourceTree = "<group>"; };
 		D6E68851252EB53F00FA09C1 /* Writing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Writing.storyboard; sourceTree = "<group>"; };
@@ -144,6 +144,7 @@
 				D63FE33B2536121000DCD75F /* RegisterVC.swift */,
 				D63FE357253747FC00DCD75F /* DoubleCheckVC.swift */,
 				D684E3D0253D679E00AB48E3 /* CheckCertificationNumberVC.swift */,
+				D6BD2C0B253FF4820028913D /* FinishRegisterViewController.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -227,7 +228,6 @@
 			children = (
 				D6578ACA2500867A000185F1 /* AppDelegate.swift */,
 				D6578AD32500867C000185F1 /* Assets.xcassets */,
-				D6578ACC2500867A000185F1 /* SceneDelegate.swift */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -363,7 +363,7 @@
 				D6E68848252EB4EC00FA09C1 /* MemorizationVC.swift in Sources */,
 				D63FE34D253693C100DCD75F /* UIButton.swift in Sources */,
 				D6E6884C252EB50700FA09C1 /* RankingVC.swift in Sources */,
-				D6578ACD2500867A000185F1 /* SceneDelegate.swift in Sources */,
+				D6BD2C0C253FF4820028913D /* FinishRegisterViewController.swift in Sources */,
 				D684E3D1253D679E00AB48E3 /* CheckCertificationNumberVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
