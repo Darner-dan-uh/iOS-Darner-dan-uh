@@ -35,9 +35,9 @@ final class RegisterVC: UIViewController {
     }
     
     private func bindUI() {
-        nameTextField.rx.text.map { $0 ?? ""}.bind(to: viewModel.nameTextFieldSubject).disposed(by: disposeBag)
-        idTextField.rx.text.map { $0 ?? ""}.bind(to: viewModel.idTextFieldSubject).disposed(by: disposeBag)
-        pwTextField.rx.text.map { $0 ?? ""}.bind(to: viewModel.pwTextFieldSubject).disposed(by: disposeBag)
+        nameTextField.rx.text.map { $0 ?? "" }.bind(to: viewModel.nameTextFieldSubject).disposed(by: disposeBag)
+        idTextField.rx.text.map { $0 ?? "" }.bind(to: viewModel.idTextFieldSubject).disposed(by: disposeBag)
+        pwTextField.rx.text.map { $0 ?? "" }.bind(to: viewModel.pwTextFieldSubject).disposed(by: disposeBag)
         viewModel.isValid().subscribe(onNext: { value in
             self.registerBtn.layer.borderColor = value ? UIColor.customPink.cgColor : UIColor.black.cgColor
             self.registerBtn.backgroundColor = value ? .customPink : .white

@@ -15,7 +15,7 @@ final class DoubleCheckVC: UIViewController {
     
     let disposeBag = DisposeBag()
     
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var emailTxtField: UITextField!
     @IBOutlet weak var nextBtn: UIButton!
     
     override func viewDidLoad() {
@@ -23,11 +23,16 @@ final class DoubleCheckVC: UIViewController {
         self.bindUI()
     }
     
+    @IBAction func pushVC(_ sender: Any) {
+        
+    }
+    
+    
 }
 
 extension DoubleCheckVC {
     private func bindUI() {
-        emailTextField.rx.text.orEmpty
+        emailTxtField.rx.text.orEmpty
             .map { self.checkEmail(email: $0) }
             .subscribe(onNext: { bool in
                 bool ? self.nextBtn.setTextColor(color: .white) : self.nextBtn.setTextColor(color: .black)
