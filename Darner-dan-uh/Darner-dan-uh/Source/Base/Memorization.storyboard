@@ -445,10 +445,10 @@
             </objects>
             <point key="canvasLocation" x="1186.9565217391305" y="161.38392857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Select Word NumVC-->
         <scene sceneID="r09-3s-Bn9">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="jL8-d3-XJw" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="jL8-d3-XJw" customClass="SelectWordNumVC" customModule="Darner_dan_uh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L0Q-wm-L6g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -520,12 +520,15 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ioj-Bd-xet">
                                         <rect key="frame" x="0.0" y="0.0" width="68" height="68"/>
                                         <state key="normal" image="minus"/>
+                                        <connections>
+                                            <action selector="minusBtn:" destination="7YD-gf-OnQ" eventType="touchUpInside" id="EDh-RR-Cq0"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xby-3c-iCd">
-                                        <rect key="frame" x="115.66666666666667" y="4" width="135.66666666666663" height="64"/>
+                                        <rect key="frame" x="134.66666666666669" y="4" width="97.666666666666686" height="64"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xb7-UU-8sI">
-                                                <rect key="frame" x="0.0" y="0.0" width="90" height="64"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xb7-UU-8sI">
+                                                <rect key="frame" x="0.0" y="0.0" width="52" height="64"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="90" id="BUe-up-8HZ"/>
                                                 </constraints>
@@ -534,7 +537,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFJ-AG-g3A">
-                                                <rect key="frame" x="90" y="0.0" width="45.666666666666657" height="64"/>
+                                                <rect key="frame" x="52" y="0.0" width="45.666666666666657" height="64"/>
                                                 <fontDescription key="fontDescription" name="BinggraeMelona-Bold" family="Binggrae Melona" pointSize="50"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -586,8 +589,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LEd-Ko-Kil"/>
+                    <connections>
+                        <outlet property="backVCBtn" destination="hCb-q2-PfL" id="mWv-ey-ldc"/>
+                        <outlet property="minusWordNumBtn" destination="ioj-Bd-xet" id="riS-ko-rtK"/>
+                        <outlet property="nextVCBtn" destination="svi-UN-2MK" id="hWF-Bd-iON"/>
+                        <outlet property="plusWordNumBtn" destination="Maa-NM-XRa" id="hG0-OC-3r7"/>
+                        <outlet property="wordNumLbl" destination="xb7-UU-8sI" id="6kZ-Df-be9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOy-Fd-Kye" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="7YD-gf-OnQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2242.0289855072465" y="160.04464285714286"/>
         </scene>
@@ -718,8 +729,8 @@
                                 <rect key="frame" x="18" y="61.666666666666657" width="12" height="22"/>
                                 <state key="normal" image="그룹 5"/>
                             </button>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfz-Kb-1NU">
-                                <rect key="frame" x="82" y="467" width="250" height="41"/>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfz-Kb-1NU">
+                                <rect key="frame" x="82" y="518" width="250" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="Ccm-gd-VV0"/>
                                     <constraint firstAttribute="height" constant="41" id="G9m-md-CQ1"/>
@@ -739,8 +750,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4x4-bI-qV1">
-                                <rect key="frame" x="89.666666666666686" y="374" width="235" height="21"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4x4-bI-qV1">
+                                <rect key="frame" x="89.666666666666686" y="447" width="235" height="21"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VLs-ro-qaz">
                                         <rect key="frame" x="0.0" y="20" width="235" height="1"/>
@@ -771,32 +782,49 @@
                                     <constraint firstItem="VLs-ro-qaz" firstAttribute="top" secondItem="84a-LN-Oeq" secondAttribute="bottom" id="bLD-kL-5oK"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3BV-Vc-HRt">
-                                <rect key="frame" x="82" y="321" width="59" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="BinggraeMelona" family="Binggrae Melona" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="의 뜻은 무엇일까요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhB-6X-48m">
-                                <rect key="frame" x="167" y="321" width="210" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="BinggraeMelona" family="Binggrae Melona" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gr1-xq-ybA">
+                                <rect key="frame" x="72.666666666666686" y="345" width="269" height="32"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3BV-Vc-HRt">
+                                        <rect key="frame" x="0.0" y="0.0" width="59" height="32"/>
+                                        <fontDescription key="fontDescription" name="BinggraeMelona" family="Binggrae Melona" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="의 뜻은 무엇일까요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhB-6X-48m">
+                                        <rect key="frame" x="59" y="0.0" width="210" height="32"/>
+                                        <fontDescription key="fontDescription" name="BinggraeMelona" family="Binggrae Melona" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="bhB-6X-48m" secondAttribute="bottom" id="4UP-p5-6DQ"/>
+                                    <constraint firstItem="bhB-6X-48m" firstAttribute="top" secondItem="gr1-xq-ybA" secondAttribute="top" id="TbC-fG-2zE"/>
+                                    <constraint firstItem="3BV-Vc-HRt" firstAttribute="centerY" secondItem="bhB-6X-48m" secondAttribute="centerY" id="i5N-50-8uX"/>
+                                    <constraint firstAttribute="trailing" secondItem="bhB-6X-48m" secondAttribute="trailing" id="jjH-gh-dr8"/>
+                                    <constraint firstItem="3BV-Vc-HRt" firstAttribute="leading" secondItem="gr1-xq-ybA" secondAttribute="leading" id="l3z-0m-Sgr"/>
+                                    <constraint firstItem="bhB-6X-48m" firstAttribute="leading" secondItem="3BV-Vc-HRt" secondAttribute="trailing" id="qnp-Kx-Y2q"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QmU-dN-KyT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Faj-gi-DpJ" firstAttribute="centerY" secondItem="0CH-fa-Wj3" secondAttribute="centerY" id="35d-do-olc"/>
+                            <constraint firstItem="4x4-bI-qV1" firstAttribute="top" secondItem="gr1-xq-ybA" secondAttribute="bottom" constant="70" id="5Rz-yw-6ox"/>
                             <constraint firstItem="84a-LN-Oeq" firstAttribute="centerX" secondItem="QmU-dN-KyT" secondAttribute="centerX" id="CMD-9J-96e"/>
                             <constraint firstItem="0CH-fa-Wj3" firstAttribute="top" secondItem="QmU-dN-KyT" secondAttribute="top" constant="9" id="Wy5-u5-pGI"/>
+                            <constraint firstItem="gr1-xq-ybA" firstAttribute="centerX" secondItem="QmU-dN-KyT" secondAttribute="centerX" id="Zz1-6a-zUf"/>
                             <constraint firstItem="0CH-fa-Wj3" firstAttribute="centerX" secondItem="QmU-dN-KyT" secondAttribute="centerX" id="cMd-i0-Wgc"/>
+                            <constraint firstItem="gr1-xq-ybA" firstAttribute="top" secondItem="0CH-fa-Wj3" secondAttribute="bottom" constant="253" id="gcd-2P-rQf"/>
+                            <constraint firstItem="bfz-Kb-1NU" firstAttribute="top" secondItem="4x4-bI-qV1" secondAttribute="bottom" constant="50" id="lqq-6P-tBH"/>
                             <constraint firstItem="bfz-Kb-1NU" firstAttribute="centerX" secondItem="QmU-dN-KyT" secondAttribute="centerX" id="xGW-VR-MCR"/>
                             <constraint firstItem="Faj-gi-DpJ" firstAttribute="leading" secondItem="QmU-dN-KyT" secondAttribute="leading" constant="18" id="z7m-9g-vYi"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="4pR-4E-IkN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rpx-YM-x4a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
