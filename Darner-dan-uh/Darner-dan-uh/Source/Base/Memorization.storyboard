@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="To0-eI-FQs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0E0-1Q-t4d">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -17,10 +17,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--MemorizationVC-->
+        <!--Memorization View Controller-->
         <scene sceneID="0MN-K0-LsG">
             <objects>
-                <viewController id="vys-wL-y3y" customClass="MemorizationVC" customModule="Darner_dan_uh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vys-wL-y3y" customClass="MemorizationViewController" customModule="Darner_dan_uh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i7A-fu-Qr2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,7 +40,7 @@
                                         <state key="normal" image="profileImg"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이페이지" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZD-R1-1u9">
-                                        <rect key="frame" x="7" y="61" width="41" height="12"/>
+                                        <rect key="frame" x="8" y="60.999999999999993" width="39" height="10.666666666666664"/>
                                         <fontDescription key="fontDescription" name="BinggraeMelona" family="Binggrae Melona" pointSize="9"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -57,16 +57,16 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2uN-Ly-vij">
-                                <rect key="frame" x="16" y="131" width="196" height="61"/>
+                                <rect key="frame" x="16" y="131" width="186" height="55"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘 공부할 단어의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wez-KL-unD">
-                                        <rect key="frame" x="0.0" y="0.0" width="182" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="172" height="27"/>
                                         <fontDescription key="fontDescription" name="BinggraeMelona-Bold" family="Binggrae Melona" pointSize="23"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주제를 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9k-pi-8JZ">
-                                        <rect key="frame" x="0.0" y="31" width="196" height="30"/>
+                                        <rect key="frame" x="0.0" y="28" width="186" height="27"/>
                                         <fontDescription key="fontDescription" name="BinggraeMelona-Bold" family="Binggrae Melona" pointSize="23"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -84,27 +84,20 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3H4-GQ-QgL">
-                                <rect key="frame" x="40" y="240" width="155" height="109"/>
+                                <rect key="frame" x="40" y="234" width="155" height="109"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="의학" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPe-xj-HRD">
-                                        <rect key="frame" x="59" y="25" width="37" height="26"/>
+                                        <rect key="frame" x="60.333333333333329" y="25" width="34.666666666666671" height="23.333333333333329"/>
                                         <fontDescription key="fontDescription" name="BinggraeMelona" family="Binggrae Melona" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medicine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXd-6K-GJM">
-                                        <rect key="frame" x="38" y="58" width="79" height="26"/>
+                                        <rect key="frame" x="36.666666666666664" y="55.333333333333321" width="81.666666666666686" height="23.333333333333336"/>
                                         <fontDescription key="fontDescription" name="BinggraeMelona" family="Binggrae Melona" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRz-1X-IEl">
-                                        <rect key="frame" x="0.0" y="0.0" width="155" height="109"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <segue destination="jL8-d3-XJw" kind="push" id="cwR-4Z-5FQ"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -128,23 +121,26 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YHO-sd-iMU">
-                                <rect key="frame" x="219" y="240" width="155" height="109"/>
+                                <rect key="frame" x="219" y="234" width="155" height="109"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="경영학" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgm-GX-e4Y">
-                                        <rect key="frame" x="50" y="25" width="55" height="26"/>
+                                        <rect key="frame" x="51.666666666666686" y="25" width="52" height="23.333333333333329"/>
                                         <fontDescription key="fontDescription" name="BinggraeMelona" family="Binggrae Melona" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Management" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCh-6u-6UY">
-                                        <rect key="frame" x="20.666666666666657" y="58" width="114" height="26"/>
+                                        <rect key="frame" x="18.666666666666664" y="55.333333333333321" width="117.66666666666669" height="23.333333333333336"/>
                                         <fontDescription key="fontDescription" name="BinggraeMelona" family="Binggrae Melona" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUh-Av-kBl">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUh-Av-kBl">
                                         <rect key="frame" x="0.0" y="0.0" width="155" height="109"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="a:" destination="vys-wL-y3y" eventType="touchUpInside" id="CBS-GW-SI5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -169,21 +165,21 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vKg-hq-X0D">
-                                <rect key="frame" x="40" y="379" width="155" height="109"/>
+                                <rect key="frame" x="40" y="373" width="155" height="109"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="의학" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXu-IL-Ijg">
-                                        <rect key="frame" x="59" y="25" width="37" height="26"/>
+                                        <rect key="frame" x="60.333333333333329" y="25" width="34.666666666666671" height="23.333333333333329"/>
                                         <fontDescription key="fontDescription" name="BinggraeMelona" family="Binggrae Melona" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medicine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTr-hC-iJ5">
-                                        <rect key="frame" x="38" y="58" width="79" height="26"/>
+                                        <rect key="frame" x="36.666666666666664" y="55.333333333333321" width="81.666666666666686" height="23.333333333333336"/>
                                         <fontDescription key="fontDescription" name="BinggraeMelona" family="Binggrae Melona" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8p-Rr-pmv">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8p-Rr-pmv">
                                         <rect key="frame" x="0.0" y="0.0" width="155" height="109"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </button>
@@ -210,21 +206,21 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0tl-zF-zLK">
-                                <rect key="frame" x="219" y="379" width="155" height="109"/>
+                                <rect key="frame" x="219" y="373" width="155" height="109"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="경영학" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Egw-0b-brr">
-                                        <rect key="frame" x="50" y="25" width="55" height="26"/>
+                                        <rect key="frame" x="51.666666666666686" y="25" width="52" height="23.333333333333329"/>
                                         <fontDescription key="fontDescription" name="BinggraeMelona" family="Binggrae Melona" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Management" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGZ-Sd-1zj">
-                                        <rect key="frame" x="20.666666666666657" y="58" width="114" height="26"/>
+                                        <rect key="frame" x="18.666666666666664" y="55.333333333333321" width="117.66666666666669" height="23.333333333333336"/>
                                         <fontDescription key="fontDescription" name="BinggraeMelona" family="Binggrae Melona" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ga-ug-5NH">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ga-ug-5NH">
                                         <rect key="frame" x="0.0" y="0.0" width="155" height="109"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </button>
@@ -251,16 +247,16 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3qu-0h-mhB">
-                                <rect key="frame" x="37" y="518" width="155" height="109"/>
+                                <rect key="frame" x="37" y="512" width="155" height="109"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="의학" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUF-fC-bxu">
-                                        <rect key="frame" x="59" y="25" width="37" height="26"/>
+                                        <rect key="frame" x="60.333333333333329" y="25" width="34.666666666666671" height="23.333333333333329"/>
                                         <fontDescription key="fontDescription" name="BinggraeMelona" family="Binggrae Melona" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medicine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaP-HN-Pal">
-                                        <rect key="frame" x="38" y="58" width="79" height="26"/>
+                                        <rect key="frame" x="36.666666666666664" y="55.333333333333378" width="81.666666666666686" height="23.333333333333336"/>
                                         <fontDescription key="fontDescription" name="BinggraeMelona" family="Binggrae Melona" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -288,16 +284,16 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jjt-nf-C9j">
-                                <rect key="frame" x="37" y="657" width="155" height="109"/>
+                                <rect key="frame" x="37" y="651" width="155" height="109"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="의학" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hS2-Ba-qou">
-                                        <rect key="frame" x="59" y="25" width="37" height="26"/>
+                                        <rect key="frame" x="60.333333333333329" y="25" width="34.666666666666671" height="23.333333333333329"/>
                                         <fontDescription key="fontDescription" name="BinggraeMelona" family="Binggrae Melona" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medicine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XrM-Hl-iDy">
-                                        <rect key="frame" x="38" y="58" width="79" height="26"/>
+                                        <rect key="frame" x="36.666666666666664" y="55.333333333333378" width="81.666666666666686" height="23.333333333333336"/>
                                         <fontDescription key="fontDescription" name="BinggraeMelona" family="Binggrae Melona" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -329,16 +325,16 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sOe-j7-47w">
-                                <rect key="frame" x="219" y="518" width="155" height="109"/>
+                                <rect key="frame" x="219" y="512" width="155" height="109"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="경영학" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4G-oD-50X">
-                                        <rect key="frame" x="50" y="25" width="55" height="26"/>
+                                        <rect key="frame" x="51.666666666666686" y="25" width="52" height="23.333333333333329"/>
                                         <fontDescription key="fontDescription" name="BinggraeMelona" family="Binggrae Melona" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Management" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5v-j5-t0e">
-                                        <rect key="frame" x="20.666666666666657" y="58" width="114" height="26"/>
+                                        <rect key="frame" x="18.666666666666664" y="55.333333333333378" width="117.66666666666669" height="23.333333333333336"/>
                                         <fontDescription key="fontDescription" name="BinggraeMelona" family="Binggrae Melona" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -370,16 +366,16 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GVe-0N-b71">
-                                <rect key="frame" x="219" y="657" width="155" height="109"/>
+                                <rect key="frame" x="219" y="651" width="155" height="109"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="경영학" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgg-ZC-njA">
-                                        <rect key="frame" x="50" y="25" width="55" height="26"/>
+                                        <rect key="frame" x="51.666666666666686" y="25" width="52" height="23.333333333333329"/>
                                         <fontDescription key="fontDescription" name="BinggraeMelona" family="Binggrae Melona" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Management" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGU-W6-9z4">
-                                        <rect key="frame" x="20.666666666666657" y="58" width="114" height="26"/>
+                                        <rect key="frame" x="18.666666666666664" y="55.333333333333378" width="117.66666666666669" height="23.333333333333336"/>
                                         <fontDescription key="fontDescription" name="BinggraeMelona" family="Binggrae Melona" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -410,6 +406,14 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRz-1X-IEl">
+                                <rect key="frame" x="40" y="240" width="155" height="109"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="a:" destination="vys-wL-y3y" eventType="touchUpInside" id="2lj-DX-hqT"/>
+                                    <segue destination="jL8-d3-XJw" kind="push" id="cwR-4Z-5FQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="R6T-gO-OYz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -440,30 +444,37 @@
                     </view>
                     <navigationItem key="navigationItem" id="d7Y-m6-SFv"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="myPageBtn" destination="08S-Ms-Ggj" id="tAg-RJ-741"/>
+                        <outletCollection property="wordTypeBtns" destination="kRz-1X-IEl" collectionClass="NSMutableArray" id="r5A-ET-aGN"/>
+                        <outletCollection property="wordTypeBtns" destination="oUh-Av-kBl" collectionClass="NSMutableArray" id="NGf-uE-y7y"/>
+                        <outletCollection property="wordTypeBtns" destination="I8p-Rr-pmv" collectionClass="NSMutableArray" id="Sml-OC-fgg"/>
+                        <outletCollection property="wordTypeBtns" destination="0ga-ug-5NH" collectionClass="NSMutableArray" id="j9p-RP-E3J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Wb-87-Egf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1186.9565217391305" y="161.38392857142856"/>
         </scene>
-        <!--Select Word NumVC-->
+        <!--Select Word Num View Controller-->
         <scene sceneID="r09-3s-Bn9">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="jL8-d3-XJw" customClass="SelectWordNumVC" customModule="Darner_dan_uh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="jL8-d3-XJw" customClass="SelectWordNumViewController" customModule="Darner_dan_uh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L0Q-wm-L6g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2re-Mh-tIG">
-                                <rect key="frame" x="56.666666666666657" y="328" width="301" height="84"/>
+                                <rect key="frame" x="64.666666666666657" y="328" width="284.66666666666674" height="76"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설정하세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RN0-9F-xdZ">
-                                        <rect key="frame" x="82" y="45" width="137" height="39"/>
+                                        <rect key="frame" x="77.333333333333314" y="41" width="130" height="35"/>
                                         <fontDescription key="fontDescription" name="BinggraeMelona-Bold" family="Binggrae Melona" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘 외울 단어의 개수를" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7C-IG-UPK">
-                                        <rect key="frame" x="0.0" y="0.0" width="301" height="39"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="284.66666666666669" height="35"/>
                                         <fontDescription key="fontDescription" name="BinggraeMelona-Bold" family="Binggrae Melona" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -480,7 +491,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svi-UN-2MK">
-                                <rect key="frame" x="82" y="592" width="250" height="41"/>
+                                <rect key="frame" x="82" y="584" width="250" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="iID-bZ-Sp5"/>
                                     <constraint firstAttribute="height" constant="41" id="sVK-j9-yWb"/>
@@ -499,9 +510,6 @@
                                         <real key="value" value="20.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="0E0-1Q-t4d" kind="push" id="6OQ-cf-NwB"/>
-                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoImage" translatesAutoresizingMaskIntoConstraints="NO" id="rcj-N2-Lt4">
                                 <rect key="frame" x="190.66666666666666" y="53" width="33" height="39"/>
@@ -515,7 +523,7 @@
                                 <state key="normal" image="그룹 5"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dYt-tj-wJt">
-                                <rect key="frame" x="23.666666666666657" y="469" width="367" height="68"/>
+                                <rect key="frame" x="23.666666666666657" y="461" width="367" height="68"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ioj-Bd-xet">
                                         <rect key="frame" x="0.0" y="0.0" width="68" height="68"/>
@@ -525,10 +533,10 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xby-3c-iCd">
-                                        <rect key="frame" x="134.66666666666669" y="4" width="97.666666666666686" height="64"/>
+                                        <rect key="frame" x="134" y="9.6666666666666892" width="99" height="58.333333333333343"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xb7-UU-8sI">
-                                                <rect key="frame" x="0.0" y="0.0" width="52" height="64"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="55.666666666666664" height="58.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="90" id="BUe-up-8HZ"/>
                                                 </constraints>
@@ -537,7 +545,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFJ-AG-g3A">
-                                                <rect key="frame" x="52" y="0.0" width="45.666666666666657" height="64"/>
+                                                <rect key="frame" x="55.666666666666686" y="0.0" width="43.333333333333343" height="58.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="BinggraeMelona-Bold" family="Binggrae Melona" pointSize="50"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -554,7 +562,7 @@
                                             <constraint firstItem="xb7-UU-8sI" firstAttribute="top" secondItem="Xby-3c-iCd" secondAttribute="top" id="svl-4g-k53"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Maa-NM-XRa">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Maa-NM-XRa">
                                         <rect key="frame" x="299" y="0.0" width="68" height="68"/>
                                         <state key="normal" image="plus"/>
                                     </button>
@@ -602,10 +610,10 @@
             </objects>
             <point key="canvasLocation" x="2242.0289855072465" y="160.04464285714286"/>
         </scene>
-        <!--View Controller-->
+        <!--Test Table View Controller-->
         <scene sceneID="rBz-e9-9L9">
             <objects>
-                <viewController id="0E0-1Q-t4d" sceneMemberID="viewController">
+                <viewController id="0E0-1Q-t4d" customClass="TestTableViewController" customModule="Darner_dan_uh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YQ6-p7-aXT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -628,7 +636,7 @@
                                     <constraint firstAttribute="width" constant="122" id="uOT-9f-qjC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="BinggraeMelona" family="Binggrae Melona" pointSize="17"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.97357493640000003" green="0.46254605050000003" blue="0.49018305540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Test">
                                     <color key="titleColor" red="0.97357493640000003" green="0.46254605050000003" blue="0.49018305540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -637,10 +645,7 @@
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <real key="value" value="20.5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                        <color key="value" red="0.97357493640000003" green="0.46254605050000003" blue="0.49018305540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
@@ -654,7 +659,7 @@
                                 <rect key="frame" x="0.0" y="210.33333333333331" width="414" height="685.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="61" id="gK4-dS-Tfo">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="61" id="gK4-dS-Tfo" customClass="WordCell" customModule="Darner_dan_uh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="61"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gK4-dS-Tfo" id="8LI-hq-gOp">
@@ -662,7 +667,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ct4-Z9-tTM">
-                                                    <rect key="frame" x="42" y="18" width="43.333333333333343" height="24"/>
+                                                    <rect key="frame" x="42" y="18" width="42.333333333333343" height="24"/>
                                                     <fontDescription key="fontDescription" name="BinggraeMelona-Bold" family="Binggrae Melona" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -683,6 +688,10 @@
                                                 <constraint firstAttribute="trailing" secondItem="3vU-mZ-cKJ" secondAttribute="trailing" constant="36" id="yFN-fP-j9L"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="wordEnglishMeanLbl" destination="ct4-Z9-tTM" id="nmQ-2H-Fon"/>
+                                            <outlet property="wordKoreanMeanLbl" destination="3vU-mZ-cKJ" id="vzS-xq-JEX"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -705,10 +714,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hrq-UC-FKB"/>
+                    <connections>
+                        <outlet property="popVCBtn" destination="TK1-yE-snw" id="pJh-Os-u1x"/>
+                        <outlet property="tableView" destination="hON-SO-w7g" id="rdD-OY-nSd"/>
+                        <outlet property="testBtn" destination="hzI-SU-lZc" id="2ok-MX-E9K"/>
+                        <outlet property="wordTypeLbl" destination="DLR-yZ-6hR" id="AcZ-hV-Nt0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dZd-7R-OnU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3304.347826086957" y="159.375"/>
+            <point key="canvasLocation" x="3091" y="161"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fJr-nv-ImF">
