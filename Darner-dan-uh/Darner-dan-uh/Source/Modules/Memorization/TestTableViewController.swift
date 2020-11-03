@@ -11,7 +11,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class TestTableViewController: UIViewController {
+final class TestTableViewController: UIViewController {
     let wordCellArrObservable: PublishSubject<[DecodeWordCell]>! = .init()
     private let disposeBag = DisposeBag()
     
@@ -32,27 +32,24 @@ class TestTableViewController: UIViewController {
 extension TestTableViewController {
     private func bindAction() {
         testBtn.rx.tap.map {
-            let firstAction = self.makeAlertAction(title: "더 공부할게요", style: .destructive, handler: nil)
-            let secAction = self.makeAlertAction(title: "준비됐습니다", style: .default) { _ in
+            self.presentAlert(message: "단어 시험을 볼 준비가 됐나요?", style: .alert, title: "더 공부할게요", actionStyle: .destructive, handler: nil, secTitle: "준비됐습니다", secActionStyle: .default) { _ in
                 let vc: TestViewController = self.makeVC(identifier: ViewControllerName.testVC)
                 self.navigationController?.pushViewController(vc, animated: true)
             }
-            self.presentAlert(message: "단어 시험을 볼 준비가 됐나요?", style: .alert, firstAction: firstAction, secAction: secAction)
-        }.subscribe().disposed(by: disposeBag)
+        }.subscribe()
+        .disposed(by: disposeBag)
         
         popVCBtn.rx.tap
+            .take(1)
             .map {
-                guard self.navigationController != nil else { return }
-                var navigationArray = self.navigationController?.viewControllers
-                navigationArray!.remove(at: (navigationArray?.count)! - 2)
-                self.navigationController?.viewControllers = navigationArray!
                 self.navigationController?.popViewController(animated: true)
             }
-            .subscribe().disposed(by: disposeBag)
+            .subscribe()
+            .disposed(by: disposeBag)
     }
     
     private func bindUI() {
-        self.wordTypeLbl.text = MemorizationViewController.wordType
+        self.wordTypeLbl.text = MemorizationViewController.obserbeWordType
         self.testBtn.layer.borderColor = UIColor.customPink.cgColor
         self.tabBarController?.tabBar.isHidden = false
     }

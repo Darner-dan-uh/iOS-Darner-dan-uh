@@ -11,7 +11,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class SelectWordNumViewController: UIViewController {
+final class SelectWordNumViewController: UIViewController {
     
     var wordNum = 10
     let disposeBag = DisposeBag()
@@ -25,6 +25,12 @@ class SelectWordNumViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bindAction()
+        bindUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = true
     }
 }
 
@@ -32,14 +38,12 @@ extension SelectWordNumViewController {
     private func bindAction() {
         minusWordNumBtn.rx.tap
             .map { self.editWordCount(self.minusWordNumBtn, self.wordNum)}
-            //            .map { self.minusNum(self.wordNum)÷ }
             .bind(onNext: { num in
                 self.wordNumLbl.text = String(num)
             }).disposed(by: disposeBag)
         
         plusWordNumBtn.rx.tap
             .map { self.editWordCount(self.plusWordNumBtn, self.wordNum)}
-            //            .map { self.plusNum(self.wordNum) }
             .bind(onNext: { num in
                 self.wordNumLbl.text = String(num)
             }).disposed(by: disposeBag)
@@ -50,11 +54,15 @@ extension SelectWordNumViewController {
             }).disposed(by: disposeBag)
         
         nextVCBtn.rx.tap
-            .map { /* wordNum을 서버로 보내야함  */}
+            .map { /* wordNum을 서버로 보내야함  */ }
             .bind(onNext: {
-                let vc = self.storyboard?.instantiateViewController(identifier: "")
-                self.navigationController?.pushViewController(vc!, animated: true)
+                let vc: TestTableViewController = self.makeVC(identifier: ViewControllerName.testTableVC)
+                self.navigationController?.pushViewController(vc, animated: true)
             }).disposed(by: disposeBag)
+    }
+    
+    private func bindUI() {
+        
     }
     
     private func editWordCount(_ sender: UIButton,_ num: Int) -> Int {
@@ -71,23 +79,5 @@ extension SelectWordNumViewController {
         default:
             return 0
         }
-    }
-    
-    //    private func minusNum(_ num: Int) -> Int {
-    //        if num <= 0 {
-    //            return num
-    //        } else {
-    //            wordNum = num - 1
-    //            return wordNum
-    //        }
-    //    }
-    //
-    //    private func plusNum(_ num: Int) -> Int {
-    //        if num >= 100 {
-    //            return num
-    //        } else {
-    //            wordNum = num + 1
-    //            return num + 1
-    //        }
-    //    }
+    }   
 }

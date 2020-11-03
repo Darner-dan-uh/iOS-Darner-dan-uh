@@ -11,7 +11,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class TestResultViewController: UIViewController {
+final class TestResultViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var finishWordTestBtn: UIButton!
