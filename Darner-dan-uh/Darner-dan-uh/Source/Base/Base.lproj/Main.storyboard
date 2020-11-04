@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SYE-k8-wwI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vf6-1l-j6K">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -214,7 +214,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJm-d5-6z0">
                                 <rect key="frame" x="18" y="59.5" width="12" height="22"/>
-                                <state key="normal" image="그룹 5"/>
+                                <state key="normal" image="그룹 5"/>
                                 <connections>
                                     <action selector="popVC:" destination="eJv-53-xTB" eventType="touchUpInside" id="Hm1-jX-z1s"/>
                                 </connections>
@@ -476,7 +476,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNp-ll-07z">
                                 <rect key="frame" x="18" y="61.5" width="12" height="22"/>
-                                <state key="normal" image="그룹 5"/>
+                                <state key="normal" image="그룹 5"/>
                                 <connections>
                                     <action selector="popVC:" destination="xkf-L2-OwB" eventType="touchUpInside" id="GxU-tp-m2c"/>
                                 </connections>
@@ -692,7 +692,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7S-fu-VnD">
                                 <rect key="frame" x="18" y="61.5" width="12" height="22"/>
-                                <state key="normal" image="그룹 5"/>
+                                <state key="normal" image="그룹 5"/>
                                 <connections>
                                     <action selector="popVC:" destination="5dz-87-A4X" eventType="touchUpInside" id="zLK-B1-KTZ"/>
                                 </connections>
@@ -1004,7 +1004,7 @@
         <image name="Icon ionic-ios-checkmark-circle" width="24" height="23.5"/>
         <image name="Icon material-radio-button-unchecked" width="24" height="23.5"/>
         <image name="LogoImage" width="139" height="167"/>
-        <image name="그룹 5" width="11.5" height="20"/>
+        <image name="그룹 5" width="11.5" height="20"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
