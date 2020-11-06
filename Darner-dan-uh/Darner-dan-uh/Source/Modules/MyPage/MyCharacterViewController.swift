@@ -30,6 +30,14 @@ class MyCharacterViewController: UIViewController {
         bindAction()
         // Do any additional setup after loading the view.
     }
+<<<<<<< Updated upstream
+=======
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+//        bindAction()
+    }
+>>>>>>> Stashed changes
 }
 
 extension MyCharacterViewController {
@@ -61,6 +69,7 @@ extension MyCharacterViewController {
     
     private func bindAction() {
         cancelBtn.rx.tap
+<<<<<<< Updated upstream
             .bind(to: { _  in
                 self.dismiss(animated: true, completion: nil)
             })
@@ -70,5 +79,17 @@ extension MyCharacterViewController {
                 let vc = makeVC(identifier: ViewControllerName.characterCollectionVC)
                 self.present(vc, animated: true, completion: nil)
             })
+=======
+            .subscribe(onNext: { _ in
+                self.tabBarController?.dismiss(animated: true, completion: nil)
+            }).disposed(by: disposeBag)
+        
+        showCharacterVCBtn.rx.tap
+            .subscribe(onNext: { _ in
+                let vc = self.makeVC(identifier: ViewControllerName.characterCollectionVC)
+                vc.modalPresentationStyle = .popover
+                self.present(vc, animated: true, completion: nil)
+            }).disposed(by: disposeBag)
+>>>>>>> Stashed changes
     }
 }
