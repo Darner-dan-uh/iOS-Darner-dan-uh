@@ -23,7 +23,11 @@ extension UIViewController {
     }
     
     func makeVC<T>(storyBoardName: String? = nil, identifier: ViewControllerName) -> T where T: UIViewController {
-        //        let storyBoard = UIStoryboard(name: storyBoardName!, bundle: nil)
+        if let storyBoard = storyBoardName {
+            let newStoryBoard = UIStoryboard(name: storyBoard, bundle: nil)
+            let vc = newStoryBoard.instantiateViewController(identifier: identifier.rawValue) as! T
+            return vc
+        }
         let vc = storyboard?.instantiateViewController(identifier: identifier.rawValue) as! T
         return vc
     }
