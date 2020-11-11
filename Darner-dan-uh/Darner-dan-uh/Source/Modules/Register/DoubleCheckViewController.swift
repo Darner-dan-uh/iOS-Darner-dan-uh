@@ -11,7 +11,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-final class DoubleCheckVC: UIViewController {
+final class DoubleCheckViewController: UIViewController {
     
     let disposeBag = DisposeBag()
     
@@ -20,17 +20,21 @@ final class DoubleCheckVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.bindUI()
+        bindUI()
+        bindAction()
     }
-    
-    @IBAction func pushVC(_ sender: Any) {
-        
-    }
-    
-    
 }
 
-extension DoubleCheckVC {
+extension DoubleCheckViewController {
+    private func bindAction() {
+        nextBtn.rx.tap
+            .map {/* 이메일 보냄*/ }
+            .subscribe { _ in
+                let vc = self.makeVC(identifier: ViewControllerName.checkCertificationVC)
+                self.navigationController?.pushViewController(vc, animated: true)
+            }.disposed(by: disposeBag)
+    }
+
     private func bindUI() {
         emailTxtField.rx.text.orEmpty
             .map { self.checkEmail(email: $0) }

@@ -10,32 +10,41 @@ import UIKit
 
 import RxCocoa
 import RxSwift
-final class CheckCertificationNumberVC: UIViewController {
+
+final class CheckCertificationNumberViewController: UIViewController {
     
     let disposeBag = DisposeBag()
     
+    @IBOutlet weak var previousVCBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var certificationNumberTxtField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.bindUI()
-    }
-    @IBAction func popVC(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    @IBAction func nextVCBtn(_ sender: Any) {
-        // textfiled 값 post
-        // sussess 면 다음 페이지
-        // fail 이면 알람
-        
-        let vc = (storyboard?.instantiateViewController(identifier: "a"))!
-        self.navigationController?.pushViewController(vc, animated: true)
+        bindUI()
+        bindAction()
     }
 }
 
-extension CheckCertificationNumberVC {
-    func bindUI() {
+extension CheckCertificationNumberViewController {
+    private func bindAction() {
+        nextBtn.rx.tap
+            .map { //  textfiled 값 post
+                // sussess 면 다음 페이지
+                // fail 이면 알람
+            }
+            .subscribe { _ in
+                let vc = self.makeVC(identifier: ViewControllerName.finishRegisterVC)
+                self.navigationController?.pushViewController(vc, animated: true)
+            }.disposed(by: disposeBag)
+        
+        previousVCBtn.rx.tap
+            .subscribe { _ in
+                self.navigationController?.popViewController(animated: true)
+            }.disposed(by: disposeBag)
+    }
+    
+    private func bindUI() {
         certificationNumberTxtField.rx.text.orEmpty
             .map { self.checkEmail(email: $0) }
             .subscribe(onNext: { bool in
