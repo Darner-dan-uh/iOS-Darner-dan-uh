@@ -20,11 +20,9 @@ final class DoubleCheckViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.bindUI()
+        bindUI()
         bindAction()
     }
-    
-    
 }
 
 extension DoubleCheckViewController {
@@ -36,7 +34,7 @@ extension DoubleCheckViewController {
                 self.navigationController?.pushViewController(vc, animated: true)
             }.disposed(by: disposeBag)
     }
-    
+
     private func bindUI() {
         emailTxtField.rx.text.orEmpty
             .map { self.checkEmail(email: $0) }

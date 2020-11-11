@@ -15,32 +15,32 @@ final class CheckCertificationNumberViewController: UIViewController {
     
     let disposeBag = DisposeBag()
     
-    @IBOutlet weak var popVCBtn: UIButton!
+    @IBOutlet weak var previousVCBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var certificationNumberTxtField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.bindUI()
+        bindUI()
+        bindAction()
     }
 }
 
 extension CheckCertificationNumberViewController {
     private func bindAction() {
-        
-        popVCBtn.rx.tap
-            .subscribe { _ in
-            self.navigationController?.popViewController(animated: true)
-        }.disposed(by: disposeBag)
-        
         nextBtn.rx.tap
             .map { //  textfiled 값 post
                 // sussess 면 다음 페이지
                 // fail 이면 알람
             }
             .subscribe { _ in
-                let vc = self.makeVC(identifier: ViewControllerName.FinishRegisterVC)
+                let vc = self.makeVC(identifier: ViewControllerName.finishRegisterVC)
                 self.navigationController?.pushViewController(vc, animated: true)
+            }.disposed(by: disposeBag)
+        
+        previousVCBtn.rx.tap
+            .subscribe { _ in
+                self.navigationController?.popViewController(animated: true)
             }.disposed(by: disposeBag)
     }
     
