@@ -20,7 +20,6 @@ final class MemorizationViewController: UIViewController {
     }
     private let disposeBag = DisposeBag()
     
-    
     @IBOutlet weak var memorizeTapItem: UINavigationItem!
     @IBOutlet weak var myPageBtn: UIButton!
     @IBOutlet weak var lawBtn: UIButton!
@@ -65,8 +64,10 @@ extension MemorizationViewController {
         
         
         myPageBtn.rx.tap
-            .map { /*my page presnet 해주기 */}
-            .subscribe()
+            .subscribe({ _ in
+                let vc = self.makeVC(identifier: ViewControllerName.myCharacterVC)
+                self.present(vc, animated: true, completion: nil)
+            })
             .disposed(by: disposeBag)
     }
 }

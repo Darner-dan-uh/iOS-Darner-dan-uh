@@ -35,6 +35,10 @@ final class SelectWordNumViewController: UIViewController {
 }
 
 extension SelectWordNumViewController {
+    private func bindUI() {
+        
+    }
+    
     private func bindAction() {
         minusWordNumBtn.rx.tap
             .map { self.editWordCount(self.minusWordNumBtn, self.wordNum)}
@@ -59,10 +63,6 @@ extension SelectWordNumViewController {
                 let vc: TestTableViewController = self.makeVC(identifier: ViewControllerName.testTableVC)
                 self.navigationController?.pushViewController(vc, animated: true)
             }).disposed(by: disposeBag)
-    }
-    
-    private func bindUI() {
-        
     }
     
     private func editWordCount(_ sender: UIButton,_ num: Int) -> Int {

@@ -7,24 +7,49 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
-class CharacterCollectionViewController: UIViewController {
+final class CharacterCollectionViewController: UIViewController {
+    private let disposeBag = DisposeBag()
 
+    @IBOutlet weak var firstCharacterBtn: UIButton!
+    @IBOutlet weak var cancelBtn: UIBarButtonItem!
+    @IBOutlet weak var secCharacterBtn: UIButton!
+    @IBOutlet weak var thirdCharacterBtn: UIButton!
+    @IBOutlet weak var fourthCharacterBtn: UIButton!
+    @IBOutlet weak var fifthCharacterBtn: UIButton!
+    @IBOutlet weak var sixCharacterBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        bindAction()
         // Do any additional setup after loading the view.
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension CharacterCollectionViewController {
+    private func bindUI() {
+        
+        
     }
-    */
-
+    
+    private func bindAction() {
+        Observable.merge(firstCharacterBtn.rx.tap.map {},
+                         secCharacterBtn.rx.tap.map {},
+                         thirdCharacterBtn.rx.tap.map {},
+                         fourthCharacterBtn.rx.tap.map {},
+                         fifthCharacterBtn.rx.tap.map {},
+                         sixCharacterBtn.rx.tap.map {}
+        )
+        .subscribe({ _ in
+            let vc = self.makeVC(identifier: ViewControllerName.setMainCharacterVC)
+            self.present(vc, animated: true, completion: nil)
+        }).disposed(by: disposeBag)
+        
+        cancelBtn.rx.tap
+            .subscribe { _ in
+            self.dismiss(animated: true, completion: nil)
+        }.disposed(by: disposeBag)
+    }
 }

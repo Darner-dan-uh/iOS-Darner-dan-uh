@@ -14,7 +14,6 @@ import RxSwift
 class MyCharacterViewController: UIViewController {
     let stringObs: Observable<String>! = nil // 서버 통신 후 받아온 문자
     let level: Int = 3 // 사용자 캐릭터의 레벨
-    var a: Int? = 0
     private let disposeBag = DisposeBag()
 
     @IBOutlet weak var userIdLbl: UILabel!
@@ -28,16 +27,7 @@ class MyCharacterViewController: UIViewController {
         super.viewDidLoad()
         bindUI()
         bindAction()
-        // Do any additional setup after loading the view.
     }
-<<<<<<< Updated upstream
-=======
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-//        bindAction()
-    }
->>>>>>> Stashed changes
 }
 
 extension MyCharacterViewController {
@@ -50,8 +40,7 @@ extension MyCharacterViewController {
 //            .bind(to: self.userLevelLbl.rx.text)
 //            .disposed(by: disposeBag)
 //
-       
-        
+        let a : Int?
         switch level {
         
         case 0...2:
@@ -69,20 +58,15 @@ extension MyCharacterViewController {
     
     private func bindAction() {
         cancelBtn.rx.tap
-<<<<<<< Updated upstream
-            .bind(to: { _  in
+            .subscribe({_ in
                 self.dismiss(animated: true, completion: nil)
-            })
+            }).disposed(by: disposeBag)
         
         showCharacterVCBtn.rx.tap
             .bind(to: { _ in
                 let vc = makeVC(identifier: ViewControllerName.characterCollectionVC)
                 self.present(vc, animated: true, completion: nil)
             })
-=======
-            .subscribe(onNext: { _ in
-                self.tabBarController?.dismiss(animated: true, completion: nil)
-            }).disposed(by: disposeBag)
         
         showCharacterVCBtn.rx.tap
             .subscribe(onNext: { _ in
@@ -90,6 +74,5 @@ extension MyCharacterViewController {
                 vc.modalPresentationStyle = .popover
                 self.present(vc, animated: true, completion: nil)
             }).disposed(by: disposeBag)
->>>>>>> Stashed changes
     }
 }

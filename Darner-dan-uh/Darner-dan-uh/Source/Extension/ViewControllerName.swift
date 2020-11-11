@@ -21,4 +21,6 @@ enum ViewControllerName: String {
     case FinishRegisterVC = "FinishRegisterViewController"
     case tabbarVC = "TabbarViewController"
     case characterCollectionVC = "CharacterCollectionViewController"
+    case setMainCharacterVC = "SetMainCharacterViewController"
+    case myCharacterVC = "MyCharacterViewController"
 }
