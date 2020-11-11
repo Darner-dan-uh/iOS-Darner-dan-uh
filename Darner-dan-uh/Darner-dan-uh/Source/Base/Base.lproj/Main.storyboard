@@ -214,7 +214,14 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJm-d5-6z0">
                                 <rect key="frame" x="18" y="59.5" width="12" height="22"/>
+<<<<<<< Updated upstream
                                 <state key="normal" image="그룹 5"/>
+=======
+                                <state key="normal" image="Image"/>
+                                <connections>
+                                    <action selector="popVC:" destination="eJv-53-xTB" eventType="touchUpInside" id="Hm1-jX-z1s"/>
+                                </connections>
+>>>>>>> Stashed changes
                             </button>
                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hvi-uZ-2cl">
                                 <rect key="frame" x="82" y="468" width="250" height="41"/>
@@ -464,7 +471,14 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNp-ll-07z">
                                 <rect key="frame" x="18" y="61.5" width="12" height="22"/>
+<<<<<<< Updated upstream
                                 <state key="normal" image="그룹 5"/>
+=======
+                                <state key="normal" image="Image"/>
+                                <connections>
+                                    <action selector="popVC:" destination="xkf-L2-OwB" eventType="touchUpInside" id="GxU-tp-m2c"/>
+                                </connections>
+>>>>>>> Stashed changes
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoImage" translatesAutoresizingMaskIntoConstraints="NO" id="9M7-EA-gqF">
                                 <rect key="frame" x="190.5" y="53" width="33" height="39"/>
@@ -673,7 +687,14 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7S-fu-VnD">
                                 <rect key="frame" x="18" y="61.5" width="12" height="22"/>
+<<<<<<< Updated upstream
                                 <state key="normal" image="그룹 5"/>
+=======
+                                <state key="normal" image="Image"/>
+                                <connections>
+                                    <action selector="popVC:" destination="5dz-87-A4X" eventType="touchUpInside" id="zLK-B1-KTZ"/>
+                                </connections>
+>>>>>>> Stashed changes
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일을 확인해주세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZV-8r-nij">
                                 <rect key="frame" x="85.5" y="302" width="243.5" height="32"/>
@@ -984,8 +1005,12 @@
     <resources>
         <image name="Icon ionic-ios-checkmark-circle" width="24" height="23.5"/>
         <image name="Icon material-radio-button-unchecked" width="24" height="23.5"/>
+        <image name="Image" width="11.5" height="20"/>
         <image name="LogoImage" width="139" height="167"/>
+<<<<<<< Updated upstream
         <image name="그룹 5" width="11.5" height="20"/>
+=======
+>>>>>>> Stashed changes
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
