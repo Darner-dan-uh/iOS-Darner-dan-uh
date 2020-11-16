@@ -157,7 +157,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCF-bn-h6Z">
-                                <rect key="frame" x="40" y="344" width="47" height="21"/>
+                                <rect key="frame" x="40" y="344" width="49.5" height="23.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="닉네임">
                                         <attributes>
@@ -169,19 +169,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Qy-cp-DYW">
-                                <rect key="frame" x="32" y="373" width="350" height="35"/>
+                                <rect key="frame" x="32" y="375.5" width="350" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="ifP-s9-4Jd"/>
                                     <constraint firstAttribute="width" constant="350" id="tCV-4h-bed"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
-                                </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmQ-Qp-A26">
-                                <rect key="frame" x="40" y="451" width="62.5" height="21"/>
+                                <rect key="frame" x="40" y="453.5" width="66" height="23.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="비밀번호">
                                         <attributes>
@@ -193,7 +190,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W7T-Pe-UJc">
-                                <rect key="frame" x="32" y="482" width="350" height="35"/>
+                                <rect key="frame" x="32" y="487" width="350" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="QVD-hC-nja"/>
                                     <constraint firstAttribute="width" constant="350" id="RUf-gR-oNZ"/>
@@ -202,7 +199,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FVK-mc-yaF">
-                                <rect key="frame" x="107" y="585" width="200" height="35.5"/>
+                                <rect key="frame" x="107" y="590" width="200" height="37.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="bef-9f-cvW"/>
                                 </constraints>
