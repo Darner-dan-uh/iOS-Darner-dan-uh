@@ -8,11 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9F0D61B525538FC100D8447F /* Mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F0D61B425538FC100D8447F /* Mypage.storyboard */; };
-		9F0D61B8255392CC00D8447F /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D61B7255392CC00D8447F /* MypageViewController.swift */; };
-		9F0D61BB2553979400D8447F /* ModifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D61BA2553979400D8447F /* ModifyViewController.swift */; };
 		9F8479B02553C5A7008FE847 /* MypageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8479AF2553C5A7008FE847 /* MypageViewModel.swift */; };
 		9F8479B42553C5CA008FE847 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8479B32553C5CA008FE847 /* ViewModelType.swift */; };
-		9F98651A255404DF0099BB02 /* EnterPwViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F986519255404DF0099BB02 /* EnterPwViewController.swift */; };
 		D63FE3212535EF4600DCD75F /* BinggraeMelona-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D63FE31F2535EF4500DCD75F /* BinggraeMelona-Bold.ttf */; };
 		D63FE3222535EF4600DCD75F /* BinggraeMelona.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D63FE3202535EF4500DCD75F /* BinggraeMelona.ttf */; };
 		D63FE3322536118200DCD75F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63FE3312536118200DCD75F /* LoginViewModel.swift */; };
@@ -21,30 +18,30 @@
 		D6578AD22500867A000185F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6578AD02500867A000185F1 /* Main.storyboard */; };
 		D6578AD42500867C000185F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6578AD32500867C000185F1 /* Assets.xcassets */; };
 		D6578AD72500867C000185F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6578AD52500867C000185F1 /* LaunchScreen.storyboard */; };
-		D6BB3723255D1BD00049BB65 /* ViewControllerName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB371F255D1BD00049BB65 /* ViewControllerName.swift */; };
-		D6BB3724255D1BD00049BB65 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB3720255D1BD00049BB65 /* UIColor.swift */; };
-		D6BB3725255D1BD00049BB65 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB3721255D1BD00049BB65 /* UIButton.swift */; };
-		D6BB3726255D1BD00049BB65 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB3722255D1BD00049BB65 /* UIViewController.swift */; };
-		D6BB372B255D1BE60049BB65 /* DarnerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB372A255D1BE60049BB65 /* DarnerAPI.swift */; };
-		D6BB3746255D1BF30049BB65 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB372F255D1BF30049BB65 /* RankingViewController.swift */; };
-		D6BB3747255D1BF30049BB65 /* SelectWordNumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB3731255D1BF30049BB65 /* SelectWordNumViewController.swift */; };
-		D6BB3748255D1BF30049BB65 /* WordResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB3733255D1BF30049BB65 /* WordResultCell.swift */; };
-		D6BB3749255D1BF30049BB65 /* WordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB3734255D1BF30049BB65 /* WordCell.swift */; };
-		D6BB374A255D1BF30049BB65 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB3735255D1BF30049BB65 /* TestViewController.swift */; };
-		D6BB374B255D1BF30049BB65 /* TestResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB3736255D1BF30049BB65 /* TestResultViewController.swift */; };
-		D6BB374C255D1BF30049BB65 /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB3737255D1BF30049BB65 /* TestTableViewController.swift */; };
-		D6BB374D255D1BF30049BB65 /* MemorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB3738255D1BF30049BB65 /* MemorizationViewController.swift */; };
-		D6BB374E255D1BF30049BB65 /* SetMainCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB373A255D1BF30049BB65 /* SetMainCharacterViewController.swift */; };
-		D6BB374F255D1BF30049BB65 /* CharacterCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB373B255D1BF30049BB65 /* CharacterCollectionViewController.swift */; };
-		D6BB3750255D1BF30049BB65 /* MyCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB373C255D1BF30049BB65 /* MyCharacterViewController.swift */; };
-		D6BB3755255D1BF30049BB65 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB3743255D1BF30049BB65 /* LoginViewController.swift */; };
-		D6BB3756255D1BF30049BB65 /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB3745255D1BF30049BB65 /* WritingViewController.swift */; };
-		D6BB375A255D210D0049BB65 /* DarnerAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB3759255D210D0049BB65 /* DarnerAPIClient.swift */; };
-		D6BB3785255E0EB80049BB65 /* CheckCertificationNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB3781255E0EB80049BB65 /* CheckCertificationNumberViewController.swift */; };
-		D6BB3786255E0EB80049BB65 /* FinishRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB3782255E0EB80049BB65 /* FinishRegisterViewController.swift */; };
-		D6BB3787255E0EB80049BB65 /* DoubleCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB3783255E0EB80049BB65 /* DoubleCheckViewController.swift */; };
-		D6BB3788255E0EB80049BB65 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB3784255E0EB80049BB65 /* RegisterViewController.swift */; };
-		D6BB3792256296DF0049BB65 /* MypageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB3791256296DF0049BB65 /* MypageModel.swift */; };
+		D6A6E0DF256346D200A77E05 /* RankingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E0C5256346D100A77E05 /* RankingVC.swift */; };
+		D6A6E0E0256346D200A77E05 /* SelectWordNumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E0C7256346D100A77E05 /* SelectWordNumViewController.swift */; };
+		D6A6E0E1256346D200A77E05 /* WordResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E0C9256346D100A77E05 /* WordResultCell.swift */; };
+		D6A6E0E2256346D200A77E05 /* WordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E0CA256346D100A77E05 /* WordCell.swift */; };
+		D6A6E0E3256346D200A77E05 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E0CB256346D100A77E05 /* TestViewController.swift */; };
+		D6A6E0E4256346D200A77E05 /* TestResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E0CC256346D100A77E05 /* TestResultViewController.swift */; };
+		D6A6E0E5256346D200A77E05 /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E0CD256346D100A77E05 /* TestTableViewController.swift */; };
+		D6A6E0E6256346D200A77E05 /* MemorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E0CE256346D100A77E05 /* MemorizationViewController.swift */; };
+		D6A6E0E7256346D200A77E05 /* ModifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E0D0256346D100A77E05 /* ModifyViewController.swift */; };
+		D6A6E0E8256346D200A77E05 /* EnterPwViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E0D1256346D100A77E05 /* EnterPwViewController.swift */; };
+		D6A6E0E9256346D200A77E05 /* SetMainCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E0D2256346D100A77E05 /* SetMainCharacterViewController.swift */; };
+		D6A6E0EA256346D200A77E05 /* CharacterCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E0D3256346D100A77E05 /* CharacterCollectionViewController.swift */; };
+		D6A6E0EB256346D200A77E05 /* MyCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E0D4256346D200A77E05 /* MyCharacterViewController.swift */; };
+		D6A6E0EC256346D200A77E05 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E0D5256346D200A77E05 /* MypageViewController.swift */; };
+		D6A6E0ED256346D200A77E05 /* CheckCertificationNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E0D7256346D200A77E05 /* CheckCertificationNumberViewController.swift */; };
+		D6A6E0EE256346D200A77E05 /* FinishRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E0D8256346D200A77E05 /* FinishRegisterViewController.swift */; };
+		D6A6E0EF256346D200A77E05 /* DoubleCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E0D9256346D200A77E05 /* DoubleCheckViewController.swift */; };
+		D6A6E0F0256346D200A77E05 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E0DA256346D200A77E05 /* RegisterViewController.swift */; };
+		D6A6E0F1256346D200A77E05 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E0DC256346D200A77E05 /* LoginViewController.swift */; };
+		D6A6E0F2256346D200A77E05 /* WritingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E0DE256346D200A77E05 /* WritingVC.swift */; };
+		D6A6E0F9256346DC00A77E05 /* ViewControllerName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E0F5256346DC00A77E05 /* ViewControllerName.swift */; };
+		D6A6E0FA256346DC00A77E05 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E0F6256346DC00A77E05 /* UIColor.swift */; };
+		D6A6E0FB256346DC00A77E05 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E0F7256346DC00A77E05 /* UIButton.swift */; };
+		D6A6E0FC256346DC00A77E05 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E0F8256346DC00A77E05 /* UIViewController.swift */; };
 		D6BB3795256296E70049BB65 /* MypageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB3794256296E70049BB65 /* MypageModel.swift */; };
 		D6E68852252EB53F00FA09C1 /* Writing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E68851252EB53F00FA09C1 /* Writing.storyboard */; };
 		D6E68855252EB54600FA09C1 /* Ranking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E68854252EB54600FA09C1 /* Ranking.storyboard */; };
@@ -57,11 +54,8 @@
 		2C2C5094395481B434C2AC5C /* Pods_Darner_dan_uh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Darner_dan_uh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		773631FB34EA472779385722 /* Pods-Darner-dan-uh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Darner-dan-uh.release.xcconfig"; path = "Target Support Files/Pods-Darner-dan-uh/Pods-Darner-dan-uh.release.xcconfig"; sourceTree = "<group>"; };
 		9F0D61B425538FC100D8447F /* Mypage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mypage.storyboard; sourceTree = "<group>"; };
-		9F0D61B7255392CC00D8447F /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
-		9F0D61BA2553979400D8447F /* ModifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyViewController.swift; sourceTree = "<group>"; };
 		9F8479AF2553C5A7008FE847 /* MypageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewModel.swift; sourceTree = "<group>"; };
 		9F8479B32553C5CA008FE847 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
-		9F986519255404DF0099BB02 /* EnterPwViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPwViewController.swift; sourceTree = "<group>"; };
 		D63FE31F2535EF4500DCD75F /* BinggraeMelona-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BinggraeMelona-Bold.ttf"; sourceTree = "<group>"; };
 		D63FE3202535EF4500DCD75F /* BinggraeMelona.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BinggraeMelona.ttf; sourceTree = "<group>"; };
 		D63FE3312536118200DCD75F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -72,30 +66,30 @@
 		D6578AD32500867C000185F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6578AD62500867C000185F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6578AD82500867C000185F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D6BB371F255D1BD00049BB65 /* ViewControllerName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerName.swift; sourceTree = "<group>"; };
-		D6BB3720255D1BD00049BB65 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		D6BB3721255D1BD00049BB65 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
-		D6BB3722255D1BD00049BB65 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		D6BB372A255D1BE60049BB65 /* DarnerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarnerAPI.swift; sourceTree = "<group>"; };
-		D6BB372F255D1BF30049BB65 /* RankingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
-		D6BB3731255D1BF30049BB65 /* SelectWordNumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectWordNumViewController.swift; sourceTree = "<group>"; };
-		D6BB3733255D1BF30049BB65 /* WordResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordResultCell.swift; sourceTree = "<group>"; };
-		D6BB3734255D1BF30049BB65 /* WordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordCell.swift; sourceTree = "<group>"; };
-		D6BB3735255D1BF30049BB65 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		D6BB3736255D1BF30049BB65 /* TestResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestResultViewController.swift; sourceTree = "<group>"; };
-		D6BB3737255D1BF30049BB65 /* TestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
-		D6BB3738255D1BF30049BB65 /* MemorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemorizationViewController.swift; sourceTree = "<group>"; };
-		D6BB373A255D1BF30049BB65 /* SetMainCharacterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetMainCharacterViewController.swift; sourceTree = "<group>"; };
-		D6BB373B255D1BF30049BB65 /* CharacterCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewController.swift; sourceTree = "<group>"; };
-		D6BB373C255D1BF30049BB65 /* MyCharacterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCharacterViewController.swift; sourceTree = "<group>"; };
-		D6BB3743255D1BF30049BB65 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		D6BB3745255D1BF30049BB65 /* WritingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
-		D6BB3759255D210D0049BB65 /* DarnerAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarnerAPIClient.swift; sourceTree = "<group>"; };
-		D6BB3781255E0EB80049BB65 /* CheckCertificationNumberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckCertificationNumberViewController.swift; sourceTree = "<group>"; };
-		D6BB3782255E0EB80049BB65 /* FinishRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishRegisterViewController.swift; sourceTree = "<group>"; };
-		D6BB3783255E0EB80049BB65 /* DoubleCheckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleCheckViewController.swift; sourceTree = "<group>"; };
-		D6BB3784255E0EB80049BB65 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		D6BB3791256296DF0049BB65 /* MypageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageModel.swift; sourceTree = "<group>"; };
+		D6A6E0C5256346D100A77E05 /* RankingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingVC.swift; sourceTree = "<group>"; };
+		D6A6E0C7256346D100A77E05 /* SelectWordNumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectWordNumViewController.swift; sourceTree = "<group>"; };
+		D6A6E0C9256346D100A77E05 /* WordResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordResultCell.swift; sourceTree = "<group>"; };
+		D6A6E0CA256346D100A77E05 /* WordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordCell.swift; sourceTree = "<group>"; };
+		D6A6E0CB256346D100A77E05 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		D6A6E0CC256346D100A77E05 /* TestResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestResultViewController.swift; sourceTree = "<group>"; };
+		D6A6E0CD256346D100A77E05 /* TestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
+		D6A6E0CE256346D100A77E05 /* MemorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemorizationViewController.swift; sourceTree = "<group>"; };
+		D6A6E0D0256346D100A77E05 /* ModifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyViewController.swift; sourceTree = "<group>"; };
+		D6A6E0D1256346D100A77E05 /* EnterPwViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterPwViewController.swift; sourceTree = "<group>"; };
+		D6A6E0D2256346D100A77E05 /* SetMainCharacterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetMainCharacterViewController.swift; sourceTree = "<group>"; };
+		D6A6E0D3256346D100A77E05 /* CharacterCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewController.swift; sourceTree = "<group>"; };
+		D6A6E0D4256346D200A77E05 /* MyCharacterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCharacterViewController.swift; sourceTree = "<group>"; };
+		D6A6E0D5256346D200A77E05 /* MypageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
+		D6A6E0D7256346D200A77E05 /* CheckCertificationNumberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckCertificationNumberViewController.swift; sourceTree = "<group>"; };
+		D6A6E0D8256346D200A77E05 /* FinishRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishRegisterViewController.swift; sourceTree = "<group>"; };
+		D6A6E0D9256346D200A77E05 /* DoubleCheckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleCheckViewController.swift; sourceTree = "<group>"; };
+		D6A6E0DA256346D200A77E05 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D6A6E0DC256346D200A77E05 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D6A6E0DE256346D200A77E05 /* WritingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingVC.swift; sourceTree = "<group>"; };
+		D6A6E0F5256346DC00A77E05 /* ViewControllerName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerName.swift; sourceTree = "<group>"; };
+		D6A6E0F6256346DC00A77E05 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		D6A6E0F7256346DC00A77E05 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		D6A6E0F8256346DC00A77E05 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		D6BB3794256296E70049BB65 /* MypageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageModel.swift; sourceTree = "<group>"; };
 		D6E68851252EB53F00FA09C1 /* Writing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Writing.storyboard; sourceTree = "<group>"; };
 		D6E68854252EB54600FA09C1 /* Ranking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ranking.storyboard; sourceTree = "<group>"; };
@@ -134,9 +128,8 @@
 		D63FE3262535EFD400DCD75F /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				D6BB372D255D1BF30049BB65 /* Modules */,
-				D6BB3729255D1BE60049BB65 /* NetWorking */,
-				D6BB371E255D1BD00049BB65 /* Extension */,
+				D6A6E0F4256346DC00A77E05 /* Extension */,
+				D6A6E0C3256346D100A77E05 /* Modules */,
 				D63FE3302536116C00DCD75F /* ViewModel */,
 				D6E68841252EB41B00FA09C1 /* Base */,
 				D6BB377E255E0D860049BB65 /* Model */,
@@ -193,99 +186,98 @@
 			path = "Darner-dan-uh";
 			sourceTree = "<group>";
 		};
-		D6BB371E255D1BD00049BB65 /* Extension */ = {
+		D6A6E0C3256346D100A77E05 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				D6BB371F255D1BD00049BB65 /* ViewControllerName.swift */,
-				D6BB3720255D1BD00049BB65 /* UIColor.swift */,
-				D6BB3721255D1BD00049BB65 /* UIButton.swift */,
-				D6BB3791256296DF0049BB65 /* MypageModel.swift */,
-				D6BB3722255D1BD00049BB65 /* UIViewController.swift */,
+				D6A6E0C4256346D100A77E05 /* Ranking */,
+				D6A6E0C6256346D100A77E05 /* Memorization */,
+				D6A6E0CF256346D100A77E05 /* MyPage */,
+				D6A6E0D6256346D200A77E05 /* Register */,
+				D6A6E0DB256346D200A77E05 /* Login */,
+				D6A6E0DD256346D200A77E05 /* Writing */,
 			);
-			name = Extension;
-			path = "../../../../iOS-Darner-dan-uh 복사본/Darner-dan-uh/Darner-dan-uh/Source/Extension";
+			path = Modules;
 			sourceTree = "<group>";
 		};
-		D6BB3729255D1BE60049BB65 /* NetWorking */ = {
+		D6A6E0C4256346D100A77E05 /* Ranking */ = {
 			isa = PBXGroup;
 			children = (
-				D6BB372A255D1BE60049BB65 /* DarnerAPI.swift */,
-				D6BB3759255D210D0049BB65 /* DarnerAPIClient.swift */,
-			);
-			path = NetWorking;
-			sourceTree = "<group>";
-		};
-		D6BB372D255D1BF30049BB65 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				D6BB3780255E0EB80049BB65 /* Register */,
-				D6BB372E255D1BF30049BB65 /* Ranking */,
-				D6BB3730255D1BF30049BB65 /* Memorization */,
-				D6BB3739255D1BF30049BB65 /* MyPage */,
-				D6BB3742255D1BF30049BB65 /* Login */,
-				D6BB3744255D1BF30049BB65 /* Writing */,
-			);
-			name = Modules;
-			path = ViewModel/Modules;
-			sourceTree = "<group>";
-		};
-		D6BB372E255D1BF30049BB65 /* Ranking */ = {
-			isa = PBXGroup;
-			children = (
-				D6BB372F255D1BF30049BB65 /* RankingViewController.swift */,
+				D6A6E0C5256346D100A77E05 /* RankingVC.swift */,
 			);
 			path = Ranking;
 			sourceTree = "<group>";
 		};
-		D6BB3730255D1BF30049BB65 /* Memorization */ = {
+		D6A6E0C6256346D100A77E05 /* Memorization */ = {
 			isa = PBXGroup;
 			children = (
-				D6BB3732255D1BF30049BB65 /* Cell */,
-				D6BB3731255D1BF30049BB65 /* SelectWordNumViewController.swift */,
-				D6BB3735255D1BF30049BB65 /* TestViewController.swift */,
-				D6BB3736255D1BF30049BB65 /* TestResultViewController.swift */,
-				D6BB3737255D1BF30049BB65 /* TestTableViewController.swift */,
-				D6BB3738255D1BF30049BB65 /* MemorizationViewController.swift */,
+				D6A6E0C7256346D100A77E05 /* SelectWordNumViewController.swift */,
+				D6A6E0C8256346D100A77E05 /* Cell */,
+				D6A6E0CB256346D100A77E05 /* TestViewController.swift */,
+				D6A6E0CC256346D100A77E05 /* TestResultViewController.swift */,
+				D6A6E0CD256346D100A77E05 /* TestTableViewController.swift */,
+				D6A6E0CE256346D100A77E05 /* MemorizationViewController.swift */,
 			);
 			path = Memorization;
 			sourceTree = "<group>";
 		};
-		D6BB3732255D1BF30049BB65 /* Cell */ = {
+		D6A6E0C8256346D100A77E05 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				D6BB3733255D1BF30049BB65 /* WordResultCell.swift */,
-				D6BB3734255D1BF30049BB65 /* WordCell.swift */,
+				D6A6E0C9256346D100A77E05 /* WordResultCell.swift */,
+				D6A6E0CA256346D100A77E05 /* WordCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		D6BB3739255D1BF30049BB65 /* MyPage */ = {
+		D6A6E0CF256346D100A77E05 /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
-				9F986519255404DF0099BB02 /* EnterPwViewController.swift */,
-				D6BB373A255D1BF30049BB65 /* SetMainCharacterViewController.swift */,
-				9F0D61B7255392CC00D8447F /* MypageViewController.swift */,
-				9F0D61BA2553979400D8447F /* ModifyViewController.swift */,
-				D6BB373B255D1BF30049BB65 /* CharacterCollectionViewController.swift */,
-				D6BB373C255D1BF30049BB65 /* MyCharacterViewController.swift */,
+				D6A6E0D0256346D100A77E05 /* ModifyViewController.swift */,
+				D6A6E0D1256346D100A77E05 /* EnterPwViewController.swift */,
+				D6A6E0D2256346D100A77E05 /* SetMainCharacterViewController.swift */,
+				D6A6E0D3256346D100A77E05 /* CharacterCollectionViewController.swift */,
+				D6A6E0D4256346D200A77E05 /* MyCharacterViewController.swift */,
+				D6A6E0D5256346D200A77E05 /* MypageViewController.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
 		};
-		D6BB3742255D1BF30049BB65 /* Login */ = {
+		D6A6E0D6256346D200A77E05 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				D6BB3743255D1BF30049BB65 /* LoginViewController.swift */,
+				D6A6E0D7256346D200A77E05 /* CheckCertificationNumberViewController.swift */,
+				D6A6E0D8256346D200A77E05 /* FinishRegisterViewController.swift */,
+				D6A6E0D9256346D200A77E05 /* DoubleCheckViewController.swift */,
+				D6A6E0DA256346D200A77E05 /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		D6A6E0DB256346D200A77E05 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D6A6E0DC256346D200A77E05 /* LoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
 		};
-		D6BB3744255D1BF30049BB65 /* Writing */ = {
+		D6A6E0DD256346D200A77E05 /* Writing */ = {
 			isa = PBXGroup;
 			children = (
-				D6BB3745255D1BF30049BB65 /* WritingViewController.swift */,
+				D6A6E0DE256346D200A77E05 /* WritingVC.swift */,
 			);
 			path = Writing;
+			sourceTree = "<group>";
+		};
+		D6A6E0F4256346DC00A77E05 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D6A6E0F5256346DC00A77E05 /* ViewControllerName.swift */,
+				D6A6E0F6256346DC00A77E05 /* UIColor.swift */,
+				D6A6E0F7256346DC00A77E05 /* UIButton.swift */,
+				D6A6E0F8256346DC00A77E05 /* UIViewController.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		D6BB377E255E0D860049BB65 /* Model */ = {
@@ -294,17 +286,6 @@
 				D6BB3794256296E70049BB65 /* MypageModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		D6BB3780255E0EB80049BB65 /* Register */ = {
-			isa = PBXGroup;
-			children = (
-				D6BB3781255E0EB80049BB65 /* CheckCertificationNumberViewController.swift */,
-				D6BB3782255E0EB80049BB65 /* FinishRegisterViewController.swift */,
-				D6BB3783255E0EB80049BB65 /* DoubleCheckViewController.swift */,
-				D6BB3784255E0EB80049BB65 /* RegisterViewController.swift */,
-			);
-			path = Register;
 			sourceTree = "<group>";
 		};
 		D6E68841252EB41B00FA09C1 /* Base */ = {
@@ -450,39 +431,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6BB3788255E0EB80049BB65 /* RegisterViewController.swift in Sources */,
-				D6BB374D255D1BF30049BB65 /* MemorizationViewController.swift in Sources */,
-				D6BB375A255D210D0049BB65 /* DarnerAPIClient.swift in Sources */,
-				D6BB372B255D1BE60049BB65 /* DarnerAPI.swift in Sources */,
+				D6A6E0EE256346D200A77E05 /* FinishRegisterViewController.swift in Sources */,
+				D6A6E0E7256346D200A77E05 /* ModifyViewController.swift in Sources */,
+				D6A6E0FB256346DC00A77E05 /* UIButton.swift in Sources */,
+				D6A6E0E8256346D200A77E05 /* EnterPwViewController.swift in Sources */,
+				D6A6E0E3256346D200A77E05 /* TestViewController.swift in Sources */,
+				D6A6E0EB256346D200A77E05 /* MyCharacterViewController.swift in Sources */,
+				D6A6E0E9256346D200A77E05 /* SetMainCharacterViewController.swift in Sources */,
 				D63FE34A2536731000DCD75F /* RegisterViewModel.swift in Sources */,
-				D6BB374E255D1BF30049BB65 /* SetMainCharacterViewController.swift in Sources */,
-				D6BB3725255D1BD00049BB65 /* UIButton.swift in Sources */,
-				D6BB374B255D1BF30049BB65 /* TestResultViewController.swift in Sources */,
-				D6BB3747255D1BF30049BB65 /* SelectWordNumViewController.swift in Sources */,
-				D6BB3785255E0EB80049BB65 /* CheckCertificationNumberViewController.swift in Sources */,
-				D6BB3750255D1BF30049BB65 /* MyCharacterViewController.swift in Sources */,
-				D6BB3756255D1BF30049BB65 /* WritingViewController.swift in Sources */,
-				D6BB3787255E0EB80049BB65 /* DoubleCheckViewController.swift in Sources */,
+				D6A6E0F9256346DC00A77E05 /* ViewControllerName.swift in Sources */,
+				D6A6E0E2256346D200A77E05 /* WordCell.swift in Sources */,
+				D6A6E0E5256346D200A77E05 /* TestTableViewController.swift in Sources */,
+				D6A6E0DF256346D200A77E05 /* RankingVC.swift in Sources */,
+				D6A6E0FC256346DC00A77E05 /* UIViewController.swift in Sources */,
+				D6A6E0E1256346D200A77E05 /* WordResultCell.swift in Sources */,
+				D6A6E0E0256346D200A77E05 /* SelectWordNumViewController.swift in Sources */,
+				D6A6E0F2256346D200A77E05 /* WritingVC.swift in Sources */,
+				D6A6E0E6256346D200A77E05 /* MemorizationViewController.swift in Sources */,
+				D6A6E0EF256346D200A77E05 /* DoubleCheckViewController.swift in Sources */,
 				D6578ACB2500867A000185F1 /* AppDelegate.swift in Sources */,
-				D6BB3755255D1BF30049BB65 /* LoginViewController.swift in Sources */,
-				D6BB374A255D1BF30049BB65 /* TestViewController.swift in Sources */,
-				D6BB3786255E0EB80049BB65 /* FinishRegisterViewController.swift in Sources */,
-				D6BB3724255D1BD00049BB65 /* UIColor.swift in Sources */,
-				D6BB3726255D1BD00049BB65 /* UIViewController.swift in Sources */,
-				D6BB3792256296DF0049BB65 /* MypageModel.swift in Sources */,
-				D6BB3723255D1BD00049BB65 /* ViewControllerName.swift in Sources */,
-				D6BB374F255D1BF30049BB65 /* CharacterCollectionViewController.swift in Sources */,
+				D6A6E0E4256346D200A77E05 /* TestResultViewController.swift in Sources */,
+				D6A6E0F1256346D200A77E05 /* LoginViewController.swift in Sources */,
+				D6A6E0FA256346DC00A77E05 /* UIColor.swift in Sources */,
+				D6A6E0EA256346D200A77E05 /* CharacterCollectionViewController.swift in Sources */,
 				D63FE3322536118200DCD75F /* LoginViewModel.swift in Sources */,
-				D6BB374C255D1BF30049BB65 /* TestTableViewController.swift in Sources */,
-				D6BB3749255D1BF30049BB65 /* WordCell.swift in Sources */,
-				D6BB3748255D1BF30049BB65 /* WordResultCell.swift in Sources */,
-				D6BB3746255D1BF30049BB65 /* RankingViewController.swift in Sources */,
-				9F0D61BB2553979400D8447F /* ModifyViewController.swift in Sources */,
+				D6A6E0EC256346D200A77E05 /* MypageViewController.swift in Sources */,
+				D6A6E0ED256346D200A77E05 /* CheckCertificationNumberViewController.swift in Sources */,
+				D6A6E0F0256346D200A77E05 /* RegisterViewController.swift in Sources */,
 				D6578ACB2500867A000185F1 /* AppDelegate.swift in Sources */,
-				9F0D61B8255392CC00D8447F /* MypageViewController.swift in Sources */,
 				9F8479B02553C5A7008FE847 /* MypageViewModel.swift in Sources */,
 				D6BB3795256296E70049BB65 /* MypageModel.swift in Sources */,
-				9F98651A255404DF0099BB02 /* EnterPwViewController.swift in Sources */,
 				9F8479B42553C5CA008FE847 /* ViewModelType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
