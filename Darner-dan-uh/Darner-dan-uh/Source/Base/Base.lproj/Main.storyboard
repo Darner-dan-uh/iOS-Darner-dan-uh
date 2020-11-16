@@ -507,6 +507,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M1q-Xl-a1g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="E3S-0M-CO2"/>
             </objects>
             <point key="canvasLocation" x="-1413" y="-297"/>
         </scene>
