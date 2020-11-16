@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< HEAD
 		D63FE3212535EF4600DCD75F /* BinggraeMelona-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D63FE31F2535EF4500DCD75F /* BinggraeMelona-Bold.ttf */; };
 		D63FE3222535EF4600DCD75F /* BinggraeMelona.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D63FE3202535EF4500DCD75F /* BinggraeMelona.ttf */; };
 		D63FE3322536118200DCD75F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63FE3312536118200DCD75F /* LoginViewModel.swift */; };
 		D63FE34A2536731000DCD75F /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63FE3492536731000DCD75F /* RegisterViewModel.swift */; };
-=======
 		9F0D61B525538FC100D8447F /* Mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F0D61B425538FC100D8447F /* Mypage.storyboard */; };
 		9F0D61B8255392CC00D8447F /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D61B7255392CC00D8447F /* MypageViewController.swift */; };
 		9F0D61BB2553979400D8447F /* ModifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D61BA2553979400D8447F /* ModifyViewController.swift */; };
@@ -22,7 +20,6 @@
 		9F9865162553ECCF0099BB02 /* BinggraeMelona.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9F9865132553ECAA0099BB02 /* BinggraeMelona.otf */; };
 		9F98651A255404DF0099BB02 /* EnterPwViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F986519255404DF0099BB02 /* EnterPwViewController.swift */; };
 		9F98651D255438130099BB02 /* MypageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F98651C255438130099BB02 /* MypageModel.swift */; };
->>>>>>> Mypage
 		D6578ACB2500867A000185F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6578ACA2500867A000185F1 /* AppDelegate.swift */; };
 		D6578AD22500867A000185F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6578AD02500867A000185F1 /* Main.storyboard */; };
 		D6578AD42500867C000185F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6578AD32500867C000185F1 /* Assets.xcassets */; };
@@ -61,12 +58,10 @@
 		0A6D3E1C8424177E67745A13 /* Pods-Darner-dan-uh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Darner-dan-uh.debug.xcconfig"; path = "Target Support Files/Pods-Darner-dan-uh/Pods-Darner-dan-uh.debug.xcconfig"; sourceTree = "<group>"; };
 		2C2C5094395481B434C2AC5C /* Pods_Darner_dan_uh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Darner_dan_uh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		773631FB34EA472779385722 /* Pods-Darner-dan-uh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Darner-dan-uh.release.xcconfig"; path = "Target Support Files/Pods-Darner-dan-uh/Pods-Darner-dan-uh.release.xcconfig"; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		D63FE31F2535EF4500DCD75F /* BinggraeMelona-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BinggraeMelona-Bold.ttf"; sourceTree = "<group>"; };
 		D63FE3202535EF4500DCD75F /* BinggraeMelona.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BinggraeMelona.ttf; sourceTree = "<group>"; };
 		D63FE3312536118200DCD75F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D63FE3492536731000DCD75F /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
-=======
 		9F0D61B425538FC100D8447F /* Mypage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mypage.storyboard; sourceTree = "<group>"; };
 		9F0D61B7255392CC00D8447F /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
 		9F0D61BA2553979400D8447F /* ModifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyViewController.swift; sourceTree = "<group>"; };
@@ -76,7 +71,6 @@
 		9F9865132553ECAA0099BB02 /* BinggraeMelona.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = BinggraeMelona.otf; path = ../../../../../Downloads/BinggraeMelona.otf; sourceTree = "<group>"; };
 		9F986519255404DF0099BB02 /* EnterPwViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPwViewController.swift; sourceTree = "<group>"; };
 		9F98651C255438130099BB02 /* MypageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageModel.swift; sourceTree = "<group>"; };
->>>>>>> Mypage
 		D6578AC72500867A000185F1 /* Darner-dan-uh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Darner-dan-uh.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6578ACA2500867A000185F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6578AD12500867A000185F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -480,7 +474,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				D6BB3788255E0EB80049BB65 /* RegisterViewController.swift in Sources */,
 				D6BB377C255E0D7F0049BB65 /* Model.swift in Sources */,
 				D6BB374D255D1BF30049BB65 /* MemorizationViewController.swift in Sources */,
@@ -508,7 +501,6 @@
 				D6BB3749255D1BF30049BB65 /* WordCell.swift in Sources */,
 				D6BB3748255D1BF30049BB65 /* WordResultCell.swift in Sources */,
 				D6BB3746255D1BF30049BB65 /* RankingViewController.swift in Sources */,
-=======
 				9F0D61BB2553979400D8447F /* ModifyViewController.swift in Sources */,
 				D6578ACF2500867A000185F1 /* WritingVC.swift in Sources */,
 				D6578ACB2500867A000185F1 /* AppDelegate.swift in Sources */,
@@ -520,7 +512,6 @@
 				9F98651A255404DF0099BB02 /* EnterPwViewController.swift in Sources */,
 				9F98651D255438130099BB02 /* MypageModel.swift in Sources */,
 				9F8479B42553C5CA008FE847 /* ViewModelType.swift in Sources */,
->>>>>>> Mypage
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
