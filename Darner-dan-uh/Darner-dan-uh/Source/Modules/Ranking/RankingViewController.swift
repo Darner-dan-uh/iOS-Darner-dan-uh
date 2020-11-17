@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class RankingVC: UIViewController {
+final class RankingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
