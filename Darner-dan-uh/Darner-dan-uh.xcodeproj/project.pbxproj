@@ -15,10 +15,10 @@
 		D6578AD22500867A000185F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6578AD02500867A000185F1 /* Main.storyboard */; };
 		D6578AD42500867C000185F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6578AD32500867C000185F1 /* Assets.xcassets */; };
 		D6578AD72500867C000185F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6578AD52500867C000185F1 /* LaunchScreen.storyboard */; };
-		D6BB3723255D1BD00049BB65 /* ViewControllerName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB371F255D1BD00049BB65 /* ViewControllerName.swift */; };
-		D6BB3724255D1BD00049BB65 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB3720255D1BD00049BB65 /* UIColor.swift */; };
-		D6BB3725255D1BD00049BB65 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB3721255D1BD00049BB65 /* UIButton.swift */; };
-		D6BB3726255D1BD00049BB65 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB3722255D1BD00049BB65 /* UIViewController.swift */; };
+		D6A6E11D25634B6400A77E05 /* ViewControllerName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E11925634B6400A77E05 /* ViewControllerName.swift */; };
+		D6A6E11E25634B6400A77E05 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E11A25634B6400A77E05 /* UIColor.swift */; };
+		D6A6E11F25634B6400A77E05 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E11B25634B6400A77E05 /* UIButton.swift */; };
+		D6A6E12025634B6400A77E05 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E11C25634B6400A77E05 /* UIViewController.swift */; };
 		D6BB372B255D1BE60049BB65 /* DarnerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB372A255D1BE60049BB65 /* DarnerAPI.swift */; };
 		D6BB3746255D1BF30049BB65 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB372F255D1BF30049BB65 /* RankingViewController.swift */; };
 		D6BB3747255D1BF30049BB65 /* SelectWordNumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB3731255D1BF30049BB65 /* SelectWordNumViewController.swift */; };
@@ -59,10 +59,10 @@
 		D6578AD32500867C000185F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6578AD62500867C000185F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6578AD82500867C000185F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D6BB371F255D1BD00049BB65 /* ViewControllerName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerName.swift; sourceTree = "<group>"; };
-		D6BB3720255D1BD00049BB65 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		D6BB3721255D1BD00049BB65 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
-		D6BB3722255D1BD00049BB65 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		D6A6E11925634B6400A77E05 /* ViewControllerName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerName.swift; sourceTree = "<group>"; };
+		D6A6E11A25634B6400A77E05 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		D6A6E11B25634B6400A77E05 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		D6A6E11C25634B6400A77E05 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		D6BB372A255D1BE60049BB65 /* DarnerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarnerAPI.swift; sourceTree = "<group>"; };
 		D6BB372F255D1BF30049BB65 /* RankingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
 		D6BB3731255D1BF30049BB65 /* SelectWordNumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectWordNumViewController.swift; sourceTree = "<group>"; };
@@ -120,9 +120,9 @@
 		D63FE3262535EFD400DCD75F /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				D6A6E11825634B6400A77E05 /* Extension */,
 				D6BB372D255D1BF30049BB65 /* Modules */,
 				D6BB3729255D1BE60049BB65 /* NetWorking */,
-				D6BB371E255D1BD00049BB65 /* Extension */,
 				D63FE3302536116C00DCD75F /* ViewModel */,
 				D6E68841252EB41B00FA09C1 /* Base */,
 				D6BB377E255E0D860049BB65 /* Model */,
@@ -177,16 +177,15 @@
 			path = "Darner-dan-uh";
 			sourceTree = "<group>";
 		};
-		D6BB371E255D1BD00049BB65 /* Extension */ = {
+		D6A6E11825634B6400A77E05 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				D6BB371F255D1BD00049BB65 /* ViewControllerName.swift */,
-				D6BB3720255D1BD00049BB65 /* UIColor.swift */,
-				D6BB3721255D1BD00049BB65 /* UIButton.swift */,
-				D6BB3722255D1BD00049BB65 /* UIViewController.swift */,
+				D6A6E11925634B6400A77E05 /* ViewControllerName.swift */,
+				D6A6E11A25634B6400A77E05 /* UIColor.swift */,
+				D6A6E11B25634B6400A77E05 /* UIButton.swift */,
+				D6A6E11C25634B6400A77E05 /* UIViewController.swift */,
 			);
-			name = Extension;
-			path = "../../../../iOS-Darner-dan-uh 복사본/Darner-dan-uh/Darner-dan-uh/Source/Extension";
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		D6BB3729255D1BE60049BB65 /* NetWorking */ = {
@@ -429,13 +428,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6BB3788255E0EB80049BB65 /* RegisterViewController.swift in Sources */,
+				D6A6E11F25634B6400A77E05 /* UIButton.swift in Sources */,
+				D6A6E12025634B6400A77E05 /* UIViewController.swift in Sources */,
 				D6BB377C255E0D7F0049BB65 /* Model.swift in Sources */,
 				D6BB374D255D1BF30049BB65 /* MemorizationViewController.swift in Sources */,
+				D6A6E11D25634B6400A77E05 /* ViewControllerName.swift in Sources */,
 				D6BB375A255D210D0049BB65 /* DarnerAPIClient.swift in Sources */,
 				D6BB372B255D1BE60049BB65 /* DarnerAPI.swift in Sources */,
 				D63FE34A2536731000DCD75F /* RegisterViewModel.swift in Sources */,
 				D6BB374E255D1BF30049BB65 /* SetMainCharacterViewController.swift in Sources */,
-				D6BB3725255D1BD00049BB65 /* UIButton.swift in Sources */,
 				D6BB374B255D1BF30049BB65 /* TestResultViewController.swift in Sources */,
 				D6BB3747255D1BF30049BB65 /* SelectWordNumViewController.swift in Sources */,
 				D6BB3785255E0EB80049BB65 /* CheckCertificationNumberViewController.swift in Sources */,
@@ -446,10 +447,8 @@
 				D6BB3755255D1BF30049BB65 /* LoginViewController.swift in Sources */,
 				D6BB374A255D1BF30049BB65 /* TestViewController.swift in Sources */,
 				D6BB3786255E0EB80049BB65 /* FinishRegisterViewController.swift in Sources */,
-				D6BB3724255D1BD00049BB65 /* UIColor.swift in Sources */,
-				D6BB3726255D1BD00049BB65 /* UIViewController.swift in Sources */,
-				D6BB3723255D1BD00049BB65 /* ViewControllerName.swift in Sources */,
 				D6BB374F255D1BF30049BB65 /* CharacterCollectionViewController.swift in Sources */,
+				D6A6E11E25634B6400A77E05 /* UIColor.swift in Sources */,
 				D63FE3322536118200DCD75F /* LoginViewModel.swift in Sources */,
 				D6BB374C255D1BF30049BB65 /* TestTableViewController.swift in Sources */,
 				D6BB3749255D1BF30049BB65 /* WordCell.swift in Sources */,

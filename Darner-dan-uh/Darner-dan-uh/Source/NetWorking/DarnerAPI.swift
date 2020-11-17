@@ -12,9 +12,9 @@ import Alamofire
 import RxAlamofire
 
 enum DarnerAPI {
-    case register
-    case verifywithemail
-    case login
+    case register(userId: String, name: String, email: String, password: String)
+    case verifywithemail(email: String, code: String)
+    case login(userId: String, password: String)
     case logout
     case rank
     case stack
@@ -29,7 +29,7 @@ enum DarnerAPI {
 
 extension DarnerAPI {
     var baseURL: String {
-        return "https://jsonplaceholder.typicode.com"
+        return "https://jsonplaceholder.typicode.com" //FIX- 주소 수정
     }
     
     var path: String {
@@ -69,6 +69,7 @@ extension DarnerAPI {
              .verifywithemail,
              .login:
             return .post
+            
         case .logout,
              .rank,
              .stack,
@@ -84,15 +85,16 @@ extension DarnerAPI {
             
 //        case .updateProfile:
 //            return .update
+        
         default:
-            return nil
+            return nil 
         }
     }
     
     var header: HTTPHeaders? {
         switch self {
-        case .verifywithemail:
-            return ["":""]
+        case .verifywithemail(_, let code):
+            return ["code" : code]
         default:
             return nil
         }
@@ -100,8 +102,17 @@ extension DarnerAPI {
     
     var parameter: Parameters? {
         switch self {
-        case .verifywithemail:
-            return ["":""]
+        case .verifywithemail(let email, _):
+            return ["email" : email]
+            
+        case .register(let userId, let name, let email, let password):
+            return ["userId" : userId, "name" : name, "email" : email, "password": password]
+            
+        case .login(let userId, let password):
+            return ["userId": userId, "password": password]
+            
+        case .wordGenre(let word_id, let number):
+            return ["word_id": word_id, "number": number]
         default:
             return nil
         }
