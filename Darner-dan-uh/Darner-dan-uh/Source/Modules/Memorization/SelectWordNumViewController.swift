@@ -25,7 +25,6 @@ final class SelectWordNumViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bindAction()
-        bindUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,10 +34,6 @@ final class SelectWordNumViewController: UIViewController {
 }
 
 extension SelectWordNumViewController {
-    private func bindUI() {
-        
-    }
-    
     private func bindAction() {
         minusWordNumBtn.rx.tap
             .map { self.editWordCount(self.minusWordNumBtn, self.wordNum)}
