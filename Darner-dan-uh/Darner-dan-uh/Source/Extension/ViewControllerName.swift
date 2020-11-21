@@ -16,7 +16,6 @@ enum ViewControllerName: String {
     case testResultVC = "TestResultViewController"
     case mainVC = "MainViewController"
     case registerVC = "RegisterViewController"
-    case doubleCheckVC = "DoubleCheckViewController"
     case checkCertificationVC = "CheckCertificationNumberViewController"
     case finishRegisterVC = "FinishRegisterViewController"
     case tabbarVC = "TabbarViewController"
