@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D63CAD472564068C0032B4F0 /* Mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63CAD462564068C0032B4F0 /* Mypage.storyboard */; };
+		D63CAD4A2564AF790032B4F0 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CAD492564AF790032B4F0 /* UIView.swift */; };
 		D63FE3212535EF4600DCD75F /* BinggraeMelona-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D63FE31F2535EF4500DCD75F /* BinggraeMelona-Bold.ttf */; };
 		D63FE3222535EF4600DCD75F /* BinggraeMelona.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D63FE3202535EF4500DCD75F /* BinggraeMelona.ttf */; };
 		D6578ACB2500867A000185F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6578ACA2500867A000185F1 /* AppDelegate.swift */; };
@@ -27,7 +29,6 @@
 		D6A6E23B2563544F00A77E05 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E2372563544E00A77E05 /* ViewModelType.swift */; };
 		D6A6E23C2563544F00A77E05 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E2382563544F00A77E05 /* RegisterViewModel.swift */; };
 		D6A6E23D2563544F00A77E05 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E2392563544F00A77E05 /* LoginViewModel.swift */; };
-		D6A6E2442563554D00A77E05 /* DoubleCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E2402563554D00A77E05 /* DoubleCheckViewController.swift */; };
 		D6A6E2452563554D00A77E05 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E2412563554D00A77E05 /* RegisterViewController.swift */; };
 		D6A6E2462563554D00A77E05 /* FinishRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E2422563554D00A77E05 /* FinishRegisterViewController.swift */; };
 		D6A6E2472563554D00A77E05 /* CheckCertificationNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E2432563554D00A77E05 /* CheckCertificationNumberViewController.swift */; };
@@ -54,6 +55,8 @@
 		0A6D3E1C8424177E67745A13 /* Pods-Darner-dan-uh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Darner-dan-uh.debug.xcconfig"; path = "Target Support Files/Pods-Darner-dan-uh/Pods-Darner-dan-uh.debug.xcconfig"; sourceTree = "<group>"; };
 		2C2C5094395481B434C2AC5C /* Pods_Darner_dan_uh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Darner_dan_uh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		773631FB34EA472779385722 /* Pods-Darner-dan-uh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Darner-dan-uh.release.xcconfig"; path = "Target Support Files/Pods-Darner-dan-uh/Pods-Darner-dan-uh.release.xcconfig"; sourceTree = "<group>"; };
+		D63CAD462564068C0032B4F0 /* Mypage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mypage.storyboard; sourceTree = "<group>"; };
+		D63CAD492564AF790032B4F0 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		D63FE31F2535EF4500DCD75F /* BinggraeMelona-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BinggraeMelona-Bold.ttf"; sourceTree = "<group>"; };
 		D63FE3202535EF4500DCD75F /* BinggraeMelona.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BinggraeMelona.ttf; sourceTree = "<group>"; };
 		D6578AC72500867A000185F1 /* Darner-dan-uh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Darner-dan-uh.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,7 +79,6 @@
 		D6A6E2372563544E00A77E05 /* ViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		D6A6E2382563544F00A77E05 /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		D6A6E2392563544F00A77E05 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		D6A6E2402563554D00A77E05 /* DoubleCheckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DoubleCheckViewController.swift; path = "Darner-dan-uh/Source/Modules/Register/DoubleCheckViewController.swift"; sourceTree = SOURCE_ROOT; };
 		D6A6E2412563554D00A77E05 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = "Darner-dan-uh/Source/Modules/Register/RegisterViewController.swift"; sourceTree = SOURCE_ROOT; };
 		D6A6E2422563554D00A77E05 /* FinishRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinishRegisterViewController.swift; path = "Darner-dan-uh/Source/Modules/Register/FinishRegisterViewController.swift"; sourceTree = SOURCE_ROOT; };
 		D6A6E2432563554D00A77E05 /* CheckCertificationNumberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckCertificationNumberViewController.swift; path = "Darner-dan-uh/Source/Modules/Register/CheckCertificationNumberViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -196,6 +198,7 @@
 				D6A6E11A25634B6400A77E05 /* UIColor.swift */,
 				D6A6E11B25634B6400A77E05 /* UIButton.swift */,
 				D6A6E11C25634B6400A77E05 /* UIViewController.swift */,
+				D63CAD492564AF790032B4F0 /* UIView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -205,9 +208,9 @@
 			children = (
 				D6A6E2502563557600A77E05 /* Cell */,
 				D6A6E24F2563557600A77E05 /* SelectWordNumViewController.swift */,
+				D6A6E2552563557600A77E05 /* TestTableViewController.swift */,
 				D6A6E2532563557600A77E05 /* TestViewController.swift */,
 				D6A6E2542563557600A77E05 /* TestResultViewController.swift */,
-				D6A6E2552563557600A77E05 /* TestTableViewController.swift */,
 				D6A6E2562563557600A77E05 /* MemorizationViewController.swift */,
 			);
 			name = Memorization;
@@ -295,7 +298,6 @@
 			isa = PBXGroup;
 			children = (
 				D6A6E2432563554D00A77E05 /* CheckCertificationNumberViewController.swift */,
-				D6A6E2402563554D00A77E05 /* DoubleCheckViewController.swift */,
 				D6A6E2422563554D00A77E05 /* FinishRegisterViewController.swift */,
 				D6A6E2412563554D00A77E05 /* RegisterViewController.swift */,
 			);
@@ -305,6 +307,7 @@
 		D6E68841252EB41B00FA09C1 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				D63CAD462564068C0032B4F0 /* Mypage.storyboard */,
 				D6578AD02500867A000185F1 /* Main.storyboard */,
 				D6578AD52500867C000185F1 /* LaunchScreen.storyboard */,
 				D6E68851252EB53F00FA09C1 /* Writing.storyboard */,
@@ -387,6 +390,7 @@
 				D63FE3222535EF4600DCD75F /* BinggraeMelona.ttf in Resources */,
 				D6E68858252EB55300FA09C1 /* Memorization.storyboard in Resources */,
 				D6578AD72500867C000185F1 /* LaunchScreen.storyboard in Resources */,
+				D63CAD472564068C0032B4F0 /* Mypage.storyboard in Resources */,
 				D6E68852252EB53F00FA09C1 /* Writing.storyboard in Resources */,
 				D6578AD42500867C000185F1 /* Assets.xcassets in Resources */,
 				D6578AD22500867A000185F1 /* Main.storyboard in Resources */,
@@ -443,8 +447,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D63CAD4A2564AF790032B4F0 /* UIView.swift in Sources */,
 				D6A6E2462563554D00A77E05 /* FinishRegisterViewController.swift in Sources */,
-				D6A6E2442563554D00A77E05 /* DoubleCheckViewController.swift in Sources */,
 				D6A6E11F25634B6400A77E05 /* UIButton.swift in Sources */,
 				D6A6E12025634B6400A77E05 /* UIViewController.swift in Sources */,
 				D6BB377C255E0D7F0049BB65 /* Model.swift in Sources */,
@@ -629,7 +633,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "personal.Darner-dan-uh";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -648,7 +652,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "personal.Darner-dan-uh";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
