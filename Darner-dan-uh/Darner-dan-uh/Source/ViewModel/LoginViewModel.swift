@@ -11,21 +11,21 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-protocol isValidFuncProtocol {
-    func isValid() -> Observable<Bool>
-}
+class LoginViewModel: ViewModelType {
+    let disposeBag = DisposeBag()
 
-class LoginViewModel: isValidFuncProtocol {
-
-    let idTextFieldSubject = PublishSubject<String>()
-    let pwTextFieldSubject = PublishSubject<String>()
-
-    func isValid() -> Observable<Bool> {
-        Observable
-            .combineLatest(idTextFieldSubject, pwTextFieldSubject)
-            .asObservable()
-            .map {
-                return !$0.isEmpty && !$1.isEmpty
-            }
+    struct Input {
+        let idTextFieldSubject: Observable<String>
+        let pwTextFieldSubject: Observable<String>
+    }
+    
+    struct Output {
+        let result: Driver<Bool>
+    }
+    
+    func transform(_ input: Input) -> Output {
+        let bool = Observable.combineLatest(input.idTextFieldSubject, input.pwTextFieldSubject).map { !$0.isEmpty && !$1.isEmpty }.asDriver(onErrorJustReturn: false)
+        return Output(result: bool)
     }
 }
+
