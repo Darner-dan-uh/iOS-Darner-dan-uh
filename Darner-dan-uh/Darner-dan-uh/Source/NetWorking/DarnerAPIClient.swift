@@ -20,9 +20,9 @@ class DarnerAPIClient {
             let request = AF.request(URL(string: api.baseURL + api.path)!,
                                      method: api.method!,
                                      parameters: api.parameter,
-                                     encoding: api.encoding,
+                                     encoding: JSONEncoding.default,
                                      headers: api.header).responseData { response in
-                                    
+                                    debugPrint(response)
                 switch response.result {
                 case .success(let data):
                     do {
@@ -41,4 +41,3 @@ class DarnerAPIClient {
         }
     }
 }
-

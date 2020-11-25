@@ -12,8 +12,8 @@ import Alamofire
 import RxAlamofire
 
 enum DarnerAPI {
-    case register(userId: String, name: String, email: String, password: String)
-    case verifywithemail(email: String, code: String, headerToken: String)
+    case signup(userId: String, name: String, email: String, password: String)
+    case verifywithemail(email: String, code: String)
     case login(userId: String, password: String)
     case logout
     case rank
@@ -29,14 +29,14 @@ enum DarnerAPI {
 
 extension DarnerAPI {
     var baseURL: String {
-//        return "http://10.156.145.103:9032" //FIX- 주소 수정
-        return "http://localhost:5000"
+        return "http://10.156.145.103:9032" //FIX- 주소 수정
+//        return "http://localhost:5000"
     }
     
     var path: String {
         switch self {
-        case .register:
-            return "/signup"
+        case .signup:
+            return "/register"
         case .verifywithemail:
             return "/verifywithemail"
         case .login:
@@ -66,7 +66,7 @@ extension DarnerAPI {
     
     var method: HTTPMethod? {
         switch self {
-        case .register,
+        case .signup,
              .verifywithemail,
              .login:
             return .post
@@ -91,8 +91,6 @@ extension DarnerAPI {
     
     var header: HTTPHeaders? {
         switch self {
-        case .verifywithemail(_, _, let token):
-            return ["Authorization" : "Bearer" + token]
         default:
             return ["Content-Type":"application/json"]
         }
@@ -116,10 +114,10 @@ extension DarnerAPI {
     
     var parameter: Parameters? {
         switch self {
-        case .verifywithemail(let email,let code ,_):
+        case .verifywithemail(let email,let code):
             return ["email" : email, "code": code]
             
-        case .register(let userId, let name, let email, let password):
+        case .signup(let userId, let name, let email, let password):
             return ["userId" : userId, "name" : name, "email" : email, "password": password]
             
         case .login(let userId, let password):
