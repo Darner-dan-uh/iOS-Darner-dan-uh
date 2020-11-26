@@ -13,24 +13,20 @@ import RxCocoa
 
 class RegisterViewModel: ViewModelType {
     struct Input {
-        let nameTextFieldSubject: Observable<String>
-        let idTextFieldSubject: Observable<String>
-        let pwTextFieldSubject: Observable<String>
-        let emailTextFieldSubject: Observable<String>
+        var idTextFieldSubject: Observable<String>
+        var pwTextFieldSubject: Observable<String>
+        var emailTextFieldSubject: Observable<String>
+        var nameTextField: Observable<String>
     }
+    
     struct Output {
-        let signal: Driver<Bool>
+        var signal: Driver<Bool>
     }
-
+    
     func transform(_ input: Input) -> Output {
-        let bool = Observable.combineLatest(input.nameTextFieldSubject,
-                                            input.idTextFieldSubject,
-                                            input.pwTextFieldSubject,
-                                            input.emailTextFieldSubject)
-            .map { !$0.isEmpty && (!$1.isEmpty && $1.count < 20) && !$3.isEmpty && !$2.isEmpty }
-            .asDriver(onErrorJustReturn: false)
+        let bool = Observable.combineLatest(input.idTextFieldSubject, input.emailTextFieldSubject, input.nameTextField, input.pwTextFieldSubject).map { !$0.isEmpty && !$1.isEmpty && !$2.isEmpty && !$3.isEmpty }.asDriver(onErrorJustReturn: false)
+        
         return Output(signal: bool)
     }
 }
-
 
