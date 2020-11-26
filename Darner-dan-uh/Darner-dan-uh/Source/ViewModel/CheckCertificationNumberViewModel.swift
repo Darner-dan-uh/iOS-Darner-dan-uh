@@ -22,7 +22,7 @@ class CheckCertificationNumberViewModel: ViewModelType {
     
     func transform(_ input: Input) -> Output {
         let bool = input.codeSubject
-            .map { $0.isEmpty }
+            .map { !$0.isEmpty }
             .asDriver(onErrorJustReturn: false)
         return Output(result: bool)
     }
