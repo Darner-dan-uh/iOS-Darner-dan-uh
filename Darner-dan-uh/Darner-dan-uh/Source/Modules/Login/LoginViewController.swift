@@ -13,7 +13,7 @@ import RxCocoa
 
 final class LoginViewController: UIViewController {
     var autoLoginFlag: Bool! = false
-    let viewModel: LoginViewModel = LoginViewModel()
+    let viewModel = LoginViewModel()
     let disposeBag = DisposeBag()
     
     @IBOutlet weak var idTextField: UITextField!
@@ -38,20 +38,19 @@ extension LoginViewController {
             .debounce(.seconds(2), scheduler: MainScheduler.instance)
             .withLatestFrom(Observable.combineLatest(self.idTextField.rx.text.orEmpty, self.pwTextField.rx.text.orEmpty))
             .map { DarnerAPI.login(userId: $0.0, password: $0.1) }
-            .flatMap { (request:DarnerAPI) -> Observable<LoginResultModel> in
+            .flatMap { (request:DarnerAPI) -> Observable<TokenMessageModel> in
                 return DarnerAPIClient.shared.networkingResult(from: request)
             }
-            .subscribe { (model:LoginResultModel) in
-                if model.message == "UnAuthorized" {
-                    self.loginBtn.shake()
-                    return
+            .subscribe { (model:TokenMessageModel) in
+                if let nToken = model.message {
+                    UserDefaults.standard.setValue(nToken, forKey: "token")
+                    let vc = self.makeVC(identifier: ViewControllerName.tabbarVC)
+                    vc.modalPresentationStyle = .fullScreen
+                    DispatchQueue.main.async {
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
                 }
-                //                    b.message 키체인에 저장
-                let vc = self.makeVC(identifier: ViewControllerName.tabbarVC)
-                vc.modalPresentationStyle = .fullScreen
-                DispatchQueue.main.async {
-                    self.navigationController?.pushViewController(vc, animated: true)
-                }
+                self.loginBtn.shake()
             } onError: { (_:Error) in
                 self.loginBtn.shake()
             }.disposed(by: self.disposeBag)
