@@ -8,6 +8,14 @@
 
 import UIKit
 
+enum StoryBoardName: String {
+    case main = "Main"
+    case myPage = "Mypage"
+    case writing = "Writing"
+    case ranking = "Ranking"
+    case memo = "Memorization"
+}
+
 enum ViewControllerName: String {
     case memoriazeMainVC = "MemorizationViewController"
     case selectwordNumVC = "SelectWordNumViewController"
