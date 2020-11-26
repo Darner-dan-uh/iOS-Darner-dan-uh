@@ -32,13 +32,17 @@ extension CheckCertificationNumberViewController {
         nextBtn.rx.tap
             .withLatestFrom(self.certificationNumberTxtField.rx.text)
             .map { DarnerAPI.verifywithemail(email: RegisterViewController.email, code: $0!) }
-            .flatMap {(request: DarnerAPI) -> Observable<LoginResultModel> in
+            .flatMap {(request: DarnerAPI) -> Observable<TokenMessageModel> in
                 DarnerAPIClient.shared.networkingResult(from: request)
             }
-            .subscribe { _ in
-                let vc = self.makeVC(identifier: .finishRegisterVC)
-                DispatchQueue.main.async {
-                    self.navigationController?.pushViewController(vc, animated: true)
+            .subscribe { response in
+                if response.message == "True" {
+                    let vc = self.makeVC(identifier: .finishRegisterVC)
+                    DispatchQueue.main.async {
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
+                } else {
+                    self.nextBtn.shake()
                 }
             } onError: { _ in
                 self.nextBtn.shake()
