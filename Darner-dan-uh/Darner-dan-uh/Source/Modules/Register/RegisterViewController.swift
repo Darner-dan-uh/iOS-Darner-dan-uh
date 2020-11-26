@@ -36,10 +36,10 @@ final class RegisterViewController: UIViewController {
 extension RegisterViewController {
     private func bindUI() {
         
-        let input = RegisterViewModel.Input.init(nameTextFieldSubject: nameTextField.rx.text.orEmpty.asObservable(),
-                                                 idTextFieldSubject: idTextField.rx.text.orEmpty.asObservable(),
-                                                 pwTextFieldSubject: pwTextField.rx.text.orEmpty.asObservable(),
-                                                 emailTextFieldSubject: emailTextField.rx.text.orEmpty.asObservable())
+        let input = RegisterViewModel.Input.init(idTextFieldSubject: nameTextField.rx.text.orEmpty.asObservable(),
+                                                 pwTextFieldSubject: idTextField.rx.text.orEmpty.asObservable(),
+                                                 emailTextFieldSubject: pwTextField.rx.text.orEmpty.asObservable(),
+                                                 nameTextField: emailTextField.rx.text.orEmpty.asObservable())
         
         let output = viewModel.transform(input)
         
@@ -65,9 +65,9 @@ extension RegisterViewController {
                                                      self.nameTextField.rx.text.orEmpty))
             .map {
                 RegisterViewController.email = $0.1;
-                return DarnerAPI.signup(userId: $0.0, name: $0.3, email: $0.1, password: $0.2)
+                return DarnerAPI.register(userId: $0.0, name: $0.3, email: $0.1, password: $0.2)
             }
-            .flatMap { (request:DarnerAPI) -> Observable<MessageModel> in
+            .flatMap { (request:DarnerAPI) -> Observable<TokenMessageModel> in
                 return DarnerAPIClient.shared.networkingResult(from: request)
             }
             .subscribe { model in
