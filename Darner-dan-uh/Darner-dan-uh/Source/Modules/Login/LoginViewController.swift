@@ -42,15 +42,13 @@ extension LoginViewController {
                 return DarnerAPIClient.shared.networkingResult(from: request)
             }
             .subscribe { (model:TokenMessageModel) in
-                if let nToken = model.message {
-                    UserDefaults.standard.setValue(nToken, forKey: "token")
-                    let vc = self.makeVC(identifier: ViewControllerName.tabbarVC)
-                    vc.modalPresentationStyle = .fullScreen
-                    DispatchQueue.main.async {
-                        self.navigationController?.pushViewController(vc, animated: true)
-                    }
+                guard let nToken = model.token else { self.loginBtn.shake(); return }
+                UserDefaults.standard.setValue(nToken, forKey: "token")
+                let vc = self.makeVC(identifier: ViewControllerName.tabbarVC)
+                vc.modalPresentationStyle = .fullScreen
+                DispatchQueue.main.async {
+                    self.navigationController?.pushViewController(vc, animated: true)
                 }
-                self.loginBtn.shake()
             } onError: { (_:Error) in
                 self.loginBtn.shake()
             }.disposed(by: self.disposeBag)
