@@ -12,7 +12,7 @@ import Alamofire
 import RxAlamofire
 
 enum DarnerAPI {
-    case signup(userId: String, name: String, email: String, password: String)
+    case register(userId: String, name: String, email: String, password: String)
     case verifywithemail(email: String, code: String)
     case login(userId: String, password: String)
     case logout
@@ -35,7 +35,7 @@ extension DarnerAPI {
     
     var path: String {
         switch self {
-        case .signup:
+        case .register:
             return "/register"
         case .verifywithemail:
             return "/verifywithemail"
@@ -66,15 +66,15 @@ extension DarnerAPI {
     
     var method: HTTPMethod? {
         switch self {
-        case .signup,
+        case .register,
              .verifywithemail,
+             .wordGenre,
              .login:
             return .post
             
         case .logout,
              .rank,
              .stack,
-             .wordGenre,
              .wordTest,
              .myProfile,
              .memoTitle,
@@ -91,6 +91,10 @@ extension DarnerAPI {
     
     var header: HTTPHeaders? {
         switch self {
+        case .wordGenre,
+             .wordTest:
+            let token = UserDefaults.standard.value(forKey: "token") as! String
+            return ["Authorization" : "Bearer " + token]
         default:
             return ["Content-Type":"application/json"]
         }
@@ -101,7 +105,6 @@ extension DarnerAPI {
         case .logout,
              .rank,
              .stack,
-             .wordGenre,
              .wordTest,
              .myProfile,
              .memoTitle,
@@ -117,14 +120,14 @@ extension DarnerAPI {
         case .verifywithemail(let email,let code):
             return ["email" : email, "code": code]
             
-        case .signup(let userId, let name, let email, let password):
+        case .register(let userId, let name, let email, let password):
             return ["userId" : userId, "name" : name, "email" : email, "password": password]
             
         case .login(let userId, let password):
             return ["userId": userId, "password": password]
             
         case .wordGenre(let word_id, let number):
-            return ["word_id": word_id, "number": number]
+            return ["word_id": "\(word_id)", "number": "\(number)"]
         default:
             return nil
         }

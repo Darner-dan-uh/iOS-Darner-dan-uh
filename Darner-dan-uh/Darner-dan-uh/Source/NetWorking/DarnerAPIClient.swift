@@ -22,7 +22,6 @@ class DarnerAPIClient {
                                      parameters: api.parameter,
                                      encoding: JSONEncoding.default,
                                      headers: api.header).responseData { response in
-                                    debugPrint(response)
                 switch response.result {
                 case .success(let data):
                     do {
