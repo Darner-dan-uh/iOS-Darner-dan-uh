@@ -8,9 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		D63CAD472564068C0032B4F0 /* Mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63CAD462564068C0032B4F0 /* Mypage.storyboard */; };
-		D63CAD4A2564AF790032B4F0 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CAD492564AF790032B4F0 /* UIView.swift */; };
 		D63FE3212535EF4600DCD75F /* BinggraeMelona-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D63FE31F2535EF4500DCD75F /* BinggraeMelona-Bold.ttf */; };
 		D63FE3222535EF4600DCD75F /* BinggraeMelona.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D63FE3202535EF4500DCD75F /* BinggraeMelona.ttf */; };
+		D644AC8825700665002905AE /* CheckCertificationNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644AC8725700665002905AE /* CheckCertificationNumberViewModel.swift */; };
+		D644AC8C257006D2002905AE /* MypageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644AC8B257006D2002905AE /* MypageModel.swift */; };
+		D644AC8F257006E1002905AE /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644AC8E257006E1002905AE /* TestViewModel.swift */; };
+		D644AC9225700B21002905AE /* TokenMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644AC9125700B21002905AE /* TokenMessageModel.swift */; };
+		D644AC9625701036002905AE /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644AC9525701036002905AE /* UIView.swift */; };
+		D644AC9A2570113B002905AE /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644AC992570113B002905AE /* WordModel.swift */; };
+		D644AC9E257011FF002905AE /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644AC9D257011FF002905AE /* MessageModel.swift */; };
+		D644ACA225701388002905AE /* TestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D644ACA025701388002905AE /* TestCollectionViewCell.xib */; };
+		D644ACA325701388002905AE /* TestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644ACA125701388002905AE /* TestCollectionViewCell.swift */; };
 		D6578ACB2500867A000185F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6578ACA2500867A000185F1 /* AppDelegate.swift */; };
 		D6578AD22500867A000185F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6578AD02500867A000185F1 /* Main.storyboard */; };
 		D6578AD42500867C000185F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6578AD32500867C000185F1 /* Assets.xcassets */; };
@@ -44,7 +52,6 @@
 		D6A6E26C2563561300A77E05 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E26B2563561300A77E05 /* RankingViewController.swift */; };
 		D6BB372B255D1BE60049BB65 /* DarnerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB372A255D1BE60049BB65 /* DarnerAPI.swift */; };
 		D6BB375A255D210D0049BB65 /* DarnerAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB3759255D210D0049BB65 /* DarnerAPIClient.swift */; };
-		D6BB377C255E0D7F0049BB65 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB377B255E0D7F0049BB65 /* Model.swift */; };
 		D6E68852252EB53F00FA09C1 /* Writing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E68851252EB53F00FA09C1 /* Writing.storyboard */; };
 		D6E68855252EB54600FA09C1 /* Ranking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E68854252EB54600FA09C1 /* Ranking.storyboard */; };
 		D6E68858252EB55300FA09C1 /* Memorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E68857252EB55300FA09C1 /* Memorization.storyboard */; };
@@ -56,9 +63,17 @@
 		2C2C5094395481B434C2AC5C /* Pods_Darner_dan_uh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Darner_dan_uh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		773631FB34EA472779385722 /* Pods-Darner-dan-uh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Darner-dan-uh.release.xcconfig"; path = "Target Support Files/Pods-Darner-dan-uh/Pods-Darner-dan-uh.release.xcconfig"; sourceTree = "<group>"; };
 		D63CAD462564068C0032B4F0 /* Mypage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mypage.storyboard; sourceTree = "<group>"; };
-		D63CAD492564AF790032B4F0 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		D63FE31F2535EF4500DCD75F /* BinggraeMelona-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BinggraeMelona-Bold.ttf"; sourceTree = "<group>"; };
 		D63FE3202535EF4500DCD75F /* BinggraeMelona.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BinggraeMelona.ttf; sourceTree = "<group>"; };
+		D644AC8725700665002905AE /* CheckCertificationNumberViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckCertificationNumberViewModel.swift; sourceTree = "<group>"; };
+		D644AC8B257006D2002905AE /* MypageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MypageModel.swift; path = "Darner-dan-uh/Source/ViewModel/MypageModel.swift"; sourceTree = SOURCE_ROOT; };
+		D644AC8E257006E1002905AE /* TestViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
+		D644AC9125700B21002905AE /* TokenMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenMessageModel.swift; sourceTree = "<group>"; };
+		D644AC9525701036002905AE /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		D644AC992570113B002905AE /* WordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
+		D644AC9D257011FF002905AE /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		D644ACA025701388002905AE /* TestCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestCollectionViewCell.xib; sourceTree = "<group>"; };
+		D644ACA125701388002905AE /* TestCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCollectionViewCell.swift; sourceTree = "<group>"; };
 		D6578AC72500867A000185F1 /* Darner-dan-uh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Darner-dan-uh.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6578ACA2500867A000185F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6578AD12500867A000185F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,7 +109,6 @@
 		D6A6E26B2563561300A77E05 /* RankingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RankingViewController.swift; path = "Darner-dan-uh/Source/Modules/Ranking/RankingViewController.swift"; sourceTree = SOURCE_ROOT; };
 		D6BB372A255D1BE60049BB65 /* DarnerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarnerAPI.swift; sourceTree = "<group>"; };
 		D6BB3759255D210D0049BB65 /* DarnerAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarnerAPIClient.swift; sourceTree = "<group>"; };
-		D6BB377B255E0D7F0049BB65 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		D6E68851252EB53F00FA09C1 /* Writing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Writing.storyboard; sourceTree = "<group>"; };
 		D6E68854252EB54600FA09C1 /* Ranking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ranking.storyboard; sourceTree = "<group>"; };
 		D6E68857252EB55300FA09C1 /* Memorization.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Memorization.storyboard; sourceTree = "<group>"; };
@@ -154,7 +168,9 @@
 		D63FE3302536116C00DCD75F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D644AC8725700665002905AE /* CheckCertificationNumberViewModel.swift */,
 				D6A6E2392563544F00A77E05 /* LoginViewModel.swift */,
+				D644AC8E257006E1002905AE /* TestViewModel.swift */,
 				D6A6E2362563544E00A77E05 /* MypageViewModel.swift */,
 				D6A6E2382563544F00A77E05 /* RegisterViewModel.swift */,
 				D6A6E2372563544E00A77E05 /* ViewModelType.swift */,
@@ -198,7 +214,7 @@
 				D6A6E11A25634B6400A77E05 /* UIColor.swift */,
 				D6A6E11B25634B6400A77E05 /* UIButton.swift */,
 				D6A6E11C25634B6400A77E05 /* UIViewController.swift */,
-				D63CAD492564AF790032B4F0 /* UIView.swift */,
+				D644AC9525701036002905AE /* UIView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -220,6 +236,8 @@
 		D6A6E2502563557600A77E05 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				D644ACA125701388002905AE /* TestCollectionViewCell.swift */,
+				D644ACA025701388002905AE /* TestCollectionViewCell.xib */,
 				D6A6E2512563557600A77E05 /* WordResultCell.swift */,
 				D6A6E2522563557600A77E05 /* WordCell.swift */,
 			);
@@ -289,7 +307,10 @@
 		D6BB377E255E0D860049BB65 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D6BB377B255E0D7F0049BB65 /* Model.swift */,
+				D644AC8B257006D2002905AE /* MypageModel.swift */,
+				D644AC9125700B21002905AE /* TokenMessageModel.swift */,
+				D644AC9D257011FF002905AE /* MessageModel.swift */,
+				D644AC992570113B002905AE /* WordModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -394,6 +415,7 @@
 				D6E68852252EB53F00FA09C1 /* Writing.storyboard in Resources */,
 				D6578AD42500867C000185F1 /* Assets.xcassets in Resources */,
 				D6578AD22500867A000185F1 /* Main.storyboard in Resources */,
+				D644ACA225701388002905AE /* TestCollectionViewCell.xib in Resources */,
 				D6E68855252EB54600FA09C1 /* Ranking.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,17 +469,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D63CAD4A2564AF790032B4F0 /* UIView.swift in Sources */,
 				D6A6E2462563554D00A77E05 /* FinishRegisterViewController.swift in Sources */,
+				D644AC8C257006D2002905AE /* MypageModel.swift in Sources */,
 				D6A6E11F25634B6400A77E05 /* UIButton.swift in Sources */,
+				D644AC9625701036002905AE /* UIView.swift in Sources */,
 				D6A6E12025634B6400A77E05 /* UIViewController.swift in Sources */,
-				D6BB377C255E0D7F0049BB65 /* Model.swift in Sources */,
 				D6A6E23C2563544F00A77E05 /* RegisterViewModel.swift in Sources */,
 				D6A6E22F2563541E00A77E05 /* EnterPwViewController.swift in Sources */,
 				D6A6E22E2563541E00A77E05 /* SetMainCharacterViewController.swift in Sources */,
 				D6A6E11D25634B6400A77E05 /* ViewControllerName.swift in Sources */,
 				D6A6E2592563557600A77E05 /* WordCell.swift in Sources */,
 				D6BB375A255D210D0049BB65 /* DarnerAPIClient.swift in Sources */,
+				D644AC8F257006E1002905AE /* TestViewModel.swift in Sources */,
 				D6A6E23D2563544F00A77E05 /* LoginViewModel.swift in Sources */,
 				D6A6E2602563558500A77E05 /* LoginViewController.swift in Sources */,
 				D6BB372B255D1BE60049BB65 /* DarnerAPI.swift in Sources */,
@@ -470,14 +493,19 @@
 				D6578ACB2500867A000185F1 /* AppDelegate.swift in Sources */,
 				D6A6E26C2563561300A77E05 /* RankingViewController.swift in Sources */,
 				D6A6E23A2563544F00A77E05 /* MypageViewModel.swift in Sources */,
+				D644AC9225700B21002905AE /* TokenMessageModel.swift in Sources */,
 				D6A6E2332563541E00A77E05 /* MypageViewController.swift in Sources */,
 				D6A6E25B2563557600A77E05 /* TestResultViewController.swift in Sources */,
+				D644AC9A2570113B002905AE /* WordModel.swift in Sources */,
+				D644ACA325701388002905AE /* TestCollectionViewCell.swift in Sources */,
 				D6A6E2582563557600A77E05 /* WordResultCell.swift in Sources */,
 				D6A6E11E25634B6400A77E05 /* UIColor.swift in Sources */,
 				D6A6E2312563541E00A77E05 /* ModifyViewController.swift in Sources */,
 				D6A6E25A2563557600A77E05 /* TestViewController.swift in Sources */,
+				D644AC9E257011FF002905AE /* MessageModel.swift in Sources */,
 				D6A6E2572563557600A77E05 /* SelectWordNumViewController.swift in Sources */,
 				D6A6E23B2563544F00A77E05 /* ViewModelType.swift in Sources */,
+				D644AC8825700665002905AE /* CheckCertificationNumberViewModel.swift in Sources */,
 				D6A6E267256355D900A77E05 /* WritingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
