@@ -9,10 +9,10 @@
 import Foundation
 
 struct WordModel: Codable {
-    var content: [Word]
+    let content: [Content]?
+    let message: String?
 }
 
-struct Word: Codable {
-    var korea: String
-    var english: String
+struct Content: Codable {
+    let korea, english: String
 }

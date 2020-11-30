@@ -12,12 +12,9 @@ import RxSwift
 import RxCocoa
 
 final class TestViewController: UIViewController {
-    
-    // realm에서 받아온 단어 배열 변수 생성
     private let disposeBag = DisposeBag()
     
-    @IBOutlet weak var englishWordMeanLbl: UILabel!
-    @IBOutlet weak var nextWordBtn: UIButton!
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var popVCBtn: UIButton!
     
     override func viewDidLoad() {
@@ -37,15 +34,17 @@ extension TestViewController {
                     self.navigationController?.popViewController(animated: true)
                 }, secTitle: "계속 할게요", secActionStyle: .default, secHandler: nil)
             }.subscribe().disposed(by: disposeBag)
-        
-        nextWordBtn.rx.tap
-            .map { /* label 바꿔야함*/ }
     }
     
     private func bindUI() {
-        // 단어 배열 변수가 마지막이면 alert 방출
-        
-        
-        englishWordMeanLbl.text = "a" // realm에서 받아온 거 넣어주기
+        let words: Observable<Welcome> = DarnerAPIClient.shared.networkingResult(from:.wordTest)
+        words.map { $0.content }
+            .bind(to: collectionView.rx.items(cellIdentifier: TestCollectionViewCell.cellName, cellType: TestCollectionViewCell.self)) { idx, model, cell in
+                if idx % 2 == 0 {
+                    cell.wordTestLbl.text = model.korea
+                } else {
+                    cell.wordTestLbl.text = model.english
+                }
+            }.disposed(by: disposeBag)
     }
 }

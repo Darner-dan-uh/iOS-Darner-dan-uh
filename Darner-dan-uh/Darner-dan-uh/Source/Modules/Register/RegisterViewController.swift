@@ -67,7 +67,7 @@ extension RegisterViewController {
                 RegisterViewController.email = $0.1;
                 return DarnerAPI.register(userId: $0.0, name: $0.3, email: $0.1, password: $0.2)
             }
-            .flatMap { (request:DarnerAPI) -> Observable<TokenMessageModel> in
+            .flatMap { (request:DarnerAPI) -> Observable<MessageModel> in
                 return DarnerAPIClient.shared.networkingResult(from: request)
             }
             .subscribe { model in

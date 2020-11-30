@@ -32,7 +32,7 @@ extension CheckCertificationNumberViewController {
         nextBtn.rx.tap
             .withLatestFrom(self.certificationNumberTxtField.rx.text)
             .map { DarnerAPI.verifywithemail(email: RegisterViewController.email, code: $0!) }
-            .flatMap {(request: DarnerAPI) -> Observable<TokenMessageModel> in
+            .flatMap {(request: DarnerAPI) -> Observable<MessageModel> in
                 DarnerAPIClient.shared.networkingResult(from: request)
             }
             .subscribe { response in
