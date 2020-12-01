@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		9F2CE42D25674F600024FD12 /* RankingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2CE42C25674F600024FD12 /* RankingModel.swift */; };
+		9FA27477256FC289002C3DAD /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA27476256FC289002C3DAD /* MemoViewController.swift */; };
+		9FA2747A256FC731002C3DAD /* MemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA27479256FC731002C3DAD /* MemoViewModel.swift */; };
+		9FA2747D256FC740002C3DAD /* MemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA2747C256FC740002C3DAD /* MemoModel.swift */; };
+		9FA27480256FE1F8002C3DAD /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA2747F256FE1F8002C3DAD /* MemoCell.swift */; };
+		9FA27483256FF5AD002C3DAD /* WritingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA27482256FF5AD002C3DAD /* WritingViewModel.swift */; };
 		9FC3431B2566843A003AEE58 /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3431A2566843A003AEE58 /* RankingCell.swift */; };
 		9FC343302566BA54003AEE58 /* RankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3432F2566BA54003AEE58 /* RankingViewModel.swift */; };
 		D63FE3212535EF4600DCD75F /* BinggraeMelona-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D63FE31F2535EF4500DCD75F /* BinggraeMelona-Bold.ttf */; };
@@ -58,6 +63,11 @@
 		2C2C5094395481B434C2AC5C /* Pods_Darner_dan_uh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Darner_dan_uh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		773631FB34EA472779385722 /* Pods-Darner-dan-uh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Darner-dan-uh.release.xcconfig"; path = "Target Support Files/Pods-Darner-dan-uh/Pods-Darner-dan-uh.release.xcconfig"; sourceTree = "<group>"; };
 		9F2CE42C25674F600024FD12 /* RankingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingModel.swift; sourceTree = "<group>"; };
+		9FA27476256FC289002C3DAD /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
+		9FA27479256FC731002C3DAD /* MemoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewModel.swift; sourceTree = "<group>"; };
+		9FA2747C256FC740002C3DAD /* MemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoModel.swift; sourceTree = "<group>"; };
+		9FA2747F256FE1F8002C3DAD /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
+		9FA27482256FF5AD002C3DAD /* WritingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingViewModel.swift; sourceTree = "<group>"; };
 		9FC3431A2566843A003AEE58 /* RankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCell.swift; sourceTree = "<group>"; };
 		9FC3432F2566BA54003AEE58 /* RankingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewModel.swift; sourceTree = "<group>"; };
 		D63FE31F2535EF4500DCD75F /* BinggraeMelona-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BinggraeMelona-Bold.ttf"; sourceTree = "<group>"; };
@@ -171,6 +181,8 @@
 				D6A6E2382563544F00A77E05 /* RegisterViewModel.swift */,
 				D6A6E2372563544E00A77E05 /* ViewModelType.swift */,
 				9FC3432F2566BA54003AEE58 /* RankingViewModel.swift */,
+				9FA27479256FC731002C3DAD /* MemoViewModel.swift */,
+				9FA27482256FF5AD002C3DAD /* WritingViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -295,6 +307,8 @@
 			isa = PBXGroup;
 			children = (
 				D6A6E266256355D900A77E05 /* WritingViewController.swift */,
+				9FA27476256FC289002C3DAD /* MemoViewController.swift */,
+				9FA2747F256FE1F8002C3DAD /* MemoCell.swift */,
 			);
 			path = Writing;
 			sourceTree = "<group>";
@@ -304,6 +318,7 @@
 			children = (
 				D6BB377B255E0D7F0049BB65 /* Model.swift */,
 				9F2CE42C25674F600024FD12 /* RankingModel.swift */,
+				9FA2747C256FC740002C3DAD /* MemoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -461,6 +476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6A6E2462563554D00A77E05 /* FinishRegisterViewController.swift in Sources */,
+				9FA27483256FF5AD002C3DAD /* WritingViewModel.swift in Sources */,
 				D6A6E2442563554D00A77E05 /* DoubleCheckViewController.swift in Sources */,
 				D6A6E11F25634B6400A77E05 /* UIButton.swift in Sources */,
 				D6A6E12025634B6400A77E05 /* UIViewController.swift in Sources */,
@@ -468,6 +484,8 @@
 				D6BB377C255E0D7F0049BB65 /* Model.swift in Sources */,
 				D6A6E23C2563544F00A77E05 /* RegisterViewModel.swift in Sources */,
 				9F2CE42D25674F600024FD12 /* RankingModel.swift in Sources */,
+				9FA27480256FE1F8002C3DAD /* MemoCell.swift in Sources */,
+				9FA27477256FC289002C3DAD /* MemoViewController.swift in Sources */,
 				D6A6E22F2563541E00A77E05 /* EnterPwViewController.swift in Sources */,
 				D6A6E22E2563541E00A77E05 /* SetMainCharacterViewController.swift in Sources */,
 				D6A6E11D25634B6400A77E05 /* ViewControllerName.swift in Sources */,
@@ -478,6 +496,7 @@
 				D6BB372B255D1BE60049BB65 /* DarnerAPI.swift in Sources */,
 				D6A6E2452563554D00A77E05 /* RegisterViewController.swift in Sources */,
 				D6A6E2322563541E00A77E05 /* MyCharacterViewController.swift in Sources */,
+				9FA2747D256FC740002C3DAD /* MemoModel.swift in Sources */,
 				D6A6E25C2563557600A77E05 /* TestTableViewController.swift in Sources */,
 				D6A6E25D2563557600A77E05 /* MemorizationViewController.swift in Sources */,
 				D6A6E2302563541E00A77E05 /* CharacterCollectionViewController.swift in Sources */,
@@ -494,6 +513,7 @@
 				D6A6E25A2563557600A77E05 /* TestViewController.swift in Sources */,
 				D6A6E2572563557600A77E05 /* SelectWordNumViewController.swift in Sources */,
 				D6A6E23B2563544F00A77E05 /* ViewModelType.swift in Sources */,
+				9FA2747A256FC731002C3DAD /* MemoViewModel.swift in Sources */,
 				D6A6E267256355D900A77E05 /* WritingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
