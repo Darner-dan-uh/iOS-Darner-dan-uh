@@ -17,6 +17,7 @@ enum DarnerAPI {
     case login(userId: String, password: String)
     case logout
     case rank
+    case myrank
     case stack
     case wordGenre(word_id: String, number: String)
     case wordTest
@@ -44,6 +45,8 @@ extension DarnerAPI {
             return "/logout"
         case .rank:
             return "/rank"
+        case .myrank:
+            return " /myrank"
         case .stack:
             return "/stack"
         case .wordGenre:
@@ -72,6 +75,7 @@ extension DarnerAPI {
             
         case .logout,
              .rank,
+             .myrank,
              .stack,
              .wordGenre,
              .wordTest,
