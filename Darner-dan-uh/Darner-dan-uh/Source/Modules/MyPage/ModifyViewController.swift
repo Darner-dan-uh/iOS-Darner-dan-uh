@@ -16,8 +16,6 @@ class ModifyViewController: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nickNameLbl: UILabel!
     @IBOutlet weak var nickNameTxtField: UITextField!
-    @IBOutlet weak var passwordLbl: UILabel!
-    @IBOutlet weak var passwordTxtFiled: UITextField!
     @IBOutlet weak var modifyBtn: UIButton!
     
     private let disposeBag = DisposeBag()
@@ -29,38 +27,29 @@ class ModifyViewController: UIViewController {
         self.navigationItem.title = "마이페이지"
         
         nickNameTxtField.clearButtonMode = .whileEditing
-        passwordTxtFiled.clearButtonMode = .whileEditing
 
         // Do any additional setup after loading the view.
         profileImage.layer.cornerRadius = profileImage.frame.width/2
         modifyBtn.buttonStyle()
         nickNameTxtField.underLine()
-        passwordTxtFiled.underLine()
         
-        passwordTxtFiled.isSecureTextEntry = true
         
     }
 
     func bindViewModel() {
-        let input = MypageViewModel.Input(userName: nickNameTxtField.rx.text.orEmpty.asDriver(), userPw: passwordTxtFiled.rx.text.orEmpty.asDriver())
+        let input = MypageViewModel.Input.init(nickName: nickNameTxtField.rx.text.orEmpty.asDriver())
         let output = viewModel.transform(input)
+        
+        output.result.emit(onCompleted: { [unowned self] in
+            self.nextView(identifire: "enterPw")
+        }).disposed(by: disposeBag)
         
     }
     
     func bindAction() {
-        modifyBtn.rx.tap
-            .map{ let controller =
-                self.navigationController?.viewControllers
-                self.navigationController?.viewControllers = controller!
-                self.navigationController?.popViewController(animated: true)
-        }
+        //modifyBtn.rx.tap.
     }
-    
-    @IBAction func nextView(_ sender: UIButton) {
-        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "enterPw") else { return }
-        self.present(nextVC, animated: true)
-        self.dismiss(animated: true)
-    }
+
 }
 
 extension UITextField {
