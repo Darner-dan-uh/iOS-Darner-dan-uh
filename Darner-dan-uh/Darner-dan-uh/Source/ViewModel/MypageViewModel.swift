@@ -17,14 +17,14 @@ class MypageViewModel {
     let viewModel = MypageViewModel()
 
     struct Input {
-        let userName: Driver<String>
-        let userPw: Driver<String>
+        let nickName: Driver<String>
     }
     struct Output {
         let result: Signal<String>
     }
     func transform(_ input: Input) -> Output {
         let result = PublishSubject<String>()
+        
         
         return Output(result: result.asSignal(onErrorJustReturn: "실패"))
     }
