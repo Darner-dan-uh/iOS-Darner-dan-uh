@@ -20,3 +20,9 @@ struct RankingModel: Codable {
         case profileImage
     }
 }
+
+struct myRankingModel: Codable {
+    let ranking: Int
+    let nickName: String
+    let profileImage: String
+}
