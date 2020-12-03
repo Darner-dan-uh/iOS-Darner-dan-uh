@@ -30,7 +30,7 @@ enum DarnerAPI {
 
 extension DarnerAPI {
     var baseURL: String {
-        return "https://jsonplaceholder.typicode.com" //FIX- 주소 수정
+        return "http://10.156.145.103:9032" //FIX- 주소 수정
     }
     
     var path: String {
