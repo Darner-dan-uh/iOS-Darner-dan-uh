@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stack View Controller-->
+        <scene sceneID="LJx-Xv-2tv">
+            <objects>
+                <viewController storyboardIdentifier="stackVC" id="elA-ZY-d21" customClass="StackViewController" customModule="Darner_dan_uh" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sKb-7G-2t5" customClass="Stack">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoImage" translatesAutoresizingMaskIntoConstraints="NO" id="PgK-YJ-Vqy">
+                                <rect key="frame" x="182" y="44" width="50" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="M6R-1S-yPE"/>
+                                    <constraint firstAttribute="width" constant="50" id="OyE-sR-4DP"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2iN-j8-qJK">
+                                <rect key="frame" x="57" y="104" width="100" height="37.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="aPX-Gd-UFC"/>
+                                    <constraint firstAttribute="height" constant="37.5" id="rYq-0C-UkM"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="랭킹">
+                                            <attributes>
+                                                <font key="NSFont" size="20" name="BinggraeMelona"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HUa-b6-y8q">
+                                <rect key="frame" x="257" y="104" width="100" height="37.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37.5" id="2ZN-r1-jCc"/>
+                                    <constraint firstAttribute="width" constant="100" id="D8G-gJ-84p"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="스택">
+                                            <attributes>
+                                                <font key="NSFont" size="20" name="BinggraeMelona"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rWa-Op-5K1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HUa-b6-y8q" firstAttribute="leading" secondItem="2iN-j8-qJK" secondAttribute="trailing" constant="100" id="2Dw-LP-kit"/>
+                            <constraint firstItem="HUa-b6-y8q" firstAttribute="top" secondItem="rWa-Op-5K1" secondAttribute="top" constant="60" id="5aI-V9-uTE"/>
+                            <constraint firstItem="2iN-j8-qJK" firstAttribute="leading" secondItem="rWa-Op-5K1" secondAttribute="leading" constant="57" id="87c-04-0np"/>
+                            <constraint firstItem="PgK-YJ-Vqy" firstAttribute="centerX" secondItem="sKb-7G-2t5" secondAttribute="centerX" id="RN3-OJ-W3I"/>
+                            <constraint firstItem="PgK-YJ-Vqy" firstAttribute="top" secondItem="rWa-Op-5K1" secondAttribute="top" id="cuF-Gp-BhI"/>
+                            <constraint firstItem="2iN-j8-qJK" firstAttribute="top" secondItem="rWa-Op-5K1" secondAttribute="top" constant="60" id="fZW-xY-hAa"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CQh-GA-zac" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69.565217391304358" y="-89.0625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LogoImage" width="139" height="167"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
