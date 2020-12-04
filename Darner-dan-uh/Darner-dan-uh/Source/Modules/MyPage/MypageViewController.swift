@@ -17,7 +17,6 @@ class MypageViewController: UIViewController {
     @IBOutlet weak var nickNameLbl: UILabel!
     @IBOutlet weak var modifyBtn: UIButton!
     @IBOutlet weak var characterBtn: UIButton!
-    //@IBOutlet weak var logOutBtn: UIButton!
     
     private let disposeBag = DisposeBag()
     private let viewModel = SeeMypageViewModel()
