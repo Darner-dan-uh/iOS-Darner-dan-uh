@@ -57,7 +57,7 @@ extension LoginViewController {
             autoLoginBtn.rx.tap.map {},
             autoLoginLblBtn.rx.tap.map {}
         ).map { self.autoLoginBtn.isSelected.toggle() }
-        .map { if self.autoLoginBtn.isSelected == true {
+        .map { if self.autoLoginBtn.isSelected {
             self.autoLoginBtn.setImage(UIImage(named: "Icon ionic-ios-checkmark-circle"), for: .selected)
         } else {
             self.autoLoginBtn.setImage(UIImage(named: "Icon material-radio-button-unchecked"), for: .normal)

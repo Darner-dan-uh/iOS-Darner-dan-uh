@@ -13,16 +13,17 @@ import RxCocoa
 
 class TestCollectionViewCell: UICollectionViewCell {
     static let cellName = "TestCollectionViewCell"
+    var sign: ((String) -> Void)? = nil
     
     @IBOutlet weak var wordMeanTextField: UITextField!
+    @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var wordTestLbl: UILabel!
-    @IBOutlet weak var nextWordBtn: UIButton!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
-    
-    
+    @IBAction func b(_ sender: UIButton) {
+        sign?(wordMeanTextField.text!)
+    }
 }
