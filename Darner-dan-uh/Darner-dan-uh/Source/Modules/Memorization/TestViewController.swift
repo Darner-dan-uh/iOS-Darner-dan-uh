@@ -12,10 +12,9 @@ import RxSwift
 import RxCocoa
 
 final class TestViewController: UIViewController {
-    static var resultWord: PublishSubject<TestRusultModel>! = nil
-    var list: [TestRusultModel]?
+    lazy var resultWord = BehaviorSubject<[TestRusultModel]>(value: list)
+    var list: [TestRusultModel] = []
     private let disposeBag = DisposeBag()
-    var wordid: Int = 0 // 없애야됨
     var wordnum: Int = 0
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -27,7 +26,6 @@ final class TestViewController: UIViewController {
         bindAction()
         // Do any additional setup after loading the view.
     }
-    
 }
 
 extension TestViewController {
@@ -39,41 +37,33 @@ extension TestViewController {
                 }, secTitle: "계속 할게요", secActionStyle: .default, secHandler: nil)
             }.subscribe().disposed(by: disposeBag)
     }
-    
+
     private func bindUI() {
         collectionView.rx
             .setDelegate(self)
             .disposed(by: disposeBag)
-        
-        //        let words: Observable<WordModel> = DarnerAPIClient.shared.networkingResult(from:.wordTest)
-        //        words.map { $0.content! }
-        //            .bind(to: collectionView.rx.items(cellIdentifier: TestCollectionViewCell.cellName, cellType: TestCollectionViewCell.self)) { idx, model, cell in
-        //                if idx % 2 == 0 {
-        //                    cell.wordTestLbl?.text = model.korea
-        //                } else {
-        //                    cell.wordTestLbl?.text = model.english
-        //                }
-        //            }.disposed(by: disposeBag)
-        
-        let words: Observable<WordModel> = DarnerAPIClient.shared.networkingResult(from: .wordGenre(word_id: String(self.wordid), number: String(self.wordnum)))
+
+        let words: Observable<WordModel> = DarnerAPIClient.shared.networkingResult(from:.wordTest)
         words.map { $0.content! }
             .bind(to: collectionView.rx.items(cellIdentifier: TestCollectionViewCell.cellName, cellType: TestCollectionViewCell.self)) { idx, model, cell in
+                let word: String
                 if idx % 2 == 0 {
                     cell.wordTestLbl?.text = model.korea
+                    word = model.english
                 } else {
                     cell.wordTestLbl?.text = model.english
+                    word = model.korea
                 }
                 cell.sign = { txt in
                     if txt == "" {
-                        self.presentAlert(message: "값이 비었습니다.", title: "정답을 채워주세요.", actionStyle: .cancel, handler: nil)
+                        self.presentAlert(message: "값이 비었습니다.", title: "정답을 채워주세요.", actionStyle: .destructive, handler: nil)
                         return
                     }
-                    self.checkValue(txt, cell.wordTestLbl.text!)
+                    self.checkValue(txt, word, cell.wordTestLbl.text!)
                     if idx == self.wordnum - 1 {
                         self.presentAlert(message: "마지막 문제입니다", title: "결과 확인하기", actionStyle: .destructive) { _ in
                             let vc = self.makeVC(storyBoardName: .memo, identifier: .testResultVC) as TestResultViewController
-                            print("다음으로 보내기전에 : ",self.list)
-                            vc.arr = self.list
+                            vc.arr = self.resultWord
                             self.navigationController?.pushViewController(vc, animated: true)
                         }
                     }
@@ -84,13 +74,14 @@ extension TestViewController {
 }
 
 extension TestViewController {
-    func checkValue(_ userAnswer: String, _ answer: String) {
+    func checkValue(_ userAnswer: String, _ answer: String, _ mean: String) {
         if userAnswer == answer {
-            self.list?.append(TestRusultModel(word: answer, correct: true))
+            self.list.append(TestRusultModel(word: mean, correct: true))
+            resultWord.onNext(self.list)
         } else {
-            self.list?.append(TestRusultModel(word: answer, correct: false))
+            self.list.append(TestRusultModel(word: mean, correct: false))
+            resultWord.onNext(self.list)
         }
-        print("check후: "list)
     }
     
     func nextCell() {
@@ -104,8 +95,8 @@ extension TestViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
-    
-    
+
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 414, height: 730)
     }
