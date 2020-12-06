@@ -102,7 +102,7 @@ extension DarnerAPI {
         case .myrank, .rank:
            // let token = UserDefaults.standard.value(forKey: "token") as! String
 
-            return ["Authorization": "Bearer " + "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI5OTk5OSIsImlhdCI6MTYwNzIzNjc1NSwiZXhwIjoxNjA3MjU0NzU1fQ.tto0eBIqfeEs9Ux7KwMNslpuW-t8cIM5ztXfQQZTHuYPJout72cXgXPy2ao5x1pJPWRUgYod12-hxQc7SiboHw"]
+            return ["Authorization": "Bearer " + "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzbWtpbSIsImlhdCI6MTYwNzI2MDQ0NSwiZXhwIjoxNjA3Mjc4NDQ1fQ.xnEgceIkK1Q72D7u9T9nsjYuELzdylINIsm8DSZYCWHvRImOfCd5O4fXrjcNbFggWQYZAuJCAEzVYVi3t0USXQ"]
             
 
         default:

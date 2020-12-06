@@ -265,7 +265,7 @@
                                     </attributedString>
                                 </state>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stack" translatesAutoresizingMaskIntoConstraints="NO" id="PJv-5Q-tU6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="스택" translatesAutoresizingMaskIntoConstraints="NO" id="PJv-5Q-tU6">
                                 <rect key="frame" x="72" y="502" width="270" height="311"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -312,8 +312,8 @@
     </scenes>
     <resources>
         <image name="ranking" width="36" height="36"/>
-        <image name="stack" width="288" height="322"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="스택" width="288" height="322"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
