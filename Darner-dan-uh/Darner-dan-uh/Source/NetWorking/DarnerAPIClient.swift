@@ -21,7 +21,9 @@ class DarnerAPIClient {
                                      method: api.method!,
                                      parameters: api.parameter,
                                      headers: api.header).responseData { response in
-                                        print(response.response?.statusCode)
+                                       // print(response.response?.statusCode)
+                                        debugPrint(response)
+
                 switch response.result {
                 case .success(let data):
                     do {

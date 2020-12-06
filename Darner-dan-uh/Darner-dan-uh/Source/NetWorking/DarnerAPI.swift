@@ -30,7 +30,7 @@ enum DarnerAPI {
 
 extension DarnerAPI {
     var baseURL: String {
-        return "https://jsonplaceholder.typicode.com" //FIX- 주소 수정
+        return "http://10.156.145.103:9032" //FIX- 주소 수정
     }
     
     var path: String {
@@ -100,7 +100,8 @@ extension DarnerAPI {
         case .verifywithemail(_, let code):
             return ["code" : code]
         case .verifyPassword:
-            return ["Authorization": "Bearer " + "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI5OTk5OSIsImlhdCI6MTYwNzIzNjc1NSwiZXhwIjoxNjA3MjU0NzU1fQ.tto0eBIqfeEs9Ux7KwMNslpuW-t8cIM5ztXfQQZTHuYPJout72cXgXPy2ao5x1pJPWRUgYod12-hxQc7SiboHw"]
+            return ["Authorization": "Bearer " + "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzbWtpbSIsImlhdCI6MTYwNzI2MjAzMSwiZXhwIjoxNjA3MjgwMDMxfQ.mlzlDztiWAWUwDXW_7DUN3SA1FRU9khqOcTqfh4lhP5xJV9PxNeLsuU7bdBYjQOQbsAiETzR020Z-44lp8JjIw",
+                    "content-type": "application/json"]
         default:
             return nil
         }
@@ -125,9 +126,6 @@ extension DarnerAPI {
             
         case .verifyPassword(let pw):
             return ["password": pw]
-            
-//        case .verifyPassword(let pw):
-//            return ["password": pw]
             
         default:
             return nil
