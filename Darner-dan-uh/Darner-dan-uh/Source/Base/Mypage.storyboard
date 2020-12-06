@@ -26,7 +26,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoImage" translatesAutoresizingMaskIntoConstraints="NO" id="1cg-fp-eta">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="노란병아리" translatesAutoresizingMaskIntoConstraints="NO" id="1cg-fp-eta">
                                 <rect key="frame" x="142" y="304" width="130" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="5jN-K0-Fou"/>
@@ -34,13 +34,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eye-nA-lwA">
-                                <rect key="frame" x="163.5" y="457" width="87" height="30"/>
+                                <rect key="frame" x="172" y="457" width="70" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="2bj-9s-Pji"/>
-                                    <constraint firstAttribute="width" constant="87" id="OmO-ck-YRY"/>
+                                    <constraint firstAttribute="width" constant="70" id="ehr-RC-t88"/>
                                 </constraints>
                                 <attributedString key="attributedText">
-                                    <fragment content="다너단어">
+                                    <fragment content="김선민">
                                         <attributes>
                                             <font key="NSFont" size="25" name="BinggraeMelona"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -68,7 +68,11 @@
                                     </attributedString>
                                 </state>
                                 <connections>
+<<<<<<< HEAD
                                     <segue destination="clX-Rq-d56" kind="show" id="OEj-Ut-21B"/>
+=======
+                                    <segue destination="x8z-rV-U7r" kind="show" id="66q-1J-qUY"/>
+>>>>>>> MypageNetworking
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cl5-s7-HeJ">
@@ -119,11 +123,11 @@
             <objects>
                 <viewController storyboardIdentifier="modify" id="clX-Rq-d56" customClass="ModifyViewController" customModule="Darner_dan_uh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gyC-Yb-XUj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2SN-gy-9jT">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="syz-Ip-oip"/>
                                 </constraints>
@@ -136,7 +140,7 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCF-bn-h6Z">
-                                <rect key="frame" x="40" y="379" width="63" height="30"/>
+                                <rect key="frame" x="40" y="433.5" width="63" height="29.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="닉네임">
                                         <attributes>
@@ -148,7 +152,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Qy-cp-DYW">
-                                <rect key="frame" x="40" y="428" width="350" height="53"/>
+                                <rect key="frame" x="40" y="482" width="350" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="ifP-s9-4Jd"/>
                                     <constraint firstAttribute="width" constant="350" id="tCV-4h-bed"/>
@@ -156,18 +160,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9MQ-m4-Wx6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="노란병아리" translatesAutoresizingMaskIntoConstraints="NO" id="9MQ-m4-Wx6">
                                 <rect key="frame" x="40" y="180" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.99792057280000002" green="0.45095777510000001" blue="0.48626422879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Mq5-Xe-TJ2"/>
                                     <constraint firstAttribute="width" constant="100" id="ckc-51-AOe"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXw-E5-ULy">
-                                <rect key="frame" x="180" y="211" width="54" height="38"/>
+                                <rect key="frame" x="180" y="211" width="93" height="38"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="아이디">
+                                    <fragment content="smKim">
                                         <attributes>
                                             <font key="NSFont" size="30" name="BinggraeMelona-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -177,7 +180,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FVK-mc-yaF">
-                                <rect key="frame" x="107" y="569" width="200" height="37.5"/>
+                                <rect key="frame" x="121" y="623" width="200" height="37.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="bef-9f-cvW"/>
                                 </constraints>
@@ -192,10 +195,6 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
-                                <connections>
-                                    <action selector="nextView:" destination="clX-Rq-d56" eventType="touchUpInside" id="7gx-IQ-ngK"/>
-                                    <segue destination="x8z-rV-U7r" kind="show" id="O5B-EO-uwZ"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="whe-Vq-K1c"/>
@@ -203,14 +202,13 @@
                         <constraints>
                             <constraint firstItem="uXw-E5-ULy" firstAttribute="leading" secondItem="9MQ-m4-Wx6" secondAttribute="trailing" constant="40" id="1uy-1J-ZDs"/>
                             <constraint firstItem="3Qy-cp-DYW" firstAttribute="top" secondItem="qCF-bn-h6Z" secondAttribute="bottom" constant="19" id="2WF-tP-sQg"/>
-                            <constraint firstItem="uXw-E5-ULy" firstAttribute="centerX" secondItem="2SN-gy-9jT" secondAttribute="centerX" id="3h4-pR-23u"/>
                             <constraint firstItem="3Qy-cp-DYW" firstAttribute="leading" secondItem="whe-Vq-K1c" secondAttribute="leading" constant="40" id="46j-vg-gmQ"/>
                             <constraint firstItem="9MQ-m4-Wx6" firstAttribute="centerY" secondItem="uXw-E5-ULy" secondAttribute="centerY" id="7kr-EN-7yV"/>
                             <constraint firstItem="2SN-gy-9jT" firstAttribute="top" secondItem="whe-Vq-K1c" secondAttribute="top" id="Dsl-OU-9aD"/>
                             <constraint firstAttribute="trailing" secondItem="2SN-gy-9jT" secondAttribute="trailing" id="Hii-S4-wzU"/>
                             <constraint firstItem="FVK-mc-yaF" firstAttribute="top" secondItem="3Qy-cp-DYW" secondAttribute="bottom" constant="88" id="LtY-zZ-Z9Y"/>
-                            <constraint firstItem="uXw-E5-ULy" firstAttribute="centerX" secondItem="FVK-mc-yaF" secondAttribute="centerX" id="Pjn-We-U3b"/>
                             <constraint firstItem="3Qy-cp-DYW" firstAttribute="leading" secondItem="9MQ-m4-Wx6" secondAttribute="leading" id="ToS-46-vQ3"/>
+                            <constraint firstItem="FVK-mc-yaF" firstAttribute="leading" secondItem="whe-Vq-K1c" secondAttribute="leading" constant="121" id="Vaf-Au-DcN"/>
                             <constraint firstItem="9MQ-m4-Wx6" firstAttribute="top" secondItem="gyC-Yb-XUj" secondAttribute="top" constant="180" id="dSb-ob-7IL"/>
                             <constraint firstAttribute="bottom" secondItem="3Qy-cp-DYW" secondAttribute="bottom" constant="361" id="eMT-LC-cYc"/>
                             <constraint firstItem="2SN-gy-9jT" firstAttribute="leading" secondItem="gyC-Yb-XUj" secondAttribute="leading" id="g36-aM-aRg"/>
@@ -219,6 +217,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="w6c-zg-DOn"/>
                     <connections>
+                        <outlet property="idLbl" destination="uXw-E5-ULy" id="KiG-s2-eVT"/>
                         <outlet property="modifyBtn" destination="FVK-mc-yaF" id="xX1-Nr-ktJ"/>
                         <outlet property="nickNameLbl" destination="qCF-bn-h6Z" id="hyW-WQ-CTh"/>
                         <outlet property="nickNameTxtField" destination="3Qy-cp-DYW" id="wq3-Ua-C2y"/>
@@ -227,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9F1-Nb-fvP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1205.7971014492755" y="28.794642857142854"/>
+            <point key="canvasLocation" x="2391" y="29"/>
         </scene>
         <!--Enter Pw View Controller-->
         <scene sceneID="GFr-Cb-pq6">
@@ -341,7 +340,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Svj-B9-yhA"/>
                     <connections>
-                        <outlet property="nextBtn" destination="dIj-yf-P85" id="Apm-iR-I9g"/>
+                        <outlet property="nextBtn" destination="dIj-yf-P85" id="q3U-dd-YA3"/>
                         <outlet property="passwordLbl" destination="a16-yT-foq" id="Tes-Lj-dMW"/>
                         <outlet property="passwordTxtField" destination="eaI-HP-I9y" id="rwP-yZ-zHW"/>
                         <outlet property="subLbl" destination="Vei-a7-Ng4" id="yPz-Z3-6r0"/>
@@ -350,7 +349,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mXK-3o-bHr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1966.6666666666667" y="28.794642857142854"/>
+            <point key="canvasLocation" x="1398.5507246376812" y="28.794642857142854"/>
         </scene>
         <!--My Character View Controller-->
         <scene sceneID="jRt-pY-4RG">
@@ -949,10 +948,13 @@
     </scenes>
     <resources>
         <image name="노란병아리" width="763" height="917"/>
+<<<<<<< HEAD
         <image name="노란알" width="498" height="602"/>
         <image name="파란 병아리" width="600" height="670"/>
         <image name="파란알" width="502" height="582"/>
         <image name="핑크알" width="468" height="594"/>
+=======
+>>>>>>> MypageNetworking
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

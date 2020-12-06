@@ -22,6 +22,8 @@ enum DarnerAPI {
     case wordGenre(word_id: String, number: String)
     case wordTest
     case myProfile
+    case updateProfile(changeId: String)
+    case verifyPassword(pw: String)
     case getLevel
     case updateProfile
     case memoTitle
@@ -63,6 +65,8 @@ extension DarnerAPI {
             return "/user/profile"
         case .updateProfile:
             return "/user/update"
+        case .verifyPassword:
+            return "/user/verifyPassword"
         case .memoTitle:
             return "/memo/title"
         case .memoContents:
@@ -76,6 +80,8 @@ extension DarnerAPI {
         switch self {
         case .register,
              .verifywithemail,
+             .login,
+             .verifyPassword:
              .wordGenre,
              .savedata,
              .login:
@@ -96,7 +102,10 @@ extension DarnerAPI {
             return .delete
             
         case .updateProfile:
-            return .put
+            return .patch
+        
+        default:
+            return nil 
         }
     }
     
@@ -131,8 +140,11 @@ extension DarnerAPI {
     
     var parameter: Parameters? {
         switch self {
-        case .savedata(let id, let count):
-            return ["id":id, "count": count]
+        case .updateProfile(let changeId):
+            return ["name": changeId]
+            
+        case .verifywithemail(let email, _):
+            return ["email" : email]
             
         case .verifywithemail(let email,let code):
             return ["email" : email, "code": code]
@@ -144,7 +156,11 @@ extension DarnerAPI {
             return ["userId": userId, "password": password]
             
         case .wordGenre(let word_id, let number):
-            return ["word_id": "\(word_id)", "number": "\(number)"]
+            return ["word_id": word_id, "number": number]
+            
+        case .verifyPassword(let pw):
+            return ["password": pw]
+            
         default:
             return nil
         }

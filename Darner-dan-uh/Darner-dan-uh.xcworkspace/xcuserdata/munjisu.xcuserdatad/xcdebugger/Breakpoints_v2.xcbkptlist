@@ -23,6 +23,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+<<<<<<< HEAD
             uuid = "3CD4F3E9-E608-4C22-8BC8-6ABF0193B77B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -98,6 +99,19 @@
             endingLineNumber = "36"
             landmarkName = "networkingResult(from:model:)"
             landmarkType = "7">
+=======
+            uuid = "58BD4AF2-9CBD-44F9-9514-E520A4AC46A8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Darner-dan-uh/Source/NetWorking/DarnerAPI.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "parameter"
+            landmarkType = "24">
+>>>>>>> MypageNetworking
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

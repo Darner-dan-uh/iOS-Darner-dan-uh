@@ -14,9 +14,15 @@ class RankingCell: UITableViewCell {
     @IBOutlet weak var nickNameLbl: UILabel!
     @IBOutlet weak var starImage: UIImageView!
     
-    var RankingData: RankingModel! {
-        didSet { setUpView() }
-    }
+//    var RankingData: RankingModel! {
+//        didSet { setUpView() }
+//    }
+//    
+//    private func setUpView() {
+//        self.RankingLbl?.text = "\(RankingData.ranking)"
+//        self.profileImage?.image = UIImage(named: RankingData.nickName)
+//        self.nickNameLbl?.text = RankingData.nickName
+//    }
     
     private func setUpView() {
         self.RankingLbl?.text = "\(RankingData.rank)"
