@@ -19,8 +19,8 @@ class RankingCell: UITableViewCell {
     }
     
     private func setUpView() {
-        self.RankingLbl?.text = "\(RankingData.ranking)"
-        self.nickNameLbl?.text = RankingData.nickName
+        self.RankingLbl?.text = "\(RankingData.rank)"
+        self.nickNameLbl?.text = RankingData.name
     }
     
     override func awakeFromNib() {
