@@ -43,7 +43,7 @@ extension CharacterCollectionViewController {
                          sixCharacterBtn.rx.tap.map {}
         )
         .subscribe({ _ in
-            let vc = self.makeVC(identifier: ViewControllerName.setMainCharacterVC)
+            let vc = self.makeVC(storyBoardName: .myPage, identifier: .setMainCharacterVC)
             self.present(vc, animated: true, completion: nil)
         }).disposed(by: disposeBag)
         

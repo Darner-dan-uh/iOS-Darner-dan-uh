@@ -22,21 +22,27 @@ enum DarnerAPI {
     case wordGenre(word_id: String, number: String)
     case wordTest
     case myProfile
+    case getLevel
     case updateProfile
     case memoTitle
     case memoContents
     case deleteMemo
+    case savedata(id: String, count: Int)
 }
 
 extension DarnerAPI {
     var baseURL: String {
-        return "http://10.156.145.103:9032" //FIX- 주소 수정
+        return "http://10.156.145.103:9032"
     }
     
     var path: String {
         switch self {
+        case .getLevel:
+            return "/user/level"
+        case .savedata:
+            return "/word/savedata"
         case .register:
-            return "/signup"
+            return "/register"
         case .verifywithemail:
             return "/verifywithemail"
         case .login:
@@ -70,6 +76,8 @@ extension DarnerAPI {
         switch self {
         case .register,
              .verifywithemail,
+             .wordGenre,
+             .savedata,
              .login:
             return .post
             
@@ -77,43 +85,57 @@ extension DarnerAPI {
              .rank,
              .myrank,
              .stack,
-             .wordGenre,
              .wordTest,
              .myProfile,
              .memoTitle,
+             .getLevel,
              .memoContents:
             return .get
             
         case .deleteMemo:
             return .delete
             
-//        case .updateProfile:
-//            return .update
-        
-        default:
-            return nil 
+        case .updateProfile:
+            return .put
         }
     }
     
     var header: HTTPHeaders? {
         switch self {
-        case .verifywithemail(_, let code):
-            return ["code" : code]
-        case .myrank, .rank:
-           // let token = UserDefaults.standard.value(forKey: "token") as! String
-
-            return ["Authorization": "Bearer " + "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzbWtpbSIsImlhdCI6MTYwNzI2MDQ0NSwiZXhwIjoxNjA3Mjc4NDQ1fQ.xnEgceIkK1Q72D7u9T9nsjYuELzdylINIsm8DSZYCWHvRImOfCd5O4fXrjcNbFggWQYZAuJCAEzVYVi3t0USXQ"]
-            
-
+        case .wordGenre,
+             .wordTest,
+             .savedata,
+             .getLevel,
+             .rank:
+            let token = UserDefaults.standard.value(forKey: "token") as! String
+            return ["Authorization" : "Bearer " + token]
         default:
-            return nil
+            return ["Content-Type":"application/json"]
         }
-     }
-        
+    }
+    
+    var encoding: ParameterEncoding {
+        switch self {
+        case .logout,
+             .rank,
+             .stack,
+             .wordTest,
+             .myProfile,
+             .memoTitle,
+             .memoContents:
+            return URLEncoding.queryString
+        default:
+            return JSONEncoding.default
+        }
+    }
+    
     var parameter: Parameters? {
         switch self {
-        case .verifywithemail(let email, _):
-            return ["email" : email]
+        case .savedata(let id, let count):
+            return ["id":id, "count": count]
+            
+        case .verifywithemail(let email,let code):
+            return ["email" : email, "code": code]
             
         case .register(let userId, let name, let email, let password):
             return ["userId" : userId, "name" : name, "email" : email, "password": password]
@@ -122,7 +144,7 @@ extension DarnerAPI {
             return ["userId": userId, "password": password]
             
         case .wordGenre(let word_id, let number):
-            return ["word_id": word_id, "number": number]
+            return ["word_id": "\(word_id)", "number": "\(number)"]
         default:
             return nil
         }

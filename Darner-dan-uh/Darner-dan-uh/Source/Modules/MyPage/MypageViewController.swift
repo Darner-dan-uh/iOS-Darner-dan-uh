@@ -37,6 +37,8 @@ class MypageViewController: UIViewController {
         alret.addAction(UIAlertAction(title: "아니요", style: .cancel, handler: nil))
         
         present(alret, animated: true, completion: nil)
+
+        
     }
 //
 //    func bindAction() {
@@ -46,23 +48,28 @@ class MypageViewController: UIViewController {
 //        .subscribe
 //    }
     
-   
-    
-    func bindViewModel() {
-        let input = SeeMypageViewModel.Input.init(doneTap: modifyBtn.rx.tap.asDriver())
-        let output = viewModel.transform(input)
+    func bindAction() {
+        logOutBtn.rx.tap
+            .map { self.presentAlert(message: "로그아웃 하시겠습니까?", style: .alert, title: "네", actionStyle: .default, handler: nil, secTitle: "아니요", secActionStyle: .cancel, secHandler: nil)}
+            .subscribe()
+            .disposed(by: disposeBag)
         
-        output.result.emit(onCompleted: { [unowned self] in
-            self.nextView(identifire: "modify")
-        }).disposed(by: disposeBag)
+        modifyBtn.rx.tap
+            .map{ let controller = self.navigationController?.viewControllers
+                self.navigationController?.viewControllers = controller!
+                self.navigationController?.popViewController(animated: true)
+        }
+        
+        characterBtn.rx.tap
+            .subscribe(onNext: { _ in
+                let vc = self.makeVC(storyBoardName: .myPage, identifier: .myCharacterVC)
+                self.present(vc, animated: true, completion: nil)
+            }).disposed(by: disposeBag)
     }
     
-}
-
-
-extension UIViewController {
-    func nextView(identifire: String) {
-        let viewController = self.storyboard?.instantiateViewController(withIdentifier: identifire)
-        navigationController?.pushViewController(viewController!, animated: true)
+    @IBAction func nextVC(_ sender: UIButton) {
+        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "modify") else { return }
+        self.present(nextVC, animated: true)
+        self.dismiss(animated: true)
     }
 }

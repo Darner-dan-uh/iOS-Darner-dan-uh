@@ -14,7 +14,6 @@ import RxCocoa
 class MypageViewModel {
 
     let disposeBag = DisposeBag()
-    let viewModel = MypageViewModel()
 
     struct Input {
         let nickName: Driver<String>

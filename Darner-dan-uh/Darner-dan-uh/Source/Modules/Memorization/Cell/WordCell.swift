@@ -9,6 +9,7 @@
 import UIKit
 
 class WordCell: UITableViewCell {
+    static let cellName = "WordCell"
 
     @IBOutlet weak var wordKoreanMeanLbl: UILabel!
     @IBOutlet weak var wordEnglishMeanLbl: UILabel!
@@ -24,9 +25,4 @@ class WordCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-}
-
-struct DecodeWordCell {
-    var englishMean: String
-    var koreanMean: String
 }

@@ -17,6 +17,10 @@ extension UIColor {
         return rgb(red: 242, green: 242, blue: 242, alpha: 0.72)
     }
     
+    static var customBlack: UIColor {
+        return rgb(red: 95, green: 89, blue: 89, alpha: 1)
+    }
+    
     static func rgb(red: Int, green: Int, blue: Int, alpha: CGFloat) -> UIColor {
         return .init(red: CGFloat(red) / 255, green: CGFloat(green) / 255, blue: CGFloat(blue) / 255, alpha: alpha)
     }

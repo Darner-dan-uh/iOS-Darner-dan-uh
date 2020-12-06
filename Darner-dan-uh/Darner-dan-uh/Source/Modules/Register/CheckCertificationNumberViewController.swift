@@ -12,8 +12,9 @@ import RxCocoa
 import RxSwift
 
 final class CheckCertificationNumberViewController: UIViewController {
-    
+
     let disposeBag = DisposeBag()
+    let viewModel = CheckCertificationNumberViewModel()
     
     @IBOutlet weak var previousVCBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
@@ -29,14 +30,24 @@ final class CheckCertificationNumberViewController: UIViewController {
 extension CheckCertificationNumberViewController {
     private func bindAction() {
         nextBtn.rx.tap
-            .map { //  textfiled 값 post
-                // sussess 면 다음 페이지
-                // fail 이면 알람
+            .withLatestFrom(self.certificationNumberTxtField.rx.text)
+            .map { DarnerAPI.verifywithemail(email: RegisterViewController.email, code: $0!) }
+            .flatMap {(request: DarnerAPI) -> Observable<MessageModel> in
+                DarnerAPIClient.shared.networkingResult(from: request)
             }
-            .subscribe { _ in
-                let vc = self.makeVC(identifier: ViewControllerName.finishRegisterVC)
-                self.navigationController?.pushViewController(vc, animated: true)
+            .subscribe { response in
+                if response.message == "true" {
+                    let vc = self.makeVC(identifier: .finishRegisterVC)
+                    DispatchQueue.main.async {
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
+                } else {
+                    self.nextBtn.shake()
+                }
+            } onError: { _ in
+                self.nextBtn.shake()
             }.disposed(by: disposeBag)
+
         
         previousVCBtn.rx.tap
             .subscribe { _ in
@@ -45,17 +56,15 @@ extension CheckCertificationNumberViewController {
     }
     
     private func bindUI() {
-        certificationNumberTxtField.rx.text.orEmpty
-            .map { self.checkEmail(email: $0) }
-            .subscribe(onNext: { bool in
-                bool ? self.nextBtn.setTextColor(color: .white) : self.nextBtn.setTextColor(color: .black)
-                self.nextBtn.isUserInteractionEnabled = bool
-                self.nextBtn.layer.borderColor = bool ? UIColor.customPink.cgColor : UIColor.black.cgColor
-                self.nextBtn.backgroundColor = bool ? .customPink : .white
-            }).disposed(by: disposeBag)
-    }
-    
-    private func checkEmail(email: String) -> Bool {
-        return !email.isEmpty
+        let input = CheckCertificationNumberViewModel.Input.init(codeSubject: certificationNumberTxtField.rx.text.orEmpty.asObservable())
+        
+        let output = viewModel.transform(input)
+        
+        output.result.drive(onNext: { bool in
+            bool ? self.nextBtn.setTextColor(color: .white) : self.nextBtn.setTextColor(color: .black)
+            self.nextBtn.isUserInteractionEnabled = bool
+            self.nextBtn.layer.borderColor = bool ? UIColor.customPink.cgColor : UIColor.black.cgColor
+            self.nextBtn.backgroundColor = bool ? .customPink : .white
+        }).disposed(by: disposeBag)
     }
 }

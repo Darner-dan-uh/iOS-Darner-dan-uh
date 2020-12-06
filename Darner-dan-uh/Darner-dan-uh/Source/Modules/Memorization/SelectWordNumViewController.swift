@@ -12,7 +12,8 @@ import RxCocoa
 import RxSwift
 
 final class SelectWordNumViewController: UIViewController {
-    
+    var wordTypeStr: String!
+    var wordTypeInt: Int!
     var wordNum = 10
     let disposeBag = DisposeBag()
     
@@ -25,7 +26,6 @@ final class SelectWordNumViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bindAction()
-        bindUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,10 +35,6 @@ final class SelectWordNumViewController: UIViewController {
 }
 
 extension SelectWordNumViewController {
-    private func bindUI() {
-        
-    }
-    
     private func bindAction() {
         minusWordNumBtn.rx.tap
             .map { self.editWordCount(self.minusWordNumBtn, self.wordNum)}
@@ -58,9 +54,11 @@ extension SelectWordNumViewController {
             }).disposed(by: disposeBag)
         
         nextVCBtn.rx.tap
-            .map { /* wordNum을 서버로 보내야함  */ }
             .bind(onNext: {
-                let vc: TestTableViewController = self.makeVC(identifier: ViewControllerName.testTableVC)
+                let vc: TestTableViewController = self.makeVC(storyBoardName: .memo, identifier: .testTableVC)
+                vc.wordNum = self.wordNum
+                vc.wordTypeInt = self.wordTypeInt
+                vc.wordTypeStr = self.wordTypeStr
                 self.navigationController?.pushViewController(vc, animated: true)
             }).disposed(by: disposeBag)
     }
