@@ -20,17 +20,20 @@ class DarnerAPIClient {
             let request = AF.request(URL(string: api.baseURL + api.path)!,
                                      method: api.method!,
                                      parameters: api.parameter,
-                                     headers: api.header).responseJSON { response in
+                                     headers: api.header).responseData { response in
+                                       // print(response.response?.statusCode)
+                                        debugPrint(response)
+
                 switch response.result {
                 case .success(let data):
                     do {
                         let dataToUse: T = try JSONDecoder().decode(T.self, from: data as! Data)
                         return obs.onNext(dataToUse)
                     } catch {
-                        return obs.onError(fatalError())
+                        return obs.onError(error)
                     }
-                case .failure(_):
-                    return obs.onError(fatalError())
+                case .failure(let error):
+                    return obs.onError(error)
                 }
                 return obs.onError(fatalError())
             }

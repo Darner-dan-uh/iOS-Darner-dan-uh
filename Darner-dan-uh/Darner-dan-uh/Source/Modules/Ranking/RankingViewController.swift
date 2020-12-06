@@ -34,17 +34,17 @@ final class RankingViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-    func bindViewModel() {
-        let input = RankingViewModel.Input(loadData: loadData.asSignal(onErrorJustReturn: ()))
-        let output = viewModel.transform(input)
-        
-        output.loadApplyList.bind(to: tableView.rx.items) { tableView, index, element -> UITableViewCell in
-            guard let cell = self.tableView.dequeueReusableCell(withIdentifier: "RankingCell") as? RankingCell else { return RankingCell() }
-            cell.RankingData = element
-            return cell
-        }.disposed(by: disposeBag)
-    }
+//    
+//    func bindViewModel() {
+//        let input = RankingViewModel.Input(loadData: loadData.asSignal(onErrorJustReturn: ()))
+//        let output = viewModel.transform(input)
+//        
+//        output.loadApplyList.bind(to: tableView.rx.items) { tableView, index, element -> UITableViewCell in
+//            guard let cell = self.tableView.dequeueReusableCell(withIdentifier: "RankingCell") as? RankingCell else { return RankingCell() }
+//            cell.RankingData = element
+//            return cell
+//        }.disposed(by: disposeBag)
+//    }
     
     
     

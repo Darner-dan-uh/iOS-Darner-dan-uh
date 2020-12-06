@@ -15,9 +15,8 @@ class ModifyViewController: UIViewController {
     
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nickNameLbl: UILabel!
+    @IBOutlet weak var idLbl: UILabel!
     @IBOutlet weak var nickNameTxtField: UITextField!
-    @IBOutlet weak var passwordLbl: UILabel!
-    @IBOutlet weak var passwordTxtFiled: UITextField!
     @IBOutlet weak var modifyBtn: UIButton!
     
     private let disposeBag = DisposeBag()
@@ -29,37 +28,60 @@ class ModifyViewController: UIViewController {
         self.navigationItem.title = "마이페이지"
         
         nickNameTxtField.clearButtonMode = .whileEditing
-        passwordTxtFiled.clearButtonMode = .whileEditing
 
         // Do any additional setup after loading the view.
         profileImage.layer.cornerRadius = profileImage.frame.width/2
         modifyBtn.buttonStyle()
         nickNameTxtField.underLine()
-        passwordTxtFiled.underLine()
         
-        passwordTxtFiled.isSecureTextEntry = true
-        
+        viewProfile()
     }
+    
+    func viewProfile() {
+        let mypage: Observable<MypageModel> = DarnerAPIClient.shared.networkingResult(from: .myProfile)
+        mypage.asObservable().subscribe(onNext: { model in
+            self.nickNameLbl.text = model.name
+            self.idLbl.text = model.userId
+        }).disposed(by: disposeBag)
+    }
+    
+    func modifyProfile() {
+        
+        let mypage: Observable<a> = DarnerAPIClient.shared.networkingResult(from: .updateProfile(changeId: self.nickNameTxtField.text!))
+        
+        modifyBtn.rx.tap
+            .map{ self.nickNameTxtField.text}
+            .subscribe(onNext: { _ in
+                mypage.asObservable().subscribe(onNext: { model in
+                    self.nickNameTxtField.text = model.name
+                }).disposed(by: self.disposeBag)
+            }).disposed(by: disposeBag)
+        
+        
+//        
+//            mypage.subscribe { (b) in
+//                if b.code == 200 {
+//    
+//                }
+//            } onError: { (<#Error#>) in
+//                <#code#>
+//            }
+//      
+    }
+        
 
-    func bindViewModel() {
-        let input = MypageViewModel.Input(userName: nickNameTxtField.rx.text.orEmpty.asDriver(), userPw: passwordTxtFiled.rx.text.orEmpty.asDriver())
-        let output = viewModel.transform(input)
-        
-    }
+ 
+
     
     func bindAction() {
-        modifyBtn.rx.tap
-            .map{ let controller =
-                self.navigationController?.viewControllers
-                self.navigationController?.viewControllers = controller!
-                self.navigationController?.popViewController(animated: true)
-        }
+        //modifyBtn.rx.tap.
     }
-    
-    @IBAction func nextView(_ sender: UIButton) {
-        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "enterPw") else { return }
-        self.present(nextVC, animated: true)
-        self.dismiss(animated: true)
+
+
+
+struct a: Codable {
+    let code: Int
+    let name: String
     }
 }
 

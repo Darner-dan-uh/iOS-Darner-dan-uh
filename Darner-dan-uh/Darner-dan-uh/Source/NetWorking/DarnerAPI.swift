@@ -21,7 +21,8 @@ enum DarnerAPI {
     case wordGenre(word_id: String, number: String)
     case wordTest
     case myProfile
-    case updateProfile
+    case updateProfile(changeId: String)
+    case verifyPassword(pw: String)
     case memoTitle
     case memoContents
     case deleteMemo
@@ -29,7 +30,7 @@ enum DarnerAPI {
 
 extension DarnerAPI {
     var baseURL: String {
-        return "https://jsonplaceholder.typicode.com" //FIX- 주소 수정
+        return "http://10.156.145.103:9032" //FIX- 주소 수정
     }
     
     var path: String {
@@ -54,6 +55,8 @@ extension DarnerAPI {
             return "/user/profile"
         case .updateProfile:
             return "/user/update"
+        case .verifyPassword:
+            return "/user/verifyPassword"
         case .memoTitle:
             return "/memo/title"
         case .memoContents:
@@ -67,7 +70,8 @@ extension DarnerAPI {
         switch self {
         case .register,
              .verifywithemail,
-             .login:
+             .login,
+             .verifyPassword:
             return .post
             
         case .logout,
@@ -83,8 +87,8 @@ extension DarnerAPI {
         case .deleteMemo:
             return .delete
             
-//        case .updateProfile:
-//            return .update
+        case .updateProfile:
+            return .patch
         
         default:
             return nil 
@@ -95,6 +99,9 @@ extension DarnerAPI {
         switch self {
         case .verifywithemail(_, let code):
             return ["code" : code]
+        case .verifyPassword:
+            return ["Authorization": "Bearer " + "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzbWtpbSIsImlhdCI6MTYwNzI2MjAzMSwiZXhwIjoxNjA3MjgwMDMxfQ.mlzlDztiWAWUwDXW_7DUN3SA1FRU9khqOcTqfh4lhP5xJV9PxNeLsuU7bdBYjQOQbsAiETzR020Z-44lp8JjIw",
+                    "content-type": "application/json"]
         default:
             return nil
         }
@@ -102,6 +109,9 @@ extension DarnerAPI {
     
     var parameter: Parameters? {
         switch self {
+        case .updateProfile(let changeId):
+            return ["name": changeId]
+            
         case .verifywithemail(let email, _):
             return ["email" : email]
             
@@ -113,6 +123,10 @@ extension DarnerAPI {
             
         case .wordGenre(let word_id, let number):
             return ["word_id": word_id, "number": number]
+            
+        case .verifyPassword(let pw):
+            return ["password": pw]
+            
         default:
             return nil
         }
