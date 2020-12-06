@@ -30,4 +30,5 @@ enum ViewControllerName: String {
     case characterCollectionVC = "CharacterCollectionViewController"
     case setMainCharacterVC = "SetMainCharacterViewController"
     case myCharacterVC = "MyCharacterViewController"
+    case mypageVC = "MypageViewController"
 }

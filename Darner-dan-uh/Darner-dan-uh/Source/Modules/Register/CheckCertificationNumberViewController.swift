@@ -36,7 +36,7 @@ extension CheckCertificationNumberViewController {
                 DarnerAPIClient.shared.networkingResult(from: request)
             }
             .subscribe { response in
-                if response.message == "True" {
+                if response.message == "true" {
                     let vc = self.makeVC(identifier: .finishRegisterVC)
                     DispatchQueue.main.async {
                         self.navigationController?.pushViewController(vc, animated: true)

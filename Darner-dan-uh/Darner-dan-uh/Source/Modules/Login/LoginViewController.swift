@@ -15,6 +15,7 @@ final class LoginViewController: UIViewController {
     var autoLoginFlag: Bool! = false
     let viewModel = LoginViewModel()
     let disposeBag = DisposeBag()
+    static var id: String!
     
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
@@ -43,6 +44,7 @@ extension LoginViewController {
             }
             .subscribe { (model:TokenMessageModel) in
                 guard let nToken = model.token else { self.loginBtn.shake(); return }
+                UserDefaults.standard.setValue(self.idTextField.text, forKey: "id")
                 UserDefaults.standard.setValue(nToken, forKey: "token")
                 let vc = self.makeVC(identifier: ViewControllerName.tabbarVC)
                 vc.modalPresentationStyle = .fullScreen

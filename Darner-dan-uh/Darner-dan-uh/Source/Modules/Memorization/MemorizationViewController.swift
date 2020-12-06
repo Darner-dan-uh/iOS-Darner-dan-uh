@@ -40,9 +40,9 @@ final class MemorizationViewController: UIViewController {
 
 extension MemorizationViewController {
     private func bindAction() {
-        Observable.merge(lawBtn.rx.tap.map { self.wordtupeStr = "법률"; self.wordtypeInt = 1 },
-                         traditionBtn.rx.tap.map { self.wordtupeStr = "전통"; self.wordtypeInt = 2 },
-                         artBtn.rx.tap.map { self.wordtupeStr = "예술"; self.wordtypeInt = 3 },
+        Observable.merge(lawBtn.rx.tap.map { self.wordtupeStr = "과일"; self.wordtypeInt = 1 },
+                         traditionBtn.rx.tap.map { self.wordtupeStr = "채소"; self.wordtypeInt = 2 },
+                         artBtn.rx.tap.map { self.wordtupeStr = "항공"; self.wordtypeInt = 3 },
                          harborBtn.rx.tap.map { self.wordtupeStr = "항구"; self.wordtypeInt = 4 },
                          agricultureBtn.rx.tap.map { self.wordtupeStr = "농업"; self.wordtypeInt = 5 },
                          militaryBtn.rx.tap.map { self.wordtupeStr = "군사"; self.wordtypeInt = 6 },
@@ -57,10 +57,11 @@ extension MemorizationViewController {
         }.disposed(by: disposeBag)
 
         myPageBtn.rx.tap
-            .subscribe({ _ in
-                let vc = self.makeVC(storyBoardName: .myPage, identifier: ViewControllerName.myCharacterVC)
+            .observeOn(MainScheduler.instance)
+            .map{ _ in
+                let vc = self.makeVC(storyBoardName: .myPage, identifier: ViewControllerName.mypageVC)
                 self.present(vc, animated: true, completion: nil)
-            })
+            }.subscribe()
             .disposed(by: disposeBag)
     }
 }

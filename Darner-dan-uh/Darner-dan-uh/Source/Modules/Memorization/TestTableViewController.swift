@@ -36,6 +36,7 @@ extension TestTableViewController {
         testBtn.rx.tap.map {
             self.presentAlert(message: "단어 시험을 볼 준비가 됐나요?", style: .alert, title: "더 공부할게요", actionStyle: .destructive, handler: nil, secTitle: "준비됐습니다", secActionStyle: .default) { _ in
                 let vc: TestViewController = self.makeVC(storyBoardName: .memo, identifier: .testVC)
+                vc.wordnum = self.wordNum
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }.subscribe()
@@ -56,7 +57,7 @@ extension TestTableViewController {
         self.tabBarController?.tabBar.isHidden = false
         
         let words: Observable<WordModel> = DarnerAPIClient.shared.networkingResult(from: .wordGenre(word_id: String(self.wordTypeInt), number: String(self.wordNum)))
-        words.map { $0.content }
+        words.map { $0.content! }
             .bind(to: tableView.rx.items(cellIdentifier: WordCell.cellName, cellType: WordCell.self)) { idx, model, cell in
                 cell.wordEnglishMeanLbl.text = model.english
                 cell.wordKoreanMeanLbl.text = model.korea
@@ -64,4 +65,3 @@ extension TestTableViewController {
     }
     
 }
-

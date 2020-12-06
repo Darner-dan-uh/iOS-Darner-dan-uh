@@ -16,25 +16,30 @@ enum DarnerAPI {
     case verifywithemail(email: String, code: String)
     case login(userId: String, password: String)
     case logout
-    case rank
+    case rank(userId: String)
     case stack
     case wordGenre(word_id: String, number: String)
     case wordTest
     case myProfile
+    case getLevel
     case updateProfile
     case memoTitle
     case memoContents
     case deleteMemo
+    case savedata(id: String, count: Int)
 }
 
 extension DarnerAPI {
     var baseURL: String {
-        return "http://10.156.145.103:9032" //FIX- 주소 수정
-//        return "http://localhost:5000"
+        return "http://10.156.145.103:9032"
     }
     
     var path: String {
         switch self {
+        case .getLevel:
+            return "/user/level"
+        case .savedata:
+            return "/word/savedata"
         case .register:
             return "/register"
         case .verifywithemail:
@@ -43,8 +48,8 @@ extension DarnerAPI {
             return "/login"
         case.logout:
             return "/logout"
-        case .rank:
-            return "/rank"
+        case .rank(let userId):
+            return "/myrank?id=\(userId)"
         case .stack:
             return "/stack"
         case .wordGenre:
@@ -69,6 +74,7 @@ extension DarnerAPI {
         case .register,
              .verifywithemail,
              .wordGenre,
+             .savedata,
              .login:
             return .post
             
@@ -78,6 +84,7 @@ extension DarnerAPI {
              .wordTest,
              .myProfile,
              .memoTitle,
+             .getLevel,
              .memoContents:
             return .get
             
@@ -92,7 +99,10 @@ extension DarnerAPI {
     var header: HTTPHeaders? {
         switch self {
         case .wordGenre,
-             .wordTest:
+             .wordTest,
+             .savedata,
+             .getLevel,
+             .rank:
             let token = UserDefaults.standard.value(forKey: "token") as! String
             return ["Authorization" : "Bearer " + token]
         default:
@@ -117,6 +127,9 @@ extension DarnerAPI {
     
     var parameter: Parameters? {
         switch self {
+        case .savedata(let id, let count):
+            return ["id":id, "count": count]
+            
         case .verifywithemail(let email,let code):
             return ["email" : email, "code": code]
             

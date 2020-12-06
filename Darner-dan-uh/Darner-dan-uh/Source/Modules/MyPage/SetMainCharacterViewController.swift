@@ -35,11 +35,10 @@ extension SetMainCharacterViewController {
         }.disposed(by: disposeBag)
         
         setProfileBtn.rx.tap.map { self.characterImageView.image }
-            .subscribe { (img) in
-                
+            .subscribe(onNext: { (img) in
+                UserDefaults.standard.setValue(img, forKey: "image")
                 self.presentingViewController?.presentingViewController?
                     .dismiss(animated: true, completion: nil)
-                
-            }.disposed(by: disposeBag)
+            }).disposed(by: disposeBag)
     }
 }

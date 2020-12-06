@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+struct LevelModel: Codable {
+    let level: Int
+}
