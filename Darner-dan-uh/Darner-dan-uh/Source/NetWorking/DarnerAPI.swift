@@ -16,8 +16,8 @@ enum DarnerAPI {
     case verifywithemail(email: String, code: String)
     case login(userId: String, password: String)
     case logout
-    case rank
-    case myrank
+    case rank(_ id: Int)
+    case myrank(_ count: String)
     case stack
     case wordGenre(word_id: String, number: String)
     case wordTest
@@ -43,10 +43,10 @@ extension DarnerAPI {
             return "/login"
         case.logout:
             return "/logout"
-        case .rank:
-            return "/rank"
-        case .myrank:
-            return " /myrank"
+        case .rank(let count):
+            return "/rank?count=\(count)"
+        case .myrank(let id):
+            return "/myrank?id=\(id)"
         case .stack:
             return "/stack"
         case .wordGenre:
@@ -99,11 +99,17 @@ extension DarnerAPI {
         switch self {
         case .verifywithemail(_, let code):
             return ["code" : code]
+        case .myrank, .rank:
+           // let token = UserDefaults.standard.value(forKey: "token") as! String
+
+            return ["Authorization": "Bearer " + "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI5OTk5OSIsImlhdCI6MTYwNzIzNjc1NSwiZXhwIjoxNjA3MjU0NzU1fQ.tto0eBIqfeEs9Ux7KwMNslpuW-t8cIM5ztXfQQZTHuYPJout72cXgXPy2ao5x1pJPWRUgYod12-hxQc7SiboHw"]
+            
+
         default:
             return nil
         }
-    }
-    
+     }
+        
     var parameter: Parameters? {
         switch self {
         case .verifywithemail(let email, _):
