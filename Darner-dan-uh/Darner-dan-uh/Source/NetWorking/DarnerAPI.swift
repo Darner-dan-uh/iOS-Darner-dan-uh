@@ -21,7 +21,8 @@ enum DarnerAPI {
     case wordGenre(word_id: String, number: String)
     case wordTest
     case myProfile
-    case updateProfile
+    case updateProfile(changeId: String)
+    case verifyPassword(pw: String)
     case memoTitle
     case memoContents
     case deleteMemo
@@ -54,6 +55,8 @@ extension DarnerAPI {
             return "/user/profile"
         case .updateProfile:
             return "/user/update"
+        case .verifyPassword:
+            return "/user/verifyPassword"
         case .memoTitle:
             return "/memo/title"
         case .memoContents:
@@ -67,7 +70,8 @@ extension DarnerAPI {
         switch self {
         case .register,
              .verifywithemail,
-             .login:
+             .login,
+             .verifyPassword:
             return .post
             
         case .logout,
@@ -83,8 +87,8 @@ extension DarnerAPI {
         case .deleteMemo:
             return .delete
             
-//        case .updateProfile:
-//            return .update
+        case .updateProfile:
+            return .patch
         
         default:
             return nil 
@@ -95,6 +99,8 @@ extension DarnerAPI {
         switch self {
         case .verifywithemail(_, let code):
             return ["code" : code]
+        case .verifyPassword:
+            return ["Authorization": "Bearer " + "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI5OTk5OSIsImlhdCI6MTYwNzIzNjc1NSwiZXhwIjoxNjA3MjU0NzU1fQ.tto0eBIqfeEs9Ux7KwMNslpuW-t8cIM5ztXfQQZTHuYPJout72cXgXPy2ao5x1pJPWRUgYod12-hxQc7SiboHw"]
         default:
             return nil
         }
@@ -102,6 +108,9 @@ extension DarnerAPI {
     
     var parameter: Parameters? {
         switch self {
+        case .updateProfile(let changeId):
+            return ["name": changeId]
+            
         case .verifywithemail(let email, _):
             return ["email" : email]
             
@@ -113,6 +122,13 @@ extension DarnerAPI {
             
         case .wordGenre(let word_id, let number):
             return ["word_id": word_id, "number": number]
+            
+        case .verifyPassword(let pw):
+            return ["password": pw]
+            
+//        case .verifyPassword(let pw):
+//            return ["password": pw]
+            
         default:
             return nil
         }

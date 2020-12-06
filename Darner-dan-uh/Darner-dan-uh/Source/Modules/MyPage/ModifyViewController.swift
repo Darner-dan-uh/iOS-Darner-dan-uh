@@ -15,6 +15,7 @@ class ModifyViewController: UIViewController {
     
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nickNameLbl: UILabel!
+    @IBOutlet weak var idLbl: UILabel!
     @IBOutlet weak var nickNameTxtField: UITextField!
     @IBOutlet weak var modifyBtn: UIButton!
     
@@ -33,23 +34,55 @@ class ModifyViewController: UIViewController {
         modifyBtn.buttonStyle()
         nickNameTxtField.underLine()
         
-        
+        viewProfile()
     }
-
-    func bindViewModel() {
-        let input = MypageViewModel.Input.init(nickName: nickNameTxtField.rx.text.orEmpty.asDriver())
-        let output = viewModel.transform(input)
-        
-        output.result.emit(onCompleted: { [unowned self] in
-            self.nextView(identifire: "enterPw")
+    
+    func viewProfile() {
+        let mypage: Observable<MypageModel> = DarnerAPIClient.shared.networkingResult(from: .myProfile)
+        mypage.asObservable().subscribe(onNext: { model in
+            self.nickNameLbl.text = model.name
+            self.idLbl.text = model.userId
         }).disposed(by: disposeBag)
-        
     }
+    
+    func modifyProfile() {
+        
+        let mypage: Observable<a> = DarnerAPIClient.shared.networkingResult(from: .updateProfile(changeId: self.nickNameTxtField.text!))
+        
+        modifyBtn.rx.tap
+            .map{ self.nickNameTxtField.text}
+            .subscribe(onNext: { _ in
+                mypage.asObservable().subscribe(onNext: { model in
+                    self.nickNameTxtField.text = model.name
+                }).disposed(by: self.disposeBag)
+            }).disposed(by: disposeBag)
+        
+        
+//        
+//            mypage.subscribe { (b) in
+//                if b.code == 200 {
+//    
+//                }
+//            } onError: { (<#Error#>) in
+//                <#code#>
+//            }
+//      
+    }
+        
+
+ 
+
     
     func bindAction() {
         //modifyBtn.rx.tap.
     }
 
+
+
+struct a: Codable {
+    let code: Int
+    let name: String
+    }
 }
 
 extension UITextField {
