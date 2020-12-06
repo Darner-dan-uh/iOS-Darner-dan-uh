@@ -2,29 +2,44 @@
 //  StackViewController.swift
 //  Darner-dan-uh
 //
-//  Created by 문지수 on 2020/12/03.
+//  Created by 문지수 on 2020/12/04.
 //  Copyright © 2020 이현욱. All rights reserved.
 //
 
 import UIKit
 
+import RxSwift
+import RxCocoa
+
 class StackViewController: UIViewController {
+    
+    @IBOutlet weak var rankingBtn: UIButton!
+    @IBOutlet weak var stackBtn: UIButton!
+    @IBOutlet weak var stackImage: UIImageView!
+    
+    let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        navigationClear()
+        navigationImage()
+        buttonAction()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.hidesBackButton = true
+    }
+    
+    func buttonAction() {
+        stackBtn.rx.tap
+            .subscribe{ _ in
+                self.nextView(identifire: "ranking")
+            }.disposed(by: disposeBag)
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+ 
 }
