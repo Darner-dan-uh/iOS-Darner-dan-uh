@@ -9,9 +9,5 @@ target 'Darner-dan-uh' do
     pod 'RxSwift'
     pod 'RxCocoa'
     pod 'Alamofire', '~> 5.2'
-pod "RxAnimated"
-pod 'RxAlamofire'
-pod 'RealmSwift'
-
 
 end
