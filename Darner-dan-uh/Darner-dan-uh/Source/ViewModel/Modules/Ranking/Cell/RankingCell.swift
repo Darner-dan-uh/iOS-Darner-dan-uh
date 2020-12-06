@@ -11,7 +11,6 @@ import UIKit
 class RankingCell: UITableViewCell {
     
     @IBOutlet weak var RankingLbl: UILabel!
-    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nickNameLbl: UILabel!
     @IBOutlet weak var starImage: UIImageView!
     
@@ -20,9 +19,8 @@ class RankingCell: UITableViewCell {
     }
     
     private func setUpView() {
-        self.RankingLbl?.text = "\(RankingData.ranking)"
-        self.profileImage?.image = UIImage(named: RankingData.nickName)
-        self.nickNameLbl?.text = RankingData.nickName
+        self.RankingLbl?.text = "\(RankingData.rank)"
+        self.nickNameLbl?.text = RankingData.name
     }
     
     override func awakeFromNib() {

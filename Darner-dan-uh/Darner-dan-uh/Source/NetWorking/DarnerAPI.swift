@@ -16,7 +16,8 @@ enum DarnerAPI {
     case verifywithemail(email: String, code: String)
     case login(userId: String, password: String)
     case logout
-    case rank
+    case rank(_ id: Int)
+    case myrank(_ count: String)
     case stack
     case wordGenre(word_id: String, number: String)
     case wordTest
@@ -29,7 +30,7 @@ enum DarnerAPI {
 
 extension DarnerAPI {
     var baseURL: String {
-        return "https://jsonplaceholder.typicode.com" //FIX- 주소 수정
+        return "http://10.156.145.103:9032" //FIX- 주소 수정
     }
     
     var path: String {
@@ -42,8 +43,10 @@ extension DarnerAPI {
             return "/login"
         case.logout:
             return "/logout"
-        case .rank:
-            return "/rank"
+        case .rank(let count):
+            return "/rank?count=\(count)"
+        case .myrank(let id):
+            return "/myrank?id=\(id)"
         case .stack:
             return "/stack"
         case .wordGenre:
@@ -72,6 +75,7 @@ extension DarnerAPI {
             
         case .logout,
              .rank,
+             .myrank,
              .stack,
              .wordGenre,
              .wordTest,
@@ -95,11 +99,17 @@ extension DarnerAPI {
         switch self {
         case .verifywithemail(_, let code):
             return ["code" : code]
+        case .myrank, .rank:
+           // let token = UserDefaults.standard.value(forKey: "token") as! String
+
+            return ["Authorization": "Bearer " + "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzbWtpbSIsImlhdCI6MTYwNzI2MDQ0NSwiZXhwIjoxNjA3Mjc4NDQ1fQ.xnEgceIkK1Q72D7u9T9nsjYuELzdylINIsm8DSZYCWHvRImOfCd5O4fXrjcNbFggWQYZAuJCAEzVYVi3t0USXQ"]
+            
+
         default:
             return nil
         }
-    }
-    
+     }
+        
     var parameter: Parameters? {
         switch self {
         case .verifywithemail(let email, _):

@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		9F2CE42D25674F600024FD12 /* RankingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2CE42C25674F600024FD12 /* RankingModel.swift */; };
+		9F5765482577360A003B37BA /* Mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5765472577360A003B37BA /* Mypage.storyboard */; };
+		9F57654B25779909003B37BA /* MypageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F57654A25779908003B37BA /* MypageModel.swift */; };
+		9FAC7120257A24870088FCAA /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAC711F257A24870088FCAA /* StackViewController.swift */; };
 		9FC3431B2566843A003AEE58 /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3431A2566843A003AEE58 /* RankingCell.swift */; };
 		9FC343302566BA54003AEE58 /* RankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3432F2566BA54003AEE58 /* RankingViewModel.swift */; };
+		9FCC818A25772C6B0010123B /* SeeMypageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC818925772C6B0010123B /* SeeMypageViewModel.swift */; };
 		D63FE3212535EF4600DCD75F /* BinggraeMelona-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D63FE31F2535EF4500DCD75F /* BinggraeMelona-Bold.ttf */; };
 		D63FE3222535EF4600DCD75F /* BinggraeMelona.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D63FE3202535EF4500DCD75F /* BinggraeMelona.ttf */; };
 		D6578ACB2500867A000185F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6578ACA2500867A000185F1 /* AppDelegate.swift */; };
@@ -58,8 +62,12 @@
 		2C2C5094395481B434C2AC5C /* Pods_Darner_dan_uh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Darner_dan_uh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		773631FB34EA472779385722 /* Pods-Darner-dan-uh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Darner-dan-uh.release.xcconfig"; path = "Target Support Files/Pods-Darner-dan-uh/Pods-Darner-dan-uh.release.xcconfig"; sourceTree = "<group>"; };
 		9F2CE42C25674F600024FD12 /* RankingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingModel.swift; sourceTree = "<group>"; };
+		9F5765472577360A003B37BA /* Mypage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mypage.storyboard; sourceTree = "<group>"; };
+		9F57654A25779908003B37BA /* MypageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MypageModel.swift; sourceTree = "<group>"; };
+		9FAC711F257A24870088FCAA /* StackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
 		9FC3431A2566843A003AEE58 /* RankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCell.swift; sourceTree = "<group>"; };
 		9FC3432F2566BA54003AEE58 /* RankingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewModel.swift; sourceTree = "<group>"; };
+		9FCC818925772C6B0010123B /* SeeMypageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMypageViewModel.swift; sourceTree = "<group>"; };
 		D63FE31F2535EF4500DCD75F /* BinggraeMelona-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BinggraeMelona-Bold.ttf"; sourceTree = "<group>"; };
 		D63FE3202535EF4500DCD75F /* BinggraeMelona.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BinggraeMelona.ttf; sourceTree = "<group>"; };
 		D6578AC72500867A000185F1 /* Darner-dan-uh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Darner-dan-uh.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +179,7 @@
 				D6A6E2382563544F00A77E05 /* RegisterViewModel.swift */,
 				D6A6E2372563544E00A77E05 /* ViewModelType.swift */,
 				9FC3432F2566BA54003AEE58 /* RankingViewModel.swift */,
+				9FCC818925772C6B0010123B /* SeeMypageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -266,6 +275,7 @@
 			children = (
 				9FC3431925668426003AEE58 /* Cell */,
 				D6A6E26B2563561300A77E05 /* RankingViewController.swift */,
+				9FAC711F257A24870088FCAA /* StackViewController.swift */,
 			);
 			path = Ranking;
 			sourceTree = "<group>";
@@ -303,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				D6BB377B255E0D7F0049BB65 /* Model.swift */,
+				9F57654A25779908003B37BA /* MypageModel.swift */,
 				9F2CE42C25674F600024FD12 /* RankingModel.swift */,
 			);
 			path = Model;
@@ -323,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				D6578AD02500867A000185F1 /* Main.storyboard */,
+				9F5765472577360A003B37BA /* Mypage.storyboard */,
 				D6578AD52500867C000185F1 /* LaunchScreen.storyboard */,
 				D6E68851252EB53F00FA09C1 /* Writing.storyboard */,
 				D6E68854252EB54600FA09C1 /* Ranking.storyboard */,
@@ -404,6 +416,7 @@
 				D63FE3222535EF4600DCD75F /* BinggraeMelona.ttf in Resources */,
 				D6E68858252EB55300FA09C1 /* Memorization.storyboard in Resources */,
 				D6578AD72500867C000185F1 /* LaunchScreen.storyboard in Resources */,
+				9F5765482577360A003B37BA /* Mypage.storyboard in Resources */,
 				D6E68852252EB53F00FA09C1 /* Writing.storyboard in Resources */,
 				D6578AD42500867C000185F1 /* Assets.xcassets in Resources */,
 				D6578AD22500867A000185F1 /* Main.storyboard in Resources */,
@@ -471,6 +484,7 @@
 				D6A6E22F2563541E00A77E05 /* EnterPwViewController.swift in Sources */,
 				D6A6E22E2563541E00A77E05 /* SetMainCharacterViewController.swift in Sources */,
 				D6A6E11D25634B6400A77E05 /* ViewControllerName.swift in Sources */,
+				9FCC818A25772C6B0010123B /* SeeMypageViewModel.swift in Sources */,
 				D6A6E2592563557600A77E05 /* WordCell.swift in Sources */,
 				D6BB375A255D210D0049BB65 /* DarnerAPIClient.swift in Sources */,
 				D6A6E23D2563544F00A77E05 /* LoginViewModel.swift in Sources */,
@@ -485,6 +499,7 @@
 				D6578ACB2500867A000185F1 /* AppDelegate.swift in Sources */,
 				9FC343302566BA54003AEE58 /* RankingViewModel.swift in Sources */,
 				D6A6E26C2563561300A77E05 /* RankingViewController.swift in Sources */,
+				9F57654B25779909003B37BA /* MypageModel.swift in Sources */,
 				D6A6E23A2563544F00A77E05 /* MypageViewModel.swift in Sources */,
 				D6A6E2332563541E00A77E05 /* MypageViewController.swift in Sources */,
 				D6A6E25B2563557600A77E05 /* TestResultViewController.swift in Sources */,
@@ -495,6 +510,7 @@
 				D6A6E2572563557600A77E05 /* SelectWordNumViewController.swift in Sources */,
 				D6A6E23B2563544F00A77E05 /* ViewModelType.swift in Sources */,
 				D6A6E267256355D900A77E05 /* WritingViewController.swift in Sources */,
+				9FAC7120257A24870088FCAA /* StackViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

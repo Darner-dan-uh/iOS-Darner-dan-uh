@@ -17,20 +17,19 @@ class MypageViewController: UIViewController {
     @IBOutlet weak var nickNameLbl: UILabel!
     @IBOutlet weak var modifyBtn: UIButton!
     @IBOutlet weak var characterBtn: UIButton!
-    @IBOutlet weak var logOutBtn: UIButton!
     
     private let disposeBag = DisposeBag()
-    private let viewModel = MypageViewModel()
+    private let viewModel = SeeMypageViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        profileImage.layer.cornerRadius = profileImage.frame.width/2
+        profileImage.layer.cornerRadius = profileImage.frame.width/3
         characterBtn.buttonStyle()
         modifyBtn.buttonStyle()
         
-        bindAction()
+        bindViewModel()
         
         let alret = UIAlertController(title: "로그아웃 하시겠습니까?", message: "", preferredStyle: UIAlertController.Style.alert)
 
@@ -38,21 +37,32 @@ class MypageViewController: UIViewController {
         alret.addAction(UIAlertAction(title: "아니요", style: .cancel, handler: nil))
         
         present(alret, animated: true, completion: nil)
-
+    }
+//
+//    func bindAction() {
+//        modifyBtn.rx.tap.flatMap{ (request: DarnerAPI) -> Observable<MypageModel> in
+//            return DarnerAPIClient.shared.networkingResult(from: request)
+//        }
+//        .subscribe
+//    }
+    
+   
+    
+    func bindViewModel() {
+        let input = SeeMypageViewModel.Input.init(doneTap: modifyBtn.rx.tap.asDriver())
+        let output = viewModel.transform(input)
         
+        output.result.emit(onCompleted: { [unowned self] in
+            self.nextView(identifire: "modify")
+        }).disposed(by: disposeBag)
     }
     
-    func bindAction() {
-        modifyBtn.rx.tap
-            .map{ let controller = self.navigationController?.viewControllers
-                self.navigationController?.viewControllers = controller!
-                self.navigationController?.popViewController(animated: true)
-        }
-    }
-    
-    @IBAction func nextVC(_ sender: UIButton) {
-        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "modify") else { return }
-        self.present(nextVC, animated: true)
-        self.dismiss(animated: true)
+}
+
+
+extension UIViewController {
+    func nextView(identifire: String) {
+        let viewController = self.storyboard?.instantiateViewController(withIdentifier: identifire)
+        navigationController?.pushViewController(viewController!, animated: true)
     }
 }

@@ -19,7 +19,6 @@ final class RankingViewController: UIViewController {
     @IBOutlet weak var myRankingLbl: UILabel!
     @IBOutlet weak var myRankingView: UIView!
     @IBOutlet weak var myRanknumLbl: UILabel!
-    @IBOutlet weak var myProfileImage: UIImageView!
     @IBOutlet weak var myNickName: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
@@ -33,35 +32,64 @@ final class RankingViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        registerCell()
+        navigationImage()
+        navigationClear()
+        rank()
+        myRank()
     }
     
-    func bindViewModel() {
-        let input = RankingViewModel.Input(loadData: loadData.asSignal(onErrorJustReturn: ()))
-        let output = viewModel.transform(input)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        output.loadApplyList.bind(to: tableView.rx.items) { tableView, index, element -> UITableViewCell in
-            guard let cell = self.tableView.dequeueReusableCell(withIdentifier: "RankingCell") as? RankingCell else { return RankingCell() }
-            cell.RankingData = element
-            return cell
+       // self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    func myRank() {
+        let rank: Observable<a> = DarnerAPIClient.shared.networkingResult(from: .myrank("smKim"))
+        rank.asObservable().subscribe(onNext: { model in
+            self.myRanknumLbl.text = String(model.rank ?? 1)
+        }).disposed(by: disposeBag)
+    }
+    
+    func rank() {
+
+        let rank: Observable<Ranking> = DarnerAPIClient.shared.networkingResult(from: .rank(3))
+        rank.map { $0.ranking }.bind(to: tableView.rx.items(cellIdentifier: "rankingCell", cellType: RankingCell.self)) { idx, model, cell in
+            cell.nickNameLbl?.text = model.name
+            cell.RankingLbl?.text = String(model.rank ?? 1)
         }.disposed(by: disposeBag)
     }
     
-    
-    
     private func registerCell() {
-        tableView.rowHeight = 75
+        tableView.rowHeight = 80
     }
 }
+struct a: Codable {
+    let rank: Int?
+    let message: String?
+}
 
-extension RankingViewController {
-    private func stackView() {
-        stackBtn.rx.tap
-            .take(1)
-            .map {
-                self.navigationController?.popViewController(animated: true)
-            }
-            .subscribe()
-            .disposed(by: disposeBag)
+
+extension UIViewController {
+    func navigationClear() {
+        let bar: UINavigationBar! = self.navigationController?.navigationBar
+        bar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        bar.shadowImage = UIImage()
+        bar.backgroundColor = UIColor.clear
     }
+    
+    
+    func navigationImage() {
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 35))
+        imageView.contentMode = .scaleAspectFit
+        
+        let image = UIImage(named: "LogoImage")
+        imageView.image = image
+        
+        navigationItem.titleView = imageView
+    }
+
 }
 
