@@ -37,6 +37,7 @@ class EnterPwViewController: UIViewController {
 //        present(alret, animated: true, completion: nil)
     }
     
+    
     func password() {
         nextBtn.rx.tap
             .map{ self.passwordTxtField.text! }
@@ -47,11 +48,6 @@ class EnterPwViewController: UIViewController {
                 //print(model)
                 self.passwordTxtField.text = model.password
             }.disposed(by: disposeBag)
-
-        
-//        password.asObservable().subscribe(onNext: { model in
-//            self.passwordTxtField.text = model.password
-//        }).disposed(by: disposeBag)
     }
 }
 
