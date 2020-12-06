@@ -10,6 +10,7 @@
 		9F2CE42D25674F600024FD12 /* RankingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2CE42C25674F600024FD12 /* RankingModel.swift */; };
 		9F5765482577360A003B37BA /* Mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5765472577360A003B37BA /* Mypage.storyboard */; };
 		9F57654B25779909003B37BA /* MypageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F57654A25779908003B37BA /* MypageModel.swift */; };
+		9FAC7120257A24870088FCAA /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAC711F257A24870088FCAA /* StackViewController.swift */; };
 		9FC3431B2566843A003AEE58 /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3431A2566843A003AEE58 /* RankingCell.swift */; };
 		9FC343302566BA54003AEE58 /* RankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3432F2566BA54003AEE58 /* RankingViewModel.swift */; };
 		9FCC818A25772C6B0010123B /* SeeMypageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC818925772C6B0010123B /* SeeMypageViewModel.swift */; };
@@ -63,6 +64,7 @@
 		9F2CE42C25674F600024FD12 /* RankingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingModel.swift; sourceTree = "<group>"; };
 		9F5765472577360A003B37BA /* Mypage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mypage.storyboard; sourceTree = "<group>"; };
 		9F57654A25779908003B37BA /* MypageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MypageModel.swift; sourceTree = "<group>"; };
+		9FAC711F257A24870088FCAA /* StackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
 		9FC3431A2566843A003AEE58 /* RankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCell.swift; sourceTree = "<group>"; };
 		9FC3432F2566BA54003AEE58 /* RankingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewModel.swift; sourceTree = "<group>"; };
 		9FCC818925772C6B0010123B /* SeeMypageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMypageViewModel.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 			children = (
 				9FC3431925668426003AEE58 /* Cell */,
 				D6A6E26B2563561300A77E05 /* RankingViewController.swift */,
+				9FAC711F257A24870088FCAA /* StackViewController.swift */,
 			);
 			path = Ranking;
 			sourceTree = "<group>";
@@ -507,6 +510,7 @@
 				D6A6E2572563557600A77E05 /* SelectWordNumViewController.swift in Sources */,
 				D6A6E23B2563544F00A77E05 /* ViewModelType.swift in Sources */,
 				D6A6E267256355D900A77E05 /* WritingViewController.swift in Sources */,
+				9FAC7120257A24870088FCAA /* StackViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
