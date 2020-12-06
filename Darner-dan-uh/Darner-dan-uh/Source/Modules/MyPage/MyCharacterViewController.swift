@@ -12,10 +12,8 @@ import RxCocoa
 import RxSwift
 
 class MyCharacterViewController: UIViewController {
-    let stringObs: Observable<String>! = nil // 서버 통신 후 받아온 문자
-    let level: Int = 3 // 사용자 캐릭터의 레벨
     private let disposeBag = DisposeBag()
-
+    
     @IBOutlet weak var userIdLbl: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var userLevelLbl: UILabel!
@@ -32,30 +30,33 @@ class MyCharacterViewController: UIViewController {
 
 extension MyCharacterViewController {
     private func bindUI() {
-//        stringObs
-//            .bind(to: self.userIdLbl.rx.text)
-//            .disposed(by: disposeBag)
-//
-//        stringObs
-//            .bind(to: self.userLevelLbl.rx.text)
-//            .disposed(by: disposeBag)
-//
-        let a : Int?
-        switch level {
+        let os: Observable<LevelModel> = DarnerAPIClient.shared.networkingResult(from: .getLevel)
         
-        case 0...2:
-            a = 3
-        case 3...9:
-            a = 10
-        case 10...29:
-            a = 30
-        default:
-            a = nil
+        os.subscribe(onNext: { model in
+            self.userLevelLbl.text = String(model.level)
+            switch model.level {
+            case 0...2:
+                self.nextEvolutionLbl.text = String(3)
+            case 3...9:
+                self.nextEvolutionLbl.text = String(10)
+            case 10...29:
+                self.nextEvolutionLbl.text = String(30)
+            default:
+                return
+            }
+        }).disposed(by: disposeBag)
+        
+        let id = UserDefaults.standard.value(forKey: "id") as! String
+        userIdLbl.text = id
+        
+        if imageView.image == nil {
+            imageView.image = UIImage(named: "핑크알")
+        } else {
+            let image = UserDefaults.standard.value(forKey: "image") as! UIImage
+            imageView.image = image
         }
-        
-        nextEvolutionLbl.text = String(a!)
     }
-    
+
     private func bindAction() {
         cancelBtn.rx.tap
             .subscribe({_ in
@@ -63,16 +64,10 @@ extension MyCharacterViewController {
             }).disposed(by: disposeBag)
         
         showCharacterVCBtn.rx.tap
-            .bind(to: { _ in
-                let vc = makeVC(identifier: ViewControllerName.characterCollectionVC)
+            .map { _ in
+                let vc = self.makeVC(storyBoardName: .myPage, identifier: .characterCollectionVC)
                 self.present(vc, animated: true, completion: nil)
-            })
-        
-        showCharacterVCBtn.rx.tap
-            .subscribe(onNext: { _ in
-                let vc = self.makeVC(identifier: ViewControllerName.characterCollectionVC)
-                vc.modalPresentationStyle = .popover
-                self.present(vc, animated: true, completion: nil)
-            }).disposed(by: disposeBag)
+            }.subscribe()
+            .disposed(by: disposeBag)
     }
 }
