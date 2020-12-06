@@ -19,5 +19,5 @@ struct MypageModel: Codable {
 }
 
 struct passwordModel: Codable {
-    let password: String
+    let password: String?
 }
