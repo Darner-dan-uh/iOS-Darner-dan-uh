@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6py-ew-KZN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6py-ew-KZN">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -265,18 +265,21 @@
                                     </attributedString>
                                 </state>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="스택" translatesAutoresizingMaskIntoConstraints="NO" id="PJv-5Q-tU6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="스택" translatesAutoresizingMaskIntoConstraints="NO" id="PJv-5Q-tU6">
                                 <rect key="frame" x="72" y="502" width="270" height="311"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="np7-4y-jGM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="PJv-5Q-tU6" firstAttribute="top" secondItem="x98-TE-q8w" secondAttribute="bottom" constant="348.5" id="E7O-aT-u4Z"/>
                             <constraint firstItem="x98-TE-q8w" firstAttribute="leading" secondItem="np7-4y-jGM" secondAttribute="leading" constant="57" id="GDf-4w-9lf"/>
                             <constraint firstItem="gBT-eO-dO9" firstAttribute="top" secondItem="np7-4y-jGM" secondAttribute="top" constant="28" id="P1c-Zx-AOT"/>
                             <constraint firstItem="gBT-eO-dO9" firstAttribute="leading" secondItem="x98-TE-q8w" secondAttribute="trailing" constant="100" id="UW7-3h-Rhd"/>
                             <constraint firstItem="x98-TE-q8w" firstAttribute="top" secondItem="np7-4y-jGM" secondAttribute="top" constant="28" id="YbN-48-2ZU"/>
+                            <constraint firstItem="PJv-5Q-tU6" firstAttribute="bottom" secondItem="np7-4y-jGM" secondAttribute="bottom" id="dBb-zj-bWd"/>
+                            <constraint firstItem="np7-4y-jGM" firstAttribute="trailing" secondItem="PJv-5Q-tU6" secondAttribute="trailing" constant="72" id="ig7-xM-uQb"/>
+                            <constraint firstItem="PJv-5Q-tU6" firstAttribute="leading" secondItem="np7-4y-jGM" secondAttribute="leading" constant="72" id="udk-Ht-Yju"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZuS-TQ-5Uz"/>

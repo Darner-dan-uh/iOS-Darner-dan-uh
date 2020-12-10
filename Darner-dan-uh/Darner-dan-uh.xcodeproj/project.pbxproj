@@ -11,6 +11,7 @@
 		9F5765482577360A003B37BA /* Mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5765472577360A003B37BA /* Mypage.storyboard */; };
 		9FC343302566BA54003AEE58 /* RankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3432F2566BA54003AEE58 /* RankingViewModel.swift */; };
 		9FCC818A25772C6B0010123B /* SeeMypageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC818925772C6B0010123B /* SeeMypageViewModel.swift */; };
+		D620C5372582587800AA628B /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D620C5362582587800AA628B /* CharacterCollectionViewCell.swift */; };
 		D63FE3212535EF4600DCD75F /* BinggraeMelona-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D63FE31F2535EF4500DCD75F /* BinggraeMelona-Bold.ttf */; };
 		D63FE3222535EF4600DCD75F /* BinggraeMelona.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D63FE3202535EF4500DCD75F /* BinggraeMelona.ttf */; };
 		D644AC8825700665002905AE /* CheckCertificationNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644AC8725700665002905AE /* CheckCertificationNumberViewModel.swift */; };
@@ -73,6 +74,7 @@
 		9F5765472577360A003B37BA /* Mypage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mypage.storyboard; sourceTree = "<group>"; };
 		9FC3432F2566BA54003AEE58 /* RankingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewModel.swift; sourceTree = "<group>"; };
 		9FCC818925772C6B0010123B /* SeeMypageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMypageViewModel.swift; sourceTree = "<group>"; };
+		D620C5362582587800AA628B /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
 		D63FE31F2535EF4500DCD75F /* BinggraeMelona-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BinggraeMelona-Bold.ttf"; sourceTree = "<group>"; };
 		D63FE3202535EF4500DCD75F /* BinggraeMelona.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BinggraeMelona.ttf; sourceTree = "<group>"; };
 		D644AC8725700665002905AE /* CheckCertificationNumberViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckCertificationNumberViewModel.swift; sourceTree = "<group>"; };
@@ -163,6 +165,14 @@
 				2C2C5094395481B434C2AC5C /* Pods_Darner_dan_uh.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D620C5352582586000AA628B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D620C5362582587800AA628B /* CharacterCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		D63FE3262535EFD400DCD75F /* Source */ = {
@@ -316,6 +326,7 @@
 		D6BB3739255D1BF30049BB65 /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
+				D620C5352582586000AA628B /* Cell */,
 				D6A6E22A2563541E00A77E05 /* CharacterCollectionViewController.swift */,
 				D6A6E2292563541E00A77E05 /* EnterPwViewController.swift */,
 				D6A6E22B2563541E00A77E05 /* ModifyViewController.swift */,
@@ -522,6 +533,7 @@
 				D6BB375A255D210D0049BB65 /* DarnerAPIClient.swift in Sources */,
 				D644AC8F257006E1002905AE /* TestViewModel.swift in Sources */,
 				D6A6E23D2563544F00A77E05 /* LoginViewModel.swift in Sources */,
+				D620C5372582587800AA628B /* CharacterCollectionViewCell.swift in Sources */,
 				D6A6E2602563558500A77E05 /* LoginViewController.swift in Sources */,
 				D6BB372B255D1BE60049BB65 /* DarnerAPI.swift in Sources */,
 				D660A23C257DA21D00C5FE6F /* MypageModel.swift in Sources */,

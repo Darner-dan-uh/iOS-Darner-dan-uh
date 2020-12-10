@@ -60,7 +60,7 @@ final class RankingViewController: UIViewController {
     func myRank() {
         let rank: Observable<a> = DarnerAPIClient.shared.networkingResult(from: .myrank("smKim"))
         rank.asObservable().subscribe(onNext: { model in
-            self.myRanknumLbl.text = String(model.rank ?? 1)
+            self.myRanknumLbl.text = String(model.rank ?? 3)
         }).disposed(by: disposeBag)
     }
     
