@@ -112,8 +112,8 @@ extension DarnerAPI {
         switch self {
         case .verifywithemail(_, let code):
             return ["code" : code]
-        case .verifyPassword:
-            return ["Authorization": "Bearer " + "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzbWtpbSIsImlhdCI6MTYwNzI2MjAzMSwiZXhwIjoxNjA3MjgwMDMxfQ.mlzlDztiWAWUwDXW_7DUN3SA1FRU9khqOcTqfh4lhP5xJV9PxNeLsuU7bdBYjQOQbsAiETzR020Z-44lp8JjIw",
+        case .verifyPassword, .myrank, .rank:
+            return ["Authorization": "Bearer " + "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJxd2VycXdlciIsImlhdCI6MTYwNzYwNTM0OCwiZXhwIjoxNjA3NjIzMzQ4fQ.7-ZLeFyuZgl2mssIlPxYSYcpi19ulzeT7VK_ese8hVo0uIY2W6w3NFStn-r-Ljd68riqUNoHAiFhiQzIZCgQdQ",
                     "content-type": "application/json"]
         default:
             return ["Content-Type":"application/json"]

@@ -21,7 +21,7 @@
         <!--Mypage View Controller-->
         <scene sceneID="wcY-5C-ssv">
             <objects>
-                <viewController storyboardIdentifier="MypageViewController" id="Ogy-mf-0UW" customClass="MypageViewController" customModule="Darner_dan_uh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mypage" id="Ogy-mf-0UW" customClass="MypageViewController" customModule="Darner_dan_uh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="elA-lD-lpK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
