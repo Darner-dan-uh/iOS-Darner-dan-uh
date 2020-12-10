@@ -25,7 +25,6 @@ enum DarnerAPI {
     case updateProfile(changeId: String)
     case verifyPassword(pw: String)
     case getLevel
-    case updateProfile
     case memoTitle
     case memoContents
     case deleteMemo
@@ -81,7 +80,7 @@ extension DarnerAPI {
         case .register,
              .verifywithemail,
              .login,
-             .verifyPassword:
+             .verifyPassword,
              .wordGenre,
              .savedata,
              .login:
@@ -142,9 +141,6 @@ extension DarnerAPI {
         switch self {
         case .updateProfile(let changeId):
             return ["name": changeId]
-            
-        case .verifywithemail(let email, _):
-            return ["email" : email]
             
         case .verifywithemail(let email,let code):
             return ["email" : email, "code": code]
