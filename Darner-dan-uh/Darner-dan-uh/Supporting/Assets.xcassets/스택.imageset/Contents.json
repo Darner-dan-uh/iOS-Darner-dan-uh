@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "그룹 5.png",
+      "filename" : "스크린샷 2020-12-06 오후 2.48.22.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "그룹 5@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "그룹 5@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

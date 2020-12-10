@@ -10,14 +10,10 @@ import UIKit
 
 import RxSwift
 import RxCocoa
-
 final class MemorizationViewController: UIViewController {
-    var wordType: String!
     
-    static var obserbeWordType: String! { // 저장되있던 wordType과 string이 같다면 전에 선택했던 것이기 떄문에 굳이 단어 선택을 안해도 됨 -> 바로 testTableVC로 푸쉬
-        didSet {}
-        willSet {}
-    }
+    var wordtupeStr: String!
+    var wordtypeInt: Int!
     private let disposeBag = DisposeBag()
     
     @IBOutlet weak var memorizeTapItem: UINavigationItem!
@@ -34,7 +30,6 @@ final class MemorizationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bindAction()
-        bindUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,30 +39,29 @@ final class MemorizationViewController: UIViewController {
 }
 
 extension MemorizationViewController {
-    private func bindUI() {
-//        memorizeTapItem.≥÷÷≥¿÷title.
-    }
-    
     private func bindAction() {
-        Observable.merge(lawBtn.rx.tap.map { MemorizationViewController.obserbeWordType = "법률" },
-                         traditionBtn.rx.tap.map { MemorizationViewController.obserbeWordType = "전통"},
-                         artBtn.rx.tap.map { MemorizationViewController.obserbeWordType = "예술"},
-                         harborBtn.rx.tap.map { MemorizationViewController.obserbeWordType = "항구"},
-                         agricultureBtn.rx.tap.map { MemorizationViewController.obserbeWordType = "농업"},
-                         militaryBtn.rx.tap.map { MemorizationViewController.obserbeWordType = "군사"},
-                         electricalEnergyBtn.rx.tap.map { MemorizationViewController.obserbeWordType = "전력"},
-                         coalBtn.rx.tap.map { MemorizationViewController.obserbeWordType = "석탄"}
-        ).subscribe { _ in
-            let vc = self.makeVC(identifier: ViewControllerName.selectwordNumVC)
+        Observable.merge(lawBtn.rx.tap.map { self.wordtupeStr = "과일"; self.wordtypeInt = 1 },
+                         traditionBtn.rx.tap.map { self.wordtupeStr = "채소"; self.wordtypeInt = 2 },
+                         artBtn.rx.tap.map { self.wordtupeStr = "항공"; self.wordtypeInt = 3 },
+                         harborBtn.rx.tap.map { self.wordtupeStr = "항구"; self.wordtypeInt = 4 },
+                         agricultureBtn.rx.tap.map { self.wordtupeStr = "농업"; self.wordtypeInt = 5 },
+                         militaryBtn.rx.tap.map { self.wordtupeStr = "군사"; self.wordtypeInt = 6 },
+                         electricalEnergyBtn.rx.tap.map { self.wordtupeStr = "전력"; self.wordtypeInt = 7 },
+                         coalBtn.rx.tap.map { self.wordtupeStr = "석탄"; self.wordtypeInt = 8 }
+        ).debounce(.nanoseconds(1), scheduler: MainScheduler.instance)
+        .subscribe { _ in
+            let vc = self.makeVC(storyBoardName: .memo, identifier: .selectwordNumVC) as SelectWordNumViewController
+            vc.wordTypeStr = self.wordtupeStr
+            vc.wordTypeInt = self.wordtypeInt
             self.navigationController?.pushViewController(vc, animated: true)
         }.disposed(by: disposeBag)
-        
-        
+
         myPageBtn.rx.tap
-            .subscribe({ _ in
-                let vc = self.makeVC(identifier: ViewControllerName.myCharacterVC)
+            .observeOn(MainScheduler.instance)
+            .map{ _ in
+                let vc = self.makeVC(storyBoardName: .myPage, identifier: ViewControllerName.mypageVC)
                 self.present(vc, animated: true, completion: nil)
-            })
+            }.subscribe()
             .disposed(by: disposeBag)
     }
 }

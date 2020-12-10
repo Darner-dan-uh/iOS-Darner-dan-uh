@@ -9,6 +9,7 @@
 import UIKit
 
 class WordResultCell: UITableViewCell {
+    static let cellName = "WordResultCell"
 
     @IBOutlet weak var wordMeanLbl: UILabel!
     @IBOutlet weak var isCorrectLbl: UILabel!

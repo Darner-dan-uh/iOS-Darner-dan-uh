@@ -9,10 +9,15 @@
 import Foundation
 
 struct MypageModel: Codable {
-    
-    let profileImage: String
-    let nickName: String
-    let ModifyProgile: String
+    //let profileImage: String
+    let name: String
+    let userId: String
+    let ModifyProfile: String
     let selectCharacter: String
     
+}
+
+struct passwordModel: Codable {
+    let password: String?
+
 }

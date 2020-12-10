@@ -16,35 +16,44 @@ enum DarnerAPI {
     case verifywithemail(email: String, code: String)
     case login(userId: String, password: String)
     case logout
-    case rank
+    case rank(_ id: Int)
+    case myrank(_ count: String)
     case stack
     case wordGenre(word_id: String, number: String)
     case wordTest
     case myProfile
     case updateProfile(changeId: String)
     case verifyPassword(pw: String)
+    case getLevel
     case memoTitle
     case memoContents
     case deleteMemo
+    case savedata(id: String, count: Int)
 }
 
 extension DarnerAPI {
     var baseURL: String {
-        return "http://10.156.145.103:9032" //FIX- 주소 수정
+        return "http://10.156.145.103:9032"
     }
     
     var path: String {
         switch self {
+        case .getLevel:
+            return "/user/level"
+        case .savedata:
+            return "/word/savedata"
         case .register:
-            return "/signup"
+            return "/register"
         case .verifywithemail:
             return "/verifywithemail"
         case .login:
             return "/login"
         case.logout:
             return "/logout"
-        case .rank:
-            return "/rank"
+        case .rank(let count):
+            return "/rank?count=\(count)"
+        case .myrank(let id):
+            return "/myrank?id=\(id)"
         case .stack:
             return "/stack"
         case .wordGenre:
@@ -71,16 +80,20 @@ extension DarnerAPI {
         case .register,
              .verifywithemail,
              .login,
-             .verifyPassword:
+             .verifyPassword,
+             .wordGenre,
+             .savedata,
+             .login:
             return .post
             
         case .logout,
              .rank,
+             .myrank,
              .stack,
-             .wordGenre,
              .wordTest,
              .myProfile,
              .memoTitle,
+             .getLevel,
              .memoContents:
             return .get
             
@@ -97,13 +110,30 @@ extension DarnerAPI {
     
     var header: HTTPHeaders? {
         switch self {
-        case .verifywithemail(_, let code):
-            return ["code" : code]
-        case .verifyPassword:
-            return ["Authorization": "Bearer " + "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzbWtpbSIsImlhdCI6MTYwNzI2MjAzMSwiZXhwIjoxNjA3MjgwMDMxfQ.mlzlDztiWAWUwDXW_7DUN3SA1FRU9khqOcTqfh4lhP5xJV9PxNeLsuU7bdBYjQOQbsAiETzR020Z-44lp8JjIw",
-                    "content-type": "application/json"]
+        case .wordGenre,
+             .wordTest,
+             .savedata,
+             .getLevel,
+             .rank:
+            let token = UserDefaults.standard.value(forKey: "token") as! String
+            return ["Authorization" : "Bearer " + token]
         default:
-            return nil
+            return ["Content-Type":"application/json"]
+        }
+    }
+    
+    var encoding: ParameterEncoding {
+        switch self {
+        case .logout,
+             .rank,
+             .stack,
+             .wordTest,
+             .myProfile,
+             .memoTitle,
+             .memoContents:
+            return URLEncoding.queryString
+        default:
+            return JSONEncoding.default
         }
     }
     
@@ -112,8 +142,8 @@ extension DarnerAPI {
         case .updateProfile(let changeId):
             return ["name": changeId]
             
-        case .verifywithemail(let email, _):
-            return ["email" : email]
+        case .verifywithemail(let email,let code):
+            return ["email" : email, "code": code]
             
         case .register(let userId, let name, let email, let password):
             return ["userId" : userId, "name" : name, "email" : email, "password": password]
