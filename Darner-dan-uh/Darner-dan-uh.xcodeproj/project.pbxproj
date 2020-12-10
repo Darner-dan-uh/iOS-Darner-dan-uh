@@ -10,8 +10,16 @@
 		9F2CE42D25674F600024FD12 /* RankingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2CE42C25674F600024FD12 /* RankingModel.swift */; };
 		9F5765482577360A003B37BA /* Mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5765472577360A003B37BA /* Mypage.storyboard */; };
 		9FC343302566BA54003AEE58 /* RankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3432F2566BA54003AEE58 /* RankingViewModel.swift */; };
+		9FC7CC91257E1CE000412C16 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC7CC90257E1CE000412C16 /* StackViewController.swift */; };
+		9FC7CC94257E47FE00412C16 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC7CC93257E47FE00412C16 /* MemoViewController.swift */; };
+		9FC7CC99257E5CA900412C16 /* MemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC7CC98257E5CA900412C16 /* MemoTableViewCell.swift */; };
+		9FC7CC9D257E681400412C16 /* MemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC7CC9C257E681400412C16 /* MemoModel.swift */; };
 		9FCC818A25772C6B0010123B /* SeeMypageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC818925772C6B0010123B /* SeeMypageViewModel.swift */; };
+<<<<<<< Updated upstream
 		D620C5372582587800AA628B /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D620C5362582587800AA628B /* CharacterCollectionViewCell.swift */; };
+=======
+		9FE5E5482582566B008D2255 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE5E5472582566B008D2255 /* DetailViewController.swift */; };
+>>>>>>> Stashed changes
 		D63FE3212535EF4600DCD75F /* BinggraeMelona-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D63FE31F2535EF4500DCD75F /* BinggraeMelona-Bold.ttf */; };
 		D63FE3222535EF4600DCD75F /* BinggraeMelona.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D63FE3202535EF4500DCD75F /* BinggraeMelona.ttf */; };
 		D644AC8825700665002905AE /* CheckCertificationNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644AC8725700665002905AE /* CheckCertificationNumberViewModel.swift */; };
@@ -73,8 +81,16 @@
 		9F2CE42C25674F600024FD12 /* RankingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingModel.swift; sourceTree = "<group>"; };
 		9F5765472577360A003B37BA /* Mypage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mypage.storyboard; sourceTree = "<group>"; };
 		9FC3432F2566BA54003AEE58 /* RankingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewModel.swift; sourceTree = "<group>"; };
+		9FC7CC90257E1CE000412C16 /* StackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
+		9FC7CC93257E47FE00412C16 /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
+		9FC7CC98257E5CA900412C16 /* MemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTableViewCell.swift; sourceTree = "<group>"; };
+		9FC7CC9C257E681400412C16 /* MemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoModel.swift; sourceTree = "<group>"; };
 		9FCC818925772C6B0010123B /* SeeMypageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMypageViewModel.swift; sourceTree = "<group>"; };
+<<<<<<< Updated upstream
 		D620C5362582587800AA628B /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
+=======
+		9FE5E5472582566B008D2255 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+>>>>>>> Stashed changes
 		D63FE31F2535EF4500DCD75F /* BinggraeMelona-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BinggraeMelona-Bold.ttf"; sourceTree = "<group>"; };
 		D63FE3202535EF4500DCD75F /* BinggraeMelona.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BinggraeMelona.ttf; sourceTree = "<group>"; };
 		D644AC8725700665002905AE /* CheckCertificationNumberViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckCertificationNumberViewModel.swift; sourceTree = "<group>"; };
@@ -155,6 +171,14 @@
 			isa = PBXGroup;
 			children = (
 				D660A219257DA0D700C5FE6F /* RankingCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		9FC7CC97257E5C8500412C16 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9FC7CC98257E5CA900412C16 /* MemoTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -318,7 +342,11 @@
 			children = (
 				9FC3431925668426003AEE58 /* Cell */,
 				D6A6E26B2563561300A77E05 /* RankingViewController.swift */,
+<<<<<<< Updated upstream
 				D660A21D257DA10600C5FE6F /* StackViewController.swift */,
+=======
+				9FC7CC90257E1CE000412C16 /* StackViewController.swift */,
+>>>>>>> Stashed changes
 			);
 			path = Ranking;
 			sourceTree = "<group>";
@@ -348,7 +376,10 @@
 		D6BB3744255D1BF30049BB65 /* Writing */ = {
 			isa = PBXGroup;
 			children = (
+				9FC7CC97257E5C8500412C16 /* Cell */,
 				D6A6E266256355D900A77E05 /* WritingViewController.swift */,
+				9FC7CC93257E47FE00412C16 /* MemoViewController.swift */,
+				9FE5E5472582566B008D2255 /* DetailViewController.swift */,
 			);
 			path = Writing;
 			sourceTree = "<group>";
@@ -359,6 +390,7 @@
 				D660A211257DA01F00C5FE6F /* LevelModel.swift */,
 				D660A214257DA03900C5FE6F /* TestResultModel.swift */,
 				9F2CE42C25674F600024FD12 /* RankingModel.swift */,
+				9FC7CC9C257E681400412C16 /* MemoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -523,8 +555,12 @@
 				D6A6E12025634B6400A77E05 /* UIViewController.swift in Sources */,
 				D6A6E23C2563544F00A77E05 /* RegisterViewModel.swift in Sources */,
 				9F2CE42D25674F600024FD12 /* RankingModel.swift in Sources */,
+<<<<<<< Updated upstream
 				D660A21E257DA10600C5FE6F /* StackViewController.swift in Sources */,
 				D660A21A257DA0D700C5FE6F /* RankingCell.swift in Sources */,
+=======
+				9FC7CC9D257E681400412C16 /* MemoModel.swift in Sources */,
+>>>>>>> Stashed changes
 				D6A6E22F2563541E00A77E05 /* EnterPwViewController.swift in Sources */,
 				D6A6E22E2563541E00A77E05 /* SetMainCharacterViewController.swift in Sources */,
 				D6A6E11D25634B6400A77E05 /* ViewControllerName.swift in Sources */,
@@ -543,8 +579,10 @@
 				D6A6E25D2563557600A77E05 /* MemorizationViewController.swift in Sources */,
 				D6A6E2302563541E00A77E05 /* CharacterCollectionViewController.swift in Sources */,
 				D6A6E2472563554D00A77E05 /* CheckCertificationNumberViewController.swift in Sources */,
+				9FC7CC94257E47FE00412C16 /* MemoViewController.swift in Sources */,
 				D6578ACB2500867A000185F1 /* AppDelegate.swift in Sources */,
 				9FC343302566BA54003AEE58 /* RankingViewModel.swift in Sources */,
+				9FE5E5482582566B008D2255 /* DetailViewController.swift in Sources */,
 				D6A6E26C2563561300A77E05 /* RankingViewController.swift in Sources */,
 				D6A6E23A2563544F00A77E05 /* MypageViewModel.swift in Sources */,
 				D644AC9225700B21002905AE /* TokenMessageModel.swift in Sources */,
@@ -558,11 +596,16 @@
 				D6A6E11E25634B6400A77E05 /* UIColor.swift in Sources */,
 				D6A6E2312563541E00A77E05 /* ModifyViewController.swift in Sources */,
 				D6A6E25A2563557600A77E05 /* TestViewController.swift in Sources */,
+<<<<<<< Updated upstream
 				D644AC9E257011FF002905AE /* MessageModel.swift in Sources */,
+=======
+				9FC7CC99257E5CA900412C16 /* MemoTableViewCell.swift in Sources */,
+>>>>>>> Stashed changes
 				D6A6E2572563557600A77E05 /* SelectWordNumViewController.swift in Sources */,
 				D6A6E23B2563544F00A77E05 /* ViewModelType.swift in Sources */,
 				D644AC8825700665002905AE /* CheckCertificationNumberViewModel.swift in Sources */,
 				D6A6E267256355D900A77E05 /* WritingViewController.swift in Sources */,
+				9FC7CC91257E1CE000412C16 /* StackViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

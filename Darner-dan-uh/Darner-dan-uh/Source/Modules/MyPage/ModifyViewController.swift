@@ -35,6 +35,8 @@ class ModifyViewController: UIViewController {
         nickNameTxtField.underLine()
         
         viewProfile()
+        modifyProfile()
+        bindAction()
     }
     
     func viewProfile() {
@@ -57,28 +59,16 @@ class ModifyViewController: UIViewController {
                 }).disposed(by: self.disposeBag)
             }).disposed(by: disposeBag)
         
-        
-//        
-//            mypage.subscribe { (b) in
-//                if b.code == 200 {
-//    
-//                }
-//            } onError: { (<#Error#>) in
-//                <#code#>
-//            }
-//      
+         
     }
-        
-
- 
-
     
     func bindAction() {
-        //modifyBtn.rx.tap.
+        modifyBtn.rx.tap
+            .subscribe(onNext: { _ in
+                self.presentAlert(message: "", title: "회원정보 수정완료", actionStyle: .default, handler: nil)
+            }).disposed(by: disposeBag)
     }
-
-
-
+    
 struct a: Codable {
     let code: Int
     let name: String
@@ -92,6 +82,7 @@ extension UITextField {
         border.borderColor = UIColor.customGray.cgColor
         border.frame = CGRect(x: 0, y: self.frame.size.height - width, width: self.frame.size.width, height: self.frame.size.height)
         border.borderWidth = width
+        border.borderColor = UIColor.black.cgColor
          self.layer.addSublayer(border)
         self.layer.masksToBounds = true
     }
@@ -104,6 +95,8 @@ extension UIButton {
         self.layer.cornerRadius = 15
     }
 }
+
+
 
 
 

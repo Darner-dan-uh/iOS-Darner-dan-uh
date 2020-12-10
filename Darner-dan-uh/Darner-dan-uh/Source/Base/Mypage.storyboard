@@ -68,7 +68,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="x8z-rV-U7r" kind="show" id="66q-1J-qUY"/>
+                                    <segue destination="x8z-rV-U7r" kind="presentation" id="sfn-eL-O78"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cl5-s7-HeJ">
@@ -235,19 +235,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IIE-Xj-XAP">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="eJg-Zc-ezQ"/>
-                                </constraints>
-                                <items>
-                                    <navigationItem title="마이페이지" id="Jds-uM-9hc">
-                                        <barButtonItem key="rightBarButtonItem" title="Cancle" id="qLG-Ci-CtZ">
-                                            <color key="tintColor" red="0.99792057280000002" green="0.45095777510000001" blue="0.48626422879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdA-RM-q8r">
                                 <rect key="frame" x="72" y="244" width="270" height="29.5"/>
                                 <constraints>
@@ -317,20 +304,28 @@
                                     </attributedString>
                                 </state>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jFG-kj-npE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="마이페이지" id="nYG-YL-nd2">
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="pBt-x4-vd3">
+                                            <color key="tintColor" red="0.99792057280000002" green="0.45095777510000001" blue="0.48626422879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9vJ-yM-AhF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="IIE-Xj-XAP" firstAttribute="centerX" secondItem="zdA-RM-q8r" secondAttribute="centerX" id="1pt-sU-KV2"/>
                             <constraint firstItem="eaI-HP-I9y" firstAttribute="leading" secondItem="a16-yT-foq" secondAttribute="trailing" constant="5" id="Fqu-hQ-59i"/>
                             <constraint firstItem="9vJ-yM-AhF" firstAttribute="trailing" secondItem="eaI-HP-I9y" secondAttribute="trailing" constant="72" id="Gxj-nH-jKu"/>
                             <constraint firstItem="a16-yT-foq" firstAttribute="leading" secondItem="9vJ-yM-AhF" secondAttribute="leading" constant="72" id="H6v-hb-60E"/>
                             <constraint firstItem="dIj-yf-P85" firstAttribute="centerX" secondItem="qMY-wF-u5v" secondAttribute="centerX" id="Lir-fJ-p80"/>
-                            <constraint firstItem="IIE-Xj-XAP" firstAttribute="top" secondItem="9vJ-yM-AhF" secondAttribute="top" id="NSx-Pw-uq2"/>
-                            <constraint firstItem="IIE-Xj-XAP" firstAttribute="leading" secondItem="qMY-wF-u5v" secondAttribute="leading" id="Opk-X4-WJN"/>
                             <constraint firstItem="eaI-HP-I9y" firstAttribute="top" secondItem="Vei-a7-Ng4" secondAttribute="bottom" constant="95" id="ZNQ-nK-IYW"/>
+                            <constraint firstItem="zdA-RM-q8r" firstAttribute="top" secondItem="9vJ-yM-AhF" secondAttribute="top" constant="244" id="d1N-2b-gKU"/>
                             <constraint firstItem="zdA-RM-q8r" firstAttribute="centerX" secondItem="qMY-wF-u5v" secondAttribute="centerX" id="lqG-Ns-piZ"/>
-                            <constraint firstItem="zdA-RM-q8r" firstAttribute="top" secondItem="IIE-Xj-XAP" secondAttribute="bottom" constant="200" id="m2a-XH-lpS"/>
                             <constraint firstItem="a16-yT-foq" firstAttribute="top" secondItem="Vei-a7-Ng4" secondAttribute="bottom" constant="100" id="ovN-fF-Ghq"/>
                             <constraint firstItem="9vJ-yM-AhF" firstAttribute="bottom" secondItem="dIj-yf-P85" secondAttribute="bottom" constant="187" id="owJ-ka-g1P"/>
                             <constraint firstItem="Vei-a7-Ng4" firstAttribute="top" secondItem="zdA-RM-q8r" secondAttribute="bottom" constant="30" id="siK-5g-xsn"/>

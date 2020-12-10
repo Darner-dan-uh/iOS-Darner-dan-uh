@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 struct RankingModel: Codable {
     let rank: Int
     let name: String
@@ -21,13 +20,5 @@ struct myRankingModel: Codable {
     let rank: Int?
     let message: String?
     let ranking: String?
-    
-//    enum CodingKeys: String, CodingKey {
-//        case rank
-//    }
-//    init(from decoder: Decoder) throws {
-//        let values = try decoder.container(keyedBy: CodingKeys.self)
-//        rank  = try values.decode(String.self, forKey: .rank)
-//    }
-}
 
+}

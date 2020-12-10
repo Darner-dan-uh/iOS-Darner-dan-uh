@@ -19,7 +19,7 @@ final class RankingViewController: UIViewController {
     @IBOutlet weak var myRankingLbl: UILabel!
     @IBOutlet weak var myRankingView: UIView!
     @IBOutlet weak var myRanknumLbl: UILabel!
-    @IBOutlet weak var myNickName: UILabel!
+    @IBOutlet weak var myNameLbl: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     private let disposeBag = DisposeBag()
@@ -39,22 +39,10 @@ final class RankingViewController: UIViewController {
         rank()
         myRank()
     }
-//    
-//    func bindViewModel() {
-//        let input = RankingViewModel.Input(loadData: loadData.asSignal(onErrorJustReturn: ()))
-//        let output = viewModel.transform(input)
-//        
-//        output.loadApplyList.bind(to: tableView.rx.items) { tableView, index, element -> UITableViewCell in
-//            guard let cell = self.tableView.dequeueReusableCell(withIdentifier: "RankingCell") as? RankingCell else { return RankingCell() }
-//            cell.RankingData = element
-//            return cell
-//        }.disposed(by: disposeBag)
-//    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-       // self.navigationController?.isNavigationBarHidden = true
+        self.navigationItem.hidesBackButton = true
     }
     
     func myRank() {
@@ -64,13 +52,25 @@ final class RankingViewController: UIViewController {
         }).disposed(by: disposeBag)
     }
     
+    func myRank() {
+           let rank: Observable<a> = DarnerAPIClient.shared.networkingResult(from: .myrank("smKim"))
+           rank.asObservable().subscribe(onNext: { model in
+               self.myRanknumLbl.text = String(model.rank ?? 2)
+           }).disposed(by: disposeBag)
+       }
+       
     func rank() {
 
-        let rank: Observable<Ranking> = DarnerAPIClient.shared.networkingResult(from: .rank(3))
-        rank.map { $0.ranking }.bind(to: tableView.rx.items(cellIdentifier: "rankingCell", cellType: RankingCell.self)) { idx, model, cell in
-            cell.nickNameLbl?.text = model.name
-            cell.RankingLbl?.text = String(model.rank ?? 1)
-        }.disposed(by: disposeBag)
+           let rank: Observable<Ranking> = DarnerAPIClient.shared.networkingResult(from: .rank(3))
+           rank.map { $0.ranking }.bind(to: tableView.rx.items(cellIdentifier: "rankingCell", cellType: RankingCell.self)) { idx, model, cell in
+               cell.nickNameLbl?.text = model.name
+            cell.RankingLbl?.text = String(model.rank)
+           }.disposed(by: disposeBag)
+       }
+    
+    struct a: Codable {
+        let rank: Int?
+        let message: String?
     }
     
     private func registerCell() {
@@ -92,6 +92,19 @@ extension UIViewController {
     }
     
     
+    func navigationImage() {
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 35))
+        imageView.contentMode = .scaleAspectFit
+        
+        let image = UIImage(named: "LogoImage")
+        imageView.image = image
+        
+        navigationItem.titleView = imageView
+    }
+
+}
+
+extension UIViewController {
     func navigationImage() {
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 35))
         imageView.contentMode = .scaleAspectFit

@@ -29,8 +29,10 @@ class MypageViewController: UIViewController {
         characterBtn.buttonStyle()
         modifyBtn.buttonStyle()
         
+        
     }
-
+    
+  
 
     
 }
