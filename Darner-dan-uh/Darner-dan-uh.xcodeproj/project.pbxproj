@@ -3,16 +3,74 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F2CE42D25674F600024FD12 /* RankingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2CE42C25674F600024FD12 /* RankingModel.swift */; };
+		9F5765482577360A003B37BA /* Mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5765472577360A003B37BA /* Mypage.storyboard */; };
+		9FC343302566BA54003AEE58 /* RankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3432F2566BA54003AEE58 /* RankingViewModel.swift */; };
+		9FC7CC91257E1CE000412C16 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC7CC90257E1CE000412C16 /* StackViewController.swift */; };
+		9FC7CC94257E47FE00412C16 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC7CC93257E47FE00412C16 /* MemoViewController.swift */; };
+		9FC7CC99257E5CA900412C16 /* MemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC7CC98257E5CA900412C16 /* MemoTableViewCell.swift */; };
+		9FC7CC9D257E681400412C16 /* MemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC7CC9C257E681400412C16 /* MemoModel.swift */; };
+		9FCC818A25772C6B0010123B /* SeeMypageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC818925772C6B0010123B /* SeeMypageViewModel.swift */; };
+<<<<<<< Updated upstream
+		D620C5372582587800AA628B /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D620C5362582587800AA628B /* CharacterCollectionViewCell.swift */; };
+=======
+		9FE5E5482582566B008D2255 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE5E5472582566B008D2255 /* DetailViewController.swift */; };
+>>>>>>> Stashed changes
+		D63FE3212535EF4600DCD75F /* BinggraeMelona-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D63FE31F2535EF4500DCD75F /* BinggraeMelona-Bold.ttf */; };
+		D63FE3222535EF4600DCD75F /* BinggraeMelona.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D63FE3202535EF4500DCD75F /* BinggraeMelona.ttf */; };
+		D644AC8825700665002905AE /* CheckCertificationNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644AC8725700665002905AE /* CheckCertificationNumberViewModel.swift */; };
+		D644AC8C257006D2002905AE /* MypageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644AC8B257006D2002905AE /* MypageModel.swift */; };
+		D644AC8F257006E1002905AE /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644AC8E257006E1002905AE /* TestViewModel.swift */; };
+		D644AC9225700B21002905AE /* TokenMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644AC9125700B21002905AE /* TokenMessageModel.swift */; };
+		D644AC9625701036002905AE /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644AC9525701036002905AE /* UIView.swift */; };
+		D644AC9A2570113B002905AE /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644AC992570113B002905AE /* WordModel.swift */; };
+		D644AC9E257011FF002905AE /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644AC9D257011FF002905AE /* MessageModel.swift */; };
+		D644ACA325701388002905AE /* TestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644ACA125701388002905AE /* TestCollectionViewCell.swift */; };
 		D6578ACB2500867A000185F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6578ACA2500867A000185F1 /* AppDelegate.swift */; };
-		D6578ACD2500867A000185F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6578ACC2500867A000185F1 /* SceneDelegate.swift */; };
-		D6578ACF2500867A000185F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6578ACE2500867A000185F1 /* ViewController.swift */; };
 		D6578AD22500867A000185F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6578AD02500867A000185F1 /* Main.storyboard */; };
 		D6578AD42500867C000185F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6578AD32500867C000185F1 /* Assets.xcassets */; };
 		D6578AD72500867C000185F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6578AD52500867C000185F1 /* LaunchScreen.storyboard */; };
+		D660A212257DA01F00C5FE6F /* LevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660A211257DA01F00C5FE6F /* LevelModel.swift */; };
+		D660A215257DA03900C5FE6F /* TestResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660A214257DA03900C5FE6F /* TestResultModel.swift */; };
+		D660A21A257DA0D700C5FE6F /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660A219257DA0D700C5FE6F /* RankingCell.swift */; };
+		D660A21E257DA10600C5FE6F /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660A21D257DA10600C5FE6F /* StackViewController.swift */; };
+		D660A23C257DA21D00C5FE6F /* MypageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660A23B257DA21D00C5FE6F /* MypageModel.swift */; };
+		D6A6E11D25634B6400A77E05 /* ViewControllerName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E11925634B6400A77E05 /* ViewControllerName.swift */; };
+		D6A6E11E25634B6400A77E05 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E11A25634B6400A77E05 /* UIColor.swift */; };
+		D6A6E11F25634B6400A77E05 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E11B25634B6400A77E05 /* UIButton.swift */; };
+		D6A6E12025634B6400A77E05 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E11C25634B6400A77E05 /* UIViewController.swift */; };
+		D6A6E22E2563541E00A77E05 /* SetMainCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E2282563541E00A77E05 /* SetMainCharacterViewController.swift */; };
+		D6A6E22F2563541E00A77E05 /* EnterPwViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E2292563541E00A77E05 /* EnterPwViewController.swift */; };
+		D6A6E2302563541E00A77E05 /* CharacterCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E22A2563541E00A77E05 /* CharacterCollectionViewController.swift */; };
+		D6A6E2312563541E00A77E05 /* ModifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E22B2563541E00A77E05 /* ModifyViewController.swift */; };
+		D6A6E2322563541E00A77E05 /* MyCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E22C2563541E00A77E05 /* MyCharacterViewController.swift */; };
+		D6A6E2332563541E00A77E05 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E22D2563541E00A77E05 /* MypageViewController.swift */; };
+		D6A6E23A2563544F00A77E05 /* MypageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E2362563544E00A77E05 /* MypageViewModel.swift */; };
+		D6A6E23B2563544F00A77E05 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E2372563544E00A77E05 /* ViewModelType.swift */; };
+		D6A6E23C2563544F00A77E05 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E2382563544F00A77E05 /* RegisterViewModel.swift */; };
+		D6A6E23D2563544F00A77E05 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E2392563544F00A77E05 /* LoginViewModel.swift */; };
+		D6A6E2452563554D00A77E05 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E2412563554D00A77E05 /* RegisterViewController.swift */; };
+		D6A6E2462563554D00A77E05 /* FinishRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E2422563554D00A77E05 /* FinishRegisterViewController.swift */; };
+		D6A6E2472563554D00A77E05 /* CheckCertificationNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E2432563554D00A77E05 /* CheckCertificationNumberViewController.swift */; };
+		D6A6E2572563557600A77E05 /* SelectWordNumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E24F2563557600A77E05 /* SelectWordNumViewController.swift */; };
+		D6A6E2582563557600A77E05 /* WordResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E2512563557600A77E05 /* WordResultCell.swift */; };
+		D6A6E2592563557600A77E05 /* WordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E2522563557600A77E05 /* WordCell.swift */; };
+		D6A6E25A2563557600A77E05 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E2532563557600A77E05 /* TestViewController.swift */; };
+		D6A6E25B2563557600A77E05 /* TestResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E2542563557600A77E05 /* TestResultViewController.swift */; };
+		D6A6E25C2563557600A77E05 /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E2552563557600A77E05 /* TestTableViewController.swift */; };
+		D6A6E25D2563557600A77E05 /* MemorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E2562563557600A77E05 /* MemorizationViewController.swift */; };
+		D6A6E2602563558500A77E05 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E25F2563558500A77E05 /* LoginViewController.swift */; };
+		D6A6E267256355D900A77E05 /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E266256355D900A77E05 /* WritingViewController.swift */; };
+		D6A6E26C2563561300A77E05 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6E26B2563561300A77E05 /* RankingViewController.swift */; };
+		D6BB372B255D1BE60049BB65 /* DarnerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB372A255D1BE60049BB65 /* DarnerAPI.swift */; };
+		D6BB375A255D210D0049BB65 /* DarnerAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB3759255D210D0049BB65 /* DarnerAPIClient.swift */; };
+		D6E68852252EB53F00FA09C1 /* Writing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E68851252EB53F00FA09C1 /* Writing.storyboard */; };
+		D6E68855252EB54600FA09C1 /* Ranking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E68854252EB54600FA09C1 /* Ranking.storyboard */; };
+		D6E68858252EB55300FA09C1 /* Memorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E68857252EB55300FA09C1 /* Memorization.storyboard */; };
 		FEB933CBE4FCA747B10CDE0A /* Pods_Darner_dan_uh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2C5094395481B434C2AC5C /* Pods_Darner_dan_uh.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,14 +78,72 @@
 		0A6D3E1C8424177E67745A13 /* Pods-Darner-dan-uh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Darner-dan-uh.debug.xcconfig"; path = "Target Support Files/Pods-Darner-dan-uh/Pods-Darner-dan-uh.debug.xcconfig"; sourceTree = "<group>"; };
 		2C2C5094395481B434C2AC5C /* Pods_Darner_dan_uh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Darner_dan_uh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		773631FB34EA472779385722 /* Pods-Darner-dan-uh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Darner-dan-uh.release.xcconfig"; path = "Target Support Files/Pods-Darner-dan-uh/Pods-Darner-dan-uh.release.xcconfig"; sourceTree = "<group>"; };
+		9F2CE42C25674F600024FD12 /* RankingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingModel.swift; sourceTree = "<group>"; };
+		9F5765472577360A003B37BA /* Mypage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mypage.storyboard; sourceTree = "<group>"; };
+		9FC3432F2566BA54003AEE58 /* RankingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewModel.swift; sourceTree = "<group>"; };
+		9FC7CC90257E1CE000412C16 /* StackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
+		9FC7CC93257E47FE00412C16 /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
+		9FC7CC98257E5CA900412C16 /* MemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTableViewCell.swift; sourceTree = "<group>"; };
+		9FC7CC9C257E681400412C16 /* MemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoModel.swift; sourceTree = "<group>"; };
+		9FCC818925772C6B0010123B /* SeeMypageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMypageViewModel.swift; sourceTree = "<group>"; };
+<<<<<<< Updated upstream
+		D620C5362582587800AA628B /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
+=======
+		9FE5E5472582566B008D2255 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+>>>>>>> Stashed changes
+		D63FE31F2535EF4500DCD75F /* BinggraeMelona-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BinggraeMelona-Bold.ttf"; sourceTree = "<group>"; };
+		D63FE3202535EF4500DCD75F /* BinggraeMelona.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BinggraeMelona.ttf; sourceTree = "<group>"; };
+		D644AC8725700665002905AE /* CheckCertificationNumberViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckCertificationNumberViewModel.swift; sourceTree = "<group>"; };
+		D644AC8B257006D2002905AE /* MypageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MypageModel.swift; path = "Darner-dan-uh/Source/ViewModel/MypageModel.swift"; sourceTree = SOURCE_ROOT; };
+		D644AC8E257006E1002905AE /* TestViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
+		D644AC9125700B21002905AE /* TokenMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenMessageModel.swift; sourceTree = "<group>"; };
+		D644AC9525701036002905AE /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		D644AC992570113B002905AE /* WordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
+		D644AC9D257011FF002905AE /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		D644ACA125701388002905AE /* TestCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCollectionViewCell.swift; sourceTree = "<group>"; };
 		D6578AC72500867A000185F1 /* Darner-dan-uh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Darner-dan-uh.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6578ACA2500867A000185F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D6578ACC2500867A000185F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D6578ACE2500867A000185F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D6578AD12500867A000185F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6578AD32500867C000185F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6578AD62500867C000185F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6578AD82500867C000185F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D660A211257DA01F00C5FE6F /* LevelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelModel.swift; sourceTree = "<group>"; };
+		D660A214257DA03900C5FE6F /* TestResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestResultModel.swift; sourceTree = "<group>"; };
+		D660A219257DA0D700C5FE6F /* RankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RankingCell.swift; path = "Darner-dan-uh/Source/Extension/RankingCell.swift"; sourceTree = SOURCE_ROOT; };
+		D660A21D257DA10600C5FE6F /* StackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StackViewController.swift; path = "Darner-dan-uh/Source/Extension/StackViewController.swift"; sourceTree = SOURCE_ROOT; };
+		D660A23B257DA21D00C5FE6F /* MypageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MypageModel.swift; path = "Darner-dan-uh/Source/ViewModel/MypageModel.swift"; sourceTree = SOURCE_ROOT; };
+		D6A6E11925634B6400A77E05 /* ViewControllerName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerName.swift; sourceTree = "<group>"; };
+		D6A6E11A25634B6400A77E05 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		D6A6E11B25634B6400A77E05 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		D6A6E11C25634B6400A77E05 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		D6A6E2282563541E00A77E05 /* SetMainCharacterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetMainCharacterViewController.swift; path = "Darner-dan-uh/Source/Modules/MyPage/SetMainCharacterViewController.swift"; sourceTree = SOURCE_ROOT; };
+		D6A6E2292563541E00A77E05 /* EnterPwViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnterPwViewController.swift; path = "Darner-dan-uh/Source/Modules/MyPage/EnterPwViewController.swift"; sourceTree = SOURCE_ROOT; };
+		D6A6E22A2563541E00A77E05 /* CharacterCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterCollectionViewController.swift; path = "Darner-dan-uh/Source/Modules/MyPage/CharacterCollectionViewController.swift"; sourceTree = SOURCE_ROOT; };
+		D6A6E22B2563541E00A77E05 /* ModifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModifyViewController.swift; path = "Darner-dan-uh/Source/Modules/MyPage/ModifyViewController.swift"; sourceTree = SOURCE_ROOT; };
+		D6A6E22C2563541E00A77E05 /* MyCharacterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyCharacterViewController.swift; path = "Darner-dan-uh/Source/Modules/MyPage/MyCharacterViewController.swift"; sourceTree = SOURCE_ROOT; };
+		D6A6E22D2563541E00A77E05 /* MypageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MypageViewController.swift; path = "Darner-dan-uh/Source/Modules/MyPage/MypageViewController.swift"; sourceTree = SOURCE_ROOT; };
+		D6A6E2362563544E00A77E05 /* MypageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MypageViewModel.swift; sourceTree = "<group>"; };
+		D6A6E2372563544E00A77E05 /* ViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		D6A6E2382563544F00A77E05 /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		D6A6E2392563544F00A77E05 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		D6A6E2412563554D00A77E05 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = "Darner-dan-uh/Source/Modules/Register/RegisterViewController.swift"; sourceTree = SOURCE_ROOT; };
+		D6A6E2422563554D00A77E05 /* FinishRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinishRegisterViewController.swift; path = "Darner-dan-uh/Source/Modules/Register/FinishRegisterViewController.swift"; sourceTree = SOURCE_ROOT; };
+		D6A6E2432563554D00A77E05 /* CheckCertificationNumberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckCertificationNumberViewController.swift; path = "Darner-dan-uh/Source/Modules/Register/CheckCertificationNumberViewController.swift"; sourceTree = SOURCE_ROOT; };
+		D6A6E24F2563557600A77E05 /* SelectWordNumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectWordNumViewController.swift; sourceTree = "<group>"; };
+		D6A6E2512563557600A77E05 /* WordResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordResultCell.swift; sourceTree = "<group>"; };
+		D6A6E2522563557600A77E05 /* WordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordCell.swift; sourceTree = "<group>"; };
+		D6A6E2532563557600A77E05 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		D6A6E2542563557600A77E05 /* TestResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestResultViewController.swift; sourceTree = "<group>"; };
+		D6A6E2552563557600A77E05 /* TestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
+		D6A6E2562563557600A77E05 /* MemorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemorizationViewController.swift; sourceTree = "<group>"; };
+		D6A6E25F2563558500A77E05 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "Darner-dan-uh/Source/Modules/Login/LoginViewController.swift"; sourceTree = SOURCE_ROOT; };
+		D6A6E266256355D900A77E05 /* WritingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WritingViewController.swift; path = "Darner-dan-uh/Source/Modules/Writing/WritingViewController.swift"; sourceTree = SOURCE_ROOT; };
+		D6A6E26B2563561300A77E05 /* RankingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RankingViewController.swift; path = "Darner-dan-uh/Source/Modules/Ranking/RankingViewController.swift"; sourceTree = SOURCE_ROOT; };
+		D6BB372A255D1BE60049BB65 /* DarnerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarnerAPI.swift; sourceTree = "<group>"; };
+		D6BB3759255D210D0049BB65 /* DarnerAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarnerAPIClient.swift; sourceTree = "<group>"; };
+		D6E68851252EB53F00FA09C1 /* Writing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Writing.storyboard; sourceTree = "<group>"; };
+		D6E68854252EB54600FA09C1 /* Ranking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ranking.storyboard; sourceTree = "<group>"; };
+		D6E68857252EB55300FA09C1 /* Memorization.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Memorization.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,8 +164,23 @@
 				0A6D3E1C8424177E67745A13 /* Pods-Darner-dan-uh.debug.xcconfig */,
 				773631FB34EA472779385722 /* Pods-Darner-dan-uh.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9FC3431925668426003AEE58 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D660A219257DA0D700C5FE6F /* RankingCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		9FC7CC97257E5C8500412C16 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9FC7CC98257E5CA900412C16 /* MemoTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		A2011636CCE48406938D6CA0 /* Frameworks */ = {
@@ -60,6 +191,52 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D620C5352582586000AA628B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D620C5362582587800AA628B /* CharacterCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D63FE3262535EFD400DCD75F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				D6A6E11825634B6400A77E05 /* Extension */,
+				D6BB372D255D1BF30049BB65 /* Modules */,
+				D6BB3729255D1BE60049BB65 /* NetWorking */,
+				D63FE3302536116C00DCD75F /* ViewModel */,
+				D6E68841252EB41B00FA09C1 /* Base */,
+				D6BB377E255E0D860049BB65 /* Model */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		D63FE3282535EFDF00DCD75F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				D63FE31F2535EF4500DCD75F /* BinggraeMelona-Bold.ttf */,
+				D63FE3202535EF4500DCD75F /* BinggraeMelona.ttf */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		D63FE3302536116C00DCD75F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D644AC8725700665002905AE /* CheckCertificationNumberViewModel.swift */,
+				D6A6E2392563544F00A77E05 /* LoginViewModel.swift */,
+				D660A23B257DA21D00C5FE6F /* MypageModel.swift */,
+				D644AC8E257006E1002905AE /* TestViewModel.swift */,
+				D6A6E2362563544E00A77E05 /* MypageViewModel.swift */,
+				D6A6E2382563544F00A77E05 /* RegisterViewModel.swift */,
+				D6A6E2372563544E00A77E05 /* ViewModelType.swift */,
+				9FC3432F2566BA54003AEE58 /* RankingViewModel.swift */,
+				9FCC818925772C6B0010123B /* SeeMypageViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		D6578ABE2500867A000185F1 = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +244,7 @@
 				D6578AC82500867A000185F1 /* Products */,
 				3BB6742B37E472050727ABC6 /* Pods */,
 				A2011636CCE48406938D6CA0 /* Frameworks */,
+				D660A1ED257D281D00C5FE6F /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,15 +259,172 @@
 		D6578AC92500867A000185F1 /* Darner-dan-uh */ = {
 			isa = PBXGroup;
 			children = (
-				D6578ACA2500867A000185F1 /* AppDelegate.swift */,
-				D6578ACC2500867A000185F1 /* SceneDelegate.swift */,
-				D6578ACE2500867A000185F1 /* ViewController.swift */,
-				D6578AD02500867A000185F1 /* Main.storyboard */,
-				D6578AD32500867C000185F1 /* Assets.xcassets */,
-				D6578AD52500867C000185F1 /* LaunchScreen.storyboard */,
 				D6578AD82500867C000185F1 /* Info.plist */,
+				D63FE3282535EFDF00DCD75F /* Resource */,
+				D63FE3262535EFD400DCD75F /* Source */,
+				D6E68842252EB42400FA09C1 /* Supporting */,
 			);
 			path = "Darner-dan-uh";
+			sourceTree = "<group>";
+		};
+		D660A1ED257D281D00C5FE6F /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				D644AC8B257006D2002905AE /* MypageModel.swift */,
+				D644AC9125700B21002905AE /* TokenMessageModel.swift */,
+				D644AC992570113B002905AE /* WordModel.swift */,
+				D644AC9D257011FF002905AE /* MessageModel.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		D6A6E11825634B6400A77E05 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D6A6E11925634B6400A77E05 /* ViewControllerName.swift */,
+				D6A6E11A25634B6400A77E05 /* UIColor.swift */,
+				D6A6E11B25634B6400A77E05 /* UIButton.swift */,
+				D6A6E11C25634B6400A77E05 /* UIViewController.swift */,
+				D644AC9525701036002905AE /* UIView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D6A6E24E2563557600A77E05 /* Memorization */ = {
+			isa = PBXGroup;
+			children = (
+				D6A6E2502563557600A77E05 /* Cell */,
+				D6A6E24F2563557600A77E05 /* SelectWordNumViewController.swift */,
+				D6A6E2552563557600A77E05 /* TestTableViewController.swift */,
+				D6A6E2532563557600A77E05 /* TestViewController.swift */,
+				D6A6E2542563557600A77E05 /* TestResultViewController.swift */,
+				D6A6E2562563557600A77E05 /* MemorizationViewController.swift */,
+			);
+			name = Memorization;
+			path = "Darner-dan-uh/Source/Modules/Memorization";
+			sourceTree = SOURCE_ROOT;
+		};
+		D6A6E2502563557600A77E05 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D644ACA125701388002905AE /* TestCollectionViewCell.swift */,
+				D6A6E2512563557600A77E05 /* WordResultCell.swift */,
+				D6A6E2522563557600A77E05 /* WordCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D6BB3729255D1BE60049BB65 /* NetWorking */ = {
+			isa = PBXGroup;
+			children = (
+				D6BB372A255D1BE60049BB65 /* DarnerAPI.swift */,
+				D6BB3759255D210D0049BB65 /* DarnerAPIClient.swift */,
+			);
+			path = NetWorking;
+			sourceTree = "<group>";
+		};
+		D6BB372D255D1BF30049BB65 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D6A6E24E2563557600A77E05 /* Memorization */,
+				D6BB3780255E0EB80049BB65 /* Register */,
+				D6BB372E255D1BF30049BB65 /* Ranking */,
+				D6BB3739255D1BF30049BB65 /* MyPage */,
+				D6BB3742255D1BF30049BB65 /* Login */,
+				D6BB3744255D1BF30049BB65 /* Writing */,
+			);
+			name = Modules;
+			path = ViewModel/Modules;
+			sourceTree = "<group>";
+		};
+		D6BB372E255D1BF30049BB65 /* Ranking */ = {
+			isa = PBXGroup;
+			children = (
+				9FC3431925668426003AEE58 /* Cell */,
+				D6A6E26B2563561300A77E05 /* RankingViewController.swift */,
+<<<<<<< Updated upstream
+				D660A21D257DA10600C5FE6F /* StackViewController.swift */,
+=======
+				9FC7CC90257E1CE000412C16 /* StackViewController.swift */,
+>>>>>>> Stashed changes
+			);
+			path = Ranking;
+			sourceTree = "<group>";
+		};
+		D6BB3739255D1BF30049BB65 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				D620C5352582586000AA628B /* Cell */,
+				D6A6E22A2563541E00A77E05 /* CharacterCollectionViewController.swift */,
+				D6A6E2292563541E00A77E05 /* EnterPwViewController.swift */,
+				D6A6E22B2563541E00A77E05 /* ModifyViewController.swift */,
+				D6A6E22C2563541E00A77E05 /* MyCharacterViewController.swift */,
+				D6A6E22D2563541E00A77E05 /* MypageViewController.swift */,
+				D6A6E2282563541E00A77E05 /* SetMainCharacterViewController.swift */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		D6BB3742255D1BF30049BB65 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D6A6E25F2563558500A77E05 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D6BB3744255D1BF30049BB65 /* Writing */ = {
+			isa = PBXGroup;
+			children = (
+				9FC7CC97257E5C8500412C16 /* Cell */,
+				D6A6E266256355D900A77E05 /* WritingViewController.swift */,
+				9FC7CC93257E47FE00412C16 /* MemoViewController.swift */,
+				9FE5E5472582566B008D2255 /* DetailViewController.swift */,
+			);
+			path = Writing;
+			sourceTree = "<group>";
+		};
+		D6BB377E255E0D860049BB65 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D660A211257DA01F00C5FE6F /* LevelModel.swift */,
+				D660A214257DA03900C5FE6F /* TestResultModel.swift */,
+				9F2CE42C25674F600024FD12 /* RankingModel.swift */,
+				9FC7CC9C257E681400412C16 /* MemoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D6BB3780255E0EB80049BB65 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				D6A6E2432563554D00A77E05 /* CheckCertificationNumberViewController.swift */,
+				D6A6E2422563554D00A77E05 /* FinishRegisterViewController.swift */,
+				D6A6E2412563554D00A77E05 /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		D6E68841252EB41B00FA09C1 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D6578AD02500867A000185F1 /* Main.storyboard */,
+				9F5765472577360A003B37BA /* Mypage.storyboard */,
+				D6578AD52500867C000185F1 /* LaunchScreen.storyboard */,
+				D6E68851252EB53F00FA09C1 /* Writing.storyboard */,
+				D6E68854252EB54600FA09C1 /* Ranking.storyboard */,
+				D6E68857252EB55300FA09C1 /* Memorization.storyboard */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D6E68842252EB42400FA09C1 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				D6578ACA2500867A000185F1 /* AppDelegate.swift */,
+				D6578AD32500867C000185F1 /* Assets.xcassets */,
+			);
+			path = Supporting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,9 +487,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D63FE3212535EF4600DCD75F /* BinggraeMelona-Bold.ttf in Resources */,
+				D63FE3222535EF4600DCD75F /* BinggraeMelona.ttf in Resources */,
+				D6E68858252EB55300FA09C1 /* Memorization.storyboard in Resources */,
 				D6578AD72500867C000185F1 /* LaunchScreen.storyboard in Resources */,
+				9F5765482577360A003B37BA /* Mypage.storyboard in Resources */,
+				D6E68852252EB53F00FA09C1 /* Writing.storyboard in Resources */,
 				D6578AD42500867C000185F1 /* Assets.xcassets in Resources */,
 				D6578AD22500867A000185F1 /* Main.storyboard in Resources */,
+				D6E68855252EB54600FA09C1 /* Ranking.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,9 +548,64 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6578ACF2500867A000185F1 /* ViewController.swift in Sources */,
+				D6A6E2462563554D00A77E05 /* FinishRegisterViewController.swift in Sources */,
+				D644AC8C257006D2002905AE /* MypageModel.swift in Sources */,
+				D6A6E11F25634B6400A77E05 /* UIButton.swift in Sources */,
+				D644AC9625701036002905AE /* UIView.swift in Sources */,
+				D6A6E12025634B6400A77E05 /* UIViewController.swift in Sources */,
+				D6A6E23C2563544F00A77E05 /* RegisterViewModel.swift in Sources */,
+				9F2CE42D25674F600024FD12 /* RankingModel.swift in Sources */,
+<<<<<<< Updated upstream
+				D660A21E257DA10600C5FE6F /* StackViewController.swift in Sources */,
+				D660A21A257DA0D700C5FE6F /* RankingCell.swift in Sources */,
+=======
+				9FC7CC9D257E681400412C16 /* MemoModel.swift in Sources */,
+>>>>>>> Stashed changes
+				D6A6E22F2563541E00A77E05 /* EnterPwViewController.swift in Sources */,
+				D6A6E22E2563541E00A77E05 /* SetMainCharacterViewController.swift in Sources */,
+				D6A6E11D25634B6400A77E05 /* ViewControllerName.swift in Sources */,
+				9FCC818A25772C6B0010123B /* SeeMypageViewModel.swift in Sources */,
+				D6A6E2592563557600A77E05 /* WordCell.swift in Sources */,
+				D6BB375A255D210D0049BB65 /* DarnerAPIClient.swift in Sources */,
+				D644AC8F257006E1002905AE /* TestViewModel.swift in Sources */,
+				D6A6E23D2563544F00A77E05 /* LoginViewModel.swift in Sources */,
+				D620C5372582587800AA628B /* CharacterCollectionViewCell.swift in Sources */,
+				D6A6E2602563558500A77E05 /* LoginViewController.swift in Sources */,
+				D6BB372B255D1BE60049BB65 /* DarnerAPI.swift in Sources */,
+				D660A23C257DA21D00C5FE6F /* MypageModel.swift in Sources */,
+				D6A6E2452563554D00A77E05 /* RegisterViewController.swift in Sources */,
+				D6A6E2322563541E00A77E05 /* MyCharacterViewController.swift in Sources */,
+				D6A6E25C2563557600A77E05 /* TestTableViewController.swift in Sources */,
+				D6A6E25D2563557600A77E05 /* MemorizationViewController.swift in Sources */,
+				D6A6E2302563541E00A77E05 /* CharacterCollectionViewController.swift in Sources */,
+				D6A6E2472563554D00A77E05 /* CheckCertificationNumberViewController.swift in Sources */,
+				9FC7CC94257E47FE00412C16 /* MemoViewController.swift in Sources */,
 				D6578ACB2500867A000185F1 /* AppDelegate.swift in Sources */,
-				D6578ACD2500867A000185F1 /* SceneDelegate.swift in Sources */,
+				9FC343302566BA54003AEE58 /* RankingViewModel.swift in Sources */,
+				9FE5E5482582566B008D2255 /* DetailViewController.swift in Sources */,
+				D6A6E26C2563561300A77E05 /* RankingViewController.swift in Sources */,
+				D6A6E23A2563544F00A77E05 /* MypageViewModel.swift in Sources */,
+				D644AC9225700B21002905AE /* TokenMessageModel.swift in Sources */,
+				D6A6E2332563541E00A77E05 /* MypageViewController.swift in Sources */,
+				D6A6E25B2563557600A77E05 /* TestResultViewController.swift in Sources */,
+				D644AC9A2570113B002905AE /* WordModel.swift in Sources */,
+				D644ACA325701388002905AE /* TestCollectionViewCell.swift in Sources */,
+				D660A212257DA01F00C5FE6F /* LevelModel.swift in Sources */,
+				D660A215257DA03900C5FE6F /* TestResultModel.swift in Sources */,
+				D6A6E2582563557600A77E05 /* WordResultCell.swift in Sources */,
+				D6A6E11E25634B6400A77E05 /* UIColor.swift in Sources */,
+				D6A6E2312563541E00A77E05 /* ModifyViewController.swift in Sources */,
+				D6A6E25A2563557600A77E05 /* TestViewController.swift in Sources */,
+<<<<<<< Updated upstream
+				D644AC9E257011FF002905AE /* MessageModel.swift in Sources */,
+=======
+				9FC7CC99257E5CA900412C16 /* MemoTableViewCell.swift in Sources */,
+>>>>>>> Stashed changes
+				D6A6E2572563557600A77E05 /* SelectWordNumViewController.swift in Sources */,
+				D6A6E23B2563544F00A77E05 /* ViewModelType.swift in Sources */,
+				D644AC8825700665002905AE /* CheckCertificationNumberViewModel.swift in Sources */,
+				D6A6E267256355D900A77E05 /* WritingViewController.swift in Sources */,
+				9FC7CC91257E1CE000412C16 /* StackViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,7 +760,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "personal.Darner-dan-uh";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -380,10 +776,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "personal.Darner-dan-uh";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
